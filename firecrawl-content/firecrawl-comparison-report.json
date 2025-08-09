@@ -1,0 +1,126 @@
+{
+  "timestamp": "2025-08-09T20:35:12.738Z",
+  "firecrawl": {
+    "tool": "Firecrawl MCP",
+    "totalPages": 7,
+    "successfulPages": 0,
+    "failedPages": 7,
+    "results": [
+      {
+        "url": "https://potato.im/",
+        "filename": "index-desktop.html",
+        "options": {
+          "mobile": false
+        },
+        "result": {
+          "success": false,
+          "error": "Firecrawl MCP failed with code 1: Error: FIRECRAWL_API_KEY environment variable is required when using the cloud service\n"
+        },
+        "timestamp": "2025-08-09T20:34:57.745Z"
+      },
+      {
+        "url": "https://potato.im/",
+        "filename": "index-mobile.html",
+        "options": {
+          "mobile": true
+        },
+        "result": {
+          "success": false,
+          "error": "Firecrawl MCP failed with code 1: Error: FIRECRAWL_API_KEY environment variable is required when using the cloud service\n"
+        },
+        "timestamp": "2025-08-09T20:34:59.916Z"
+      },
+      {
+        "url": "https://potato.im/apps",
+        "filename": "apps.html",
+        "options": {
+          "mobile": false
+        },
+        "result": {
+          "success": false,
+          "error": "Firecrawl MCP failed with code 1: Error: FIRECRAWL_API_KEY environment variable is required when using the cloud service\n"
+        },
+        "timestamp": "2025-08-09T20:35:02.053Z"
+      },
+      {
+        "url": "https://potato.im/api",
+        "filename": "api.html",
+        "options": {
+          "mobile": false
+        },
+        "result": {
+          "success": false,
+          "error": "Firecrawl MCP failed with code 1: Error: FIRECRAWL_API_KEY environment variable is required when using the cloud service\n"
+        },
+        "timestamp": "2025-08-09T20:35:04.183Z"
+      },
+      {
+        "url": "https://potato.im/faq",
+        "filename": "faq.html",
+        "options": {
+          "mobile": false
+        },
+        "result": {
+          "success": false,
+          "error": "Firecrawl MCP failed with code 1: Error: FIRECRAWL_API_KEY environment variable is required when using the cloud service\n"
+        },
+        "timestamp": "2025-08-09T20:35:06.324Z"
+      },
+      {
+        "url": "https://potato.im/privacy",
+        "filename": "privacy.html",
+        "options": {
+          "mobile": false
+        },
+        "result": {
+          "success": false,
+          "error": "Firecrawl MCP failed with code 1: Error: FIRECRAWL_API_KEY environment variable is required when using the cloud service\n"
+        },
+        "timestamp": "2025-08-09T20:35:08.461Z"
+      },
+      {
+        "url": "https://potato.im/news",
+        "filename": "news.html",
+        "options": {
+          "mobile": false
+        },
+        "result": {
+          "success": false,
+          "error": "Firecrawl MCP failed with code 1: Error: FIRECRAWL_API_KEY environment variable is required when using the cloud service\n"
+        },
+        "timestamp": "2025-08-09T20:35:10.601Z"
+      }
+    ]
+  },
+  "puppeteer": {
+    "tool": "Puppeteer",
+    "totalPages": 6,
+    "totalResources": 6,
+    "comparison": "Available for comparison"
+  },
+  "comparison": {
+    "toolsUsed": [
+      "Firecrawl MCP",
+      "Puppeteer"
+    ],
+    "advantages": {
+      "firecrawl": [
+        "MCP 协议标准化",
+        "云端处理能力",
+        "专业的网页抓取服务",
+        "更好的反爬虫处理"
+      ],
+      "puppeteer": [
+        "完全控制浏览器",
+        "本地处理",
+        "详细的资源下载",
+        "自定义用户代理"
+      ]
+    },
+    "recommendations": [
+      "Firecrawl MCP 适合标准化的内容抓取",
+      "Puppeteer 适合需要精细控制的场景",
+      "两种工具可以互补使用"
+    ]
+  }
+}

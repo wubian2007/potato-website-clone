@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-08-09T20:43:53.724Z",
+  "tool": "Firecrawl API",
+  "totalResults": 1,
+  "successfulPages": 1,
+  "failedPages": 0,
+  "results": [
+    {
+      "url": "https://potato.im/",
+      "success": true,
+      "title": "Potato",
+      "size": 0,
+      "timestamp": "2025-08-09T20:43:43.189Z"
+    }
+  ]
+}
