@@ -12,23 +12,20 @@
     <meta property="og:url" content="https://www.potato.im">
     <meta property="og:site_name" content="Potato">
     <meta property="fb:app_id" content="1222245288686627">
-    <link rel="icon" href="https://potato.im/resources/images/ico.ico">
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="potato-firecrawl-improved.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Browser Notice -->
-    <div class="browser-notice">
-        Your browser version is too low, some content may not display properly, please download the latest version!
-    </div>
+    <!-- 移除浏览器版本过低的提示 -->
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="https://potato.im/resources/images/logo@2x.png" alt="Potato" class="logo">
+                <img src="images/potato-logo.svg" alt="Potato" class="logo" onerror="this.src='images/potato-logo.png'; this.onerror=null;">
             </div>
             <div class="nav-menu">
                 <a href="https://potato.im/" class="nav-link">HOME</a>
@@ -71,22 +68,22 @@
                 <div class="download-section">
                     <div class="download-grid">
                         <div class="download-item">
-                            <img src="https://potato.im/resources/images/platforms/windows.svg" alt="Windows">
+                            <div class="platform-icon">💻</div>
                             <h3>Windows</h3>
                             <a href="https://download.potato.im/win/Potato_Desktop2.47.28.zip" class="download-btn">Download Windows client</a>
                         </div>
                         <div class="download-item">
-                            <img src="https://potato.im/resources/images/platforms/macos.svg" alt="macOS">
+                            <div class="platform-icon">🍎</div>
                             <h3>macOS</h3>
                             <a href="https://download.potato.im/mac/Potato_Desktop2.47.3.dmg" class="download-btn">Download the MacOS client</a>
                         </div>
                         <div class="download-item">
-                            <img src="https://potato.im/resources/images/platforms/android.svg" alt="Android">
+                            <div class="platform-icon">🤖</div>
                             <h3>Android</h3>
                             <a href="https://ptapk.potato.im/android/latest.apk" class="download-btn">Official website download</a>
                         </div>
                         <div class="download-item">
-                            <img src="https://potato.im/resources/images/platforms/ios.svg" alt="iPhone">
+                            <div class="platform-icon">📱</div>
                             <h3>iPhone</h3>
                             <div class="ios-links">
                                 <a href="https://itunes.apple.com/us/app/potato-chat/id1204726898" class="download-btn">AppStore</a>
@@ -100,7 +97,15 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://potato.im/resources/images/index/image_ui_web@2x.png" alt="Potato Interface">
+                <div class="hero-placeholder">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="chat-bubble">💬 Fast</div>
+                            <div class="chat-bubble">🔒 Secure</div>
+                            <div class="chat-bubble">⚡ Powerful</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -111,77 +116,77 @@
             <h2 class="section-title">Why do global users choose Potato Chat?</h2>
             <div class="features-grid">
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_applets.svg" alt="Mini Programs">
+                    <div class="feature-icon">🔧</div>
                     <h3>Mini Programs</h3>
                     <p>Experience it without downloading and installation</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_cloudstorage.svg" alt="Cloud">
+                    <div class="feature-icon">☁️</div>
                     <h3>Cloud</h3>
                     <p>Support multi-terminal login, message will synchronize automatically</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_safety.svg" alt="Safe">
+                    <div class="feature-icon">🔒</div>
                     <h3>Safe</h3>
                     <p>Use the most advanced encryption technology to ensure information security</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_powerful.svg" alt="Free">
+                    <div class="feature-icon">🆓</div>
                     <h3>Free</h3>
                     <p>No limits on message and file sizes</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_rapid.svg" alt="Fast">
+                    <div class="feature-icon">⚡</div>
                     <h3>Fast</h3>
                     <p>Provides users with super-fast connections and experience</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_wallet.svg" alt="Wallet">
+                    <div class="feature-icon">💰</div>
                     <h3>Wallet & Web3.0 Wallet</h3>
                     <p>Support global digital currency, multi-currency management, payment and red envelopes</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_permission.svg" alt="Bot">
+                    <div class="feature-icon">🤖</div>
                     <h3>Bot</h3>
                     <p>Freely create bots through API</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_grouping.svg" alt="Groups">
+                    <div class="feature-icon">👥</div>
                     <h3>Groups</h3>
                     <p>Create a super group of up to 200,000 members</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_privacy.svg" alt="Privacy">
+                    <div class="feature-icon">🔐</div>
                     <h3>Privacy</h3>
                     <p>Message encryption can be customized to self-destruction</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_open.svg" alt="Open">
+                    <div class="feature-icon">🌐</div>
                     <h3>Open</h3>
                     <p>A diverse and free platform</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_taste.svg" alt="Fun">
+                    <div class="feature-icon">🎉</div>
                     <h3>Fun</h3>
                     <p>Find funny things and interesting people</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_video.svg" alt="Video Call">
+                    <div class="feature-icon">📹</div>
                     <h3>Video Call</h3>
                     <p>Experience high-quality voice and video calls for free</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_circleoffriends.svg" alt="Moments">
+                    <div class="feature-icon">📸</div>
                     <h3>Moments</h3>
                     <p>Share and post updates</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/gdct/ic_peoplenearby.svg" alt="People Nearby">
+                    <div class="feature-icon">📍</div>
                     <h3>People Nearby</h3>
                     <p>Find your friends based on location</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://potato.im/resources/images/index/ic_fansx.svg" alt="FansX">
+                    <div class="feature-icon">⭐</div>
                     <h3>FansX</h3>
                     <p>Everyone is a creator, making creation more free, simpler, safer and more valuable</p>
                 </div>
