@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-08-09T19:51:56.128Z",
+  "baseUrl": "https://potato.im/",
+  "crawledPages": [
+    "https://potato.im/",
+    "https://potato.im/apps",
+    "https://potato.im/api",
+    "https://potato.im/faq",
+    "https://potato.im/privacy",
+    "https://potato.im/news"
+  ],
+  "totalResources": 6,
+  "devices": [
+    "desktop",
+    "mobile"
+  ]
+}

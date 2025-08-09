@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Potato是一个专注于安全的即时通讯工具。它更快、更安全、更开放且完全免费。可在IOS、Android、Windows 、MacOS和Linux上使用。">
+    <meta name="keywords" content="Potato,聊天,手机,视频,语音,消息,发送消息,发送照片,免费,im,potato.im,聊天消息,聊天工具,即时消息,安全聊天,私密聊天,语音通话,视频通话,朋友圈,相册,应用程序,下载,发送图片,超级群,频道,钱包,数字钱包,AI,机器人,机器人API,开放平台">
+    <title>Potato - 基于抓取内容的精确副本</title>
+    <link rel="stylesheet" href="potato-crawled.css">
+    <link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzAwN0VFNSIvPgo8cGF0aCBkPSJNMTYgOEMxMSA4IDggMTIgOCAxNkM4IDIwIDEwIDI0IDE0IDI2QzE1IDI3IDE3IDI3IDE4IDI2QzIyIDI0IDI0IDIwIDI0IDE2QzI0IDEyIDIxIDggMTYgOFoiIGZpbGw9IndoaXRlIi8+CjxlbGxpcHNlIGN4PSIxNCIgY3k9IjE0IiByeD0iMS41IiByeT0iMSIgZmlsbD0iIzAwN0VFNSIgb3BhY2l0eT0iMC43Ii8+CjxlbGxpcHNlIGN4PSIxOCIgY3k9IjE2IiByeD0iMSIgcnk9IjAuOCIgZmlsbD0iIzAwN0VFNSIgb3BhY2l0eT0iMC43Ii8+Cjwvc3ZnPgo=" type="image/svg+xml">
+</head>
+<body>
+    <!-- 顶部通知栏 -->
+    <div class="browser-notice">
+        您的浏览器版本过低，部分内容可能无法正常显示，请下载最新版本！
+    </div>
+
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#007EE5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#5856D6;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="2" y="2" width="36" height="36" rx="8" fill="url(#logoGradient)" />
+                        <path d="M20 8C15 8 12 12 12 16C12 20 14 24 18 26C19 27 21 27 22 26C26 24 28 20 28 16C28 12 25 8 20 8Z" fill="white"/>
+                        <ellipse cx="18" cy="14" rx="1.5" ry="1" fill="url(#logoGradient)" opacity="0.7"/>
+                        <ellipse cx="22" cy="16" rx="1" ry="0.8" fill="url(#logoGradient)" opacity="0.7"/>
+                        <text x="45" y="16" font-family="PingFang SC, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#000">Potato</text>
+                        <text x="45" y="30" font-family="PingFang SC, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#8E8E93">Chat & More</text>
+                    </svg>
+                </div>
+                
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">首页</a>
+                    <a href="#apps" class="nav-link">应用</a>
+                    <a href="#developer" class="nav-link">开发者</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#privacy" class="nav-link">隐私</a>
+                    <a href="#news" class="nav-link">新闻</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <div class="language-selector">
+                        <select id="language">
+                            <option value="zh">简体中文</option>
+                            <option value="en">English</option>
+                            <option value="tw">繁體中文</option>
+                        </select>
+                        <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1L6 6L11 1" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <button class="feedback-btn">反馈</button>
+                    <button class="service-btn">服务</button>
+                    <button class="news-btn">新闻</button>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- 英雄区域 -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">让全球用户的沟通变得简单、安全、可靠且有趣</h1>
+                    <p class="hero-subtitle">
+                        通过 POTATO，您可以快速、轻松、安全地发送和接收来自世界各地的消息和通话，
+                        同时享受最安全的娱乐体验。
+                    </p>
+                    
+                    <!-- 下载按钮区域 -->
+                    <div class="download-section">
+                        <div class="download-tabs">
+                            <button class="download-tab active" data-tab="mobile">移动版</button>
+                            <button class="download-tab" data-tab="desktop">桌面版</button>
+                        </div>
+                        
+                        <div class="download-content">
+                            <div class="download-panel active" data-panel="mobile">
+                                <div class="download-grid">
+                                    <a href="#" class="download-btn android">
+                                        <div class="download-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M17.523 15.3414C17.3444 15.1628 17.0952 15.0625 16.8353 15.0625H7.16475C6.90485 15.0625 6.65564 15.1628 6.47705 15.3414C6.29846 15.52 6.19824 15.7692 6.19824 16.0291V20.0625C6.19824 20.3224 6.29846 20.5716 6.47705 20.7502C6.65564 20.9288 6.90485 21.0291 7.16475 21.0291H16.8353C17.0952 21.0291 17.3444 20.9288 17.523 20.7502C17.7016 20.5716 17.8018 20.3224 17.8018 20.0625V16.0291C17.8018 15.7692 17.7016 15.52 17.523 15.3414Z" fill="currentColor"/>
+                                                <path d="M12 3C8.13401 3 5 6.13401 5 10V14H19V10C19 6.13401 15.866 3 12 3Z" fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <div class="download-info">
+                                            <div class="download-platform">Android</div>
+                                            <div class="download-desc">官网下载</div>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="#" class="download-btn ios">
+                                        <div class="download-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <div class="download-info">
+                                            <div class="download-platform">iPhone</div>
+                                            <div class="download-desc">AppStore / Testflight</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="download-panel" data-panel="desktop">
+                                <div class="download-grid">
+                                    <a href="#" class="download-btn windows">
+                                        <div class="download-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.851" fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <div class="download-info">
+                                            <div class="download-platform">Windows</div>
+                                            <div class="download-desc">下载 Windows 客户端</div>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="#" class="download-btn macos">
+                                        <div class="download-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <div class="download-info">
+                                            <div class="download-platform">macOS</div>
+                                            <div class="download-desc">下载 MacOS 客户端</div>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="#" class="download-btn linux">
+                                        <div class="download-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 01-.088.066c-.187.159-.404.222-.629.222-.17 0-.343-.032-.522-.063-.356-.048-.566-.08-.566-.08-.188-.022-.304-.047-.392-.085a.75.75 0 01-.26-.214c-.067-.108-.118-.224-.118-.354 0-.132.05-.248.118-.354.067-.108.158-.204.26-.214.088-.038.204-.063.392-.085 0 0 .21-.032.566-.08.179-.031.352-.063.522-.063z" fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <div class="download-info">
+                                            <div class="download-platform">Linux</div>
+                                            <div class="download-desc">Potato Linux Desktop</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="learn-more-btn">了解更多</button>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="chat-interface">
+                                <div class="chat-header">
+                                    <div class="avatar"></div>
+                                    <div class="chat-info">
+                                        <div class="chat-name">Potato Team</div>
+                                        <div class="chat-status">在线</div>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="message received">
+                                        <div class="message-content">欢迎使用 Potato！</div>
+                                    </div>
+                                    <div class="message sent">
+                                        <div class="message-content">感谢你们的产品 👍</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 功能特性区域 -->
+        <section class="features-section">
+            <div class="features-container">
+                <h2>为什么全球用户选择 Potato Chat？</h2>
+                <div class="features-grid">
+                    <!-- 基于抓取内容的功能特性 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <path d="M24 6C15 6 8 13 8 22C8 31 15 38 24 38C33 38 40 31 40 22C40 13 33 6 24 6Z" fill="#007EE5" opacity="0.1"/>
+                                <path d="M24 10C17.4 10 12 15.4 12 22C12 28.6 17.4 34 24 34C30.6 34 36 28.6 36 22C36 15.4 30.6 10 24 10Z" fill="#007EE5"/>
+                            </svg>
+                        </div>
+                        <h3>小程序</h3>
+                        <p>无需下载安装即可体验</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">☁️</div>
+                        <h3>云存储</h3>
+                        <p>支持多终端登录，消息自动同步</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>安全</h3>
+                        <p>使用最先进的加密技术确保信息安全</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>强大</h3>
+                        <p>消息和文件大小无限制</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>快速</h3>
+                        <p>为用户提供超快的连接和体验</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h3>钱包 & Web3.0 钱包</h3>
+                        <p>支持全球数字货币，多币种管理，支付和红包</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔐</div>
+                        <h3>权限</h3>
+                        <p>消息加密可自定义自毁</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>群组</h3>
+                        <p>创建最多 200,000 成员的超级群组</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔐</div>
+                        <h3>隐私</h3>
+                        <p>消息加密可自定义自毁</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>开放</h3>
+                        <p>多元化和自由的平台</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎉</div>
+                        <h3>趣味</h3>
+                        <p>发现有趣的事物和有趣的人</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📹</div>
+                        <h3>视频</h3>
+                        <p>免费体验高质量的语音和视频通话</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <h3>朋友圈</h3>
+                        <p>分享和发布更新</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3>附近的人</h3>
+                        <p>根据位置找到您的朋友</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h3>FansX</h3>
+                        <p>每个人都是创作者，让创作更自由、更简单、更安全、更有价值</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>移动应用</h4>
+                <ul>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">iOS</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>桌面应用</h4>
+                <ul>
+                    <li><a href="#">macOS</a></li>
+                    <li><a href="#">Windows</a></li>
+                    <li><a href="#">Linux</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>官方社区</h4>
+                <ul>
+                    <li><a href="#">关注 Twitter</a></li>
+                    <li><a href="#">商务邮箱</a></li>
+                    <li><a href="#">技术支持邮箱</a></li>
+                    <li><a href="#">管理员邮箱</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>订阅我们</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="请输入邮箱地址">
+                    <button type="submit">订阅</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Potato. 基于抓取内容的精确副本，仅供学习使用。</p>
+        </div>
+    </footer>
+
+    <!-- 模态框和其他交互元素 -->
+    <!-- 反馈模态框 -->
+    <div class="modal" id="feedback-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>反馈</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="feedback-form">
+                    <div class="form-group">
+                        <label for="feedback-text">输入您遇到的问题</label>
+                        <textarea id="feedback-text" placeholder="请描述您遇到的问题..." maxlength="520"></textarea>
+                        <div class="char-count"><span id="char-count">0</span>/520</div>
+                    </div>
+                    <div class="form-group">
+                        <label>上传照片</label>
+                        <div class="upload-area">
+                            <input type="file" id="photo-upload" multiple accept="image/*">
+                            <div class="upload-text">
+                                <p>最多可上传两张图片，每张图片网络容量大小不能超过3M</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">提交</button>
+                </form>
+                
+                <div class="hot-issues">
+                    <h4>热门问题</h4>
+                    <div class="issue-list">
+                        <div class="issue-item hot">
+                            <span class="hot-badge">HOT</span>
+                            手机无法登录，快速绑定邮箱地址
+                        </div>
+                        <div class="issue-item hot">
+                            <span class="hot-badge">HOT</span>
+                            为什么需要用邮箱注册？
+                        </div>
+                        <div class="issue-item">
+                            如何下载最新版本的 Potato？
+                        </div>
+                        <div class="issue-item">
+                            注册/登录发送验证码失败怎么办？
+                        </div>
+                    </div>
+                    <a href="#" class="faq-link">Potato FAQ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="potato-crawled.js"></script>
+</body>
+</html>

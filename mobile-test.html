@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato 移动端测试页面</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .test-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #007AFF;
+            margin-bottom: 30px;
+        }
+        
+        .test-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007AFF;
+        }
+        
+        .test-item h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        
+        .test-item p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .device-info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .device-info strong {
+            color: #1976d2;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #007AFF;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            background: #0056b3;
+        }
+        
+        .status {
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        
+        .status.success { background: #d4edda; color: #155724; }
+        .status.warning { background: #fff3cd; color: #856404; }
+        .status.info { background: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🥔 Potato 移动端测试</h1>
+        
+        <div class="device-info">
+            <strong>设备信息：</strong><br>
+            屏幕宽度: <span id="screen-width"></span>px<br>
+            视窗宽度: <span id="viewport-width"></span>px<br>
+            用户代理: <span id="user-agent"></span><br>
+            触摸支持: <span id="touch-support"></span>
+        </div>
+        
+        <div class="test-item">
+            <h3>✅ 响应式设计测试</h3>
+            <p>页面应该根据屏幕大小自动调整布局</p>
+            <div class="status" id="responsive-status"></div>
+        </div>
+        
+        <div class="test-item">
+            <h3>📱 触摸交互测试</h3>
+            <p>按钮和链接应该有适当的触摸区域（至少44px）</p>
+            <button class="btn" onclick="testTouch()">测试触摸响应</button>
+        </div>
+        
+        <div class="test-item">
+            <h3>🎯 导航菜单测试</h3>
+            <p>移动端应该显示汉堡菜单</p>
+            <a href="index.html" class="btn">打开主页面测试</a>
+        </div>
+        
+        <div class="test-item">
+            <h3>📝 表单输入测试</h3>
+            <p>表单应该在移动端正确显示和工作</p>
+            <input type="text" placeholder="测试输入框" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; margin: 10px 0;">
+            <input type="email" placeholder="邮箱测试" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; margin: 10px 0;">
+        </div>
+        
+        <div class="test-item">
+            <h3>🌐 网络状态</h3>
+            <p>当前网络连接状态</p>
+            <div class="status" id="network-status"></div>
+        </div>
+        
+        <div class="test-item">
+            <h3>📊 性能指标</h3>
+            <p>页面加载和渲染性能</p>
+            <div class="status info" id="performance-info"></div>
+        </div>
+    </div>
+    
+    <script>
+        // 更新设备信息
+        function updateDeviceInfo() {
+            document.getElementById('screen-width').textContent = screen.width;
+            document.getElementById('viewport-width').textContent = window.innerWidth;
+            document.getElementById('user-agent').textContent = navigator.userAgent.substring(0, 50) + '...';
+            document.getElementById('touch-support').textContent = 'ontouchstart' in window ? '是' : '否';
+        }
+        
+        // 测试响应式设计
+        function testResponsive() {
+            const width = window.innerWidth;
+            const status = document.getElementById('responsive-status');
+            
+            if (width <= 480) {
+                status.textContent = '✅ 手机端布局 (≤480px)';
+                status.className = 'status success';
+            } else if (width <= 768) {
+                status.textContent = '✅ 平板端布局 (481-768px)';
+                status.className = 'status success';
+            } else {
+                status.textContent = '✅ 桌面端布局 (>768px)';
+                status.className = 'status success';
+            }
+        }
+        
+        // 测试触摸交互
+        function testTouch() {
+            if ('ontouchstart' in window) {
+                alert('✅ 触摸事件正常工作！');
+                
+                // 测试触觉反馈
+                if ('vibrate' in navigator) {
+                    navigator.vibrate(50);
+                }
+            } else {
+                alert('ℹ️ 当前设备不支持触摸，使用鼠标点击');
+            }
+        }
+        
+        // 测试网络状态
+        function testNetwork() {
+            const status = document.getElementById('network-status');
+            
+            if ('onLine' in navigator) {
+                if (navigator.onLine) {
+                    status.textContent = '✅ 网络连接正常';
+                    status.className = 'status success';
+                } else {
+                    status.textContent = '❌ 网络连接断开';
+                    status.className = 'status warning';
+                }
+            } else {
+                status.textContent = 'ℹ️ 无法检测网络状态';
+                status.className = 'status info';
+            }
+        }
+        
+        // 性能测试
+        function testPerformance() {
+            const performanceInfo = document.getElementById('performance-info');
+            
+            if ('performance' in window) {
+                const loadTime = Math.round(performance.now());
+                const memoryInfo = performance.memory ? 
+                    `内存使用: ${Math.round(performance.memory.usedJSHeapSize / 1024 / 1024)}MB` : 
+                    '内存信息不可用';
+                
+                performanceInfo.innerHTML = `
+                    页面加载时间: ${loadTime}ms<br>
+                    ${memoryInfo}
+                `;
+            } else {
+                performanceInfo.textContent = 'Performance API 不可用';
+            }
+        }
+        
+        // 窗口大小改变时重新测试
+        window.addEventListener('resize', () => {
+            updateDeviceInfo();
+            testResponsive();
+        });
+        
+        // 网络状态改变时重新测试
+        window.addEventListener('online', testNetwork);
+        window.addEventListener('offline', testNetwork);
+        
+        // 页面加载完成后执行测试
+        window.addEventListener('load', () => {
+            updateDeviceInfo();
+            testResponsive();
+            testNetwork();
+            testPerformance();
+        });
+        
+        // 初始化
+        updateDeviceInfo();
+        testResponsive();
+        testNetwork();
+        testPerformance();
+    </script>
+</body>
+</html>

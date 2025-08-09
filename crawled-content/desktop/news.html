@@ -1,0 +1,2799 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Potato是一个专注于安全的即时通讯工具。它更快、更安全、更开放且完全免费。可在IOS、Android、Windows 、MacOS和Linux上使用。可创建20万成员的超级群，超级频道，支持语音和视频通话、发照片、发视频、贴纸和Gif，而且文件大小没有限制等。它为你提供了全方面的隐私设置，以及最安全和最稳定的聊天环境。此外，Potato也是保护你的数字货币的专家。">
+    <meta name="keywords" content="Potato,聊天,手机,视频,语音,消息,发送消息,发送照片,免费,im,potato.im,聊天消息,聊天工具,即时消息,安全聊天,私密聊天,语音通话,视频通话,朋友圈,相册,应用程序,下载,发送图片,超级群,频道,钱包,数字钱包,AI,机器人,机器人API,开放平台">
+    <title>新闻</title>
+    <link href="/resources/images/ico.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="/resources/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/css/main.css">
+    <link rel="stylesheet" href="/resources/css/font-awesome.min.css">
+</head>
+<body style="background-color: rgb(255, 255, 255); height: 1411px; width: 1920px;">
+<div style="width: 100%;min-width: 1200px;">
+    <link href="/resources/css/float-frame.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-GTP3KRY87B&amp;cx=c&amp;gtm=457e5861za200&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~105033763~105033765~105103161~105103163~105135708~105135710"></script><script src="/resources/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <input type="hidden" id="usrck" value="0">
+    <input type="hidden" id="localelang" value="zh">
+    <div class="ieshow">Your browser version is too low, some content may not display properly, please download the
+        latest version!</div>
+    <nav class="navbar  fixed-top" style="position: relative;padding-left: 20px;">
+        <div class="container" style="min-width: 1200px;padding: 0px;">
+            <a href="/" style="background: url('/resources/images/banner/ic_header_logo.svg');height: 42px;width: 206px;    background-repeat: no-repeat !important;">
+            </a>
+            <nav class="my-2 my-md-0 mr-md-3" style=" margin-left: 134px;">
+                <a class="nav-item" href="/">
+                    <span>首页</span>
+                </a>
+
+                <a class="nav-item" href="/apps">
+                    <span>应用</span>
+                </a>
+                <a class="nav-item" href="/api">
+                    <span>开发者</span>
+                </a>
+                <a class="nav-item" href="/faq">
+                    <span>问答</span>
+                </a>
+                <a class="nav-item" href="/privacy">
+                    <span>隐私 </span>
+                </a>
+
+                <a class="nav-item nav-active" href="/news">
+                    <span>新闻</span>
+                </a>
+            </nav>
+
+            <div class="nav-right">
+                <select class="lanselect" id="lanselect">
+                    <option value="zh" selected="selected">简体中文</option>
+                    <option value="en">English</option>
+                    <option value="zh_TW">繁體中文
+                    </option>
+                </select>
+                <span style="border: 1px solid #E5E5E5;height: 14px;width: 1px;margin-left: 14px;display: inline-block;"></span>
+                <a class="twitter-nav" href="https://twitter.com/PotatoChatApp" target="_blank"><i class="iconfont" style="font-size: 20px;"></i></a>
+            </div>
+
+
+            <div class="rbar">
+
+                <a id="toTop" class="feedback aa1" style="display: none">
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px;margin: 0;"></i></div>
+                </a>
+
+                <a class="feedback aa1 suga" href="javascript:void(0)">
+                    <div class="feedbackL a">意见反馈</div>
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px;margin: 0;"></i></div>
+                </a>
+                <!-- <a class="feedback bb1" target="_blank" href="Support_Bot"
+                    th:href="(${#request.getAttribute('shortDomain')}?'':'https://ptcc.in') + '/Support_Bot?lang=' + ${#locale.language} + (${#strings.isEmpty(#locale.country)}?'':'_' + ${#locale.country})">
+                    <div class="feedbackL b" th:text="#{Service}">Service</div>
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px">&#xe68c;</i></div>
+                </a> -->
+                <!-- <a class="feedback bb1" target="_blank" href="Support_Bot"
+                    th:href="'pt://resolve?domain=Support_Bot&'">
+                    <div class="feedbackL b" th:text="#{Service}">Service</div>
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px">&#xe68c;</i></div>
+                </a> -->
+                <a class="feedback bb1" target="_blank" href="">
+                    <div class="feedbackL b">客服</div>
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px"></i></div>
+                </a>
+
+
+                <a class="feedback aa1" href="/news">
+                    <div class="feedbackL a">新闻</div>
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px;margin: 0;"></i></div>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+    <div>
+    <style>
+        input,textarea{
+            outline: none;
+            border: 1px solid #E5E5E5;
+            font-size: 14px;
+        }
+        p{
+            font-size: 14px;
+        }
+        input{
+            width: 100%;
+            height: 48px;
+            padding: 5px 10px
+        }
+        textarea{
+            width:100%;
+            min-height:75px;
+            height:100px;
+            max-height: 120px;
+            background: #FFFFFF;
+            padding: 5px 10px;
+        }
+        .question-content{
+            font-size: 14px;
+            color: #333333;
+            letter-spacing: 0;
+            line-height: 22px;
+            position: relative;
+        }
+        .textarea-num{
+            margin: 0;
+            text-align: right;
+            position: absolute;
+            right: 6px;
+            bottom: 9px;
+            z-index: 9;
+            color: #b2b2b2;
+        }
+        .phone-input{
+            width: 100%;
+            height: 46px;
+            border: none;
+        }
+        .hot_div{
+            background: #FF3E3E;
+            border-radius: 100px 100px 100px 1px;
+            width: 35px;
+            min-width: 35px;
+            white-space: nowrap;
+            text-align: center;
+            margin-left: 10px;
+        }
+        .hot_font{
+            font-family: PingFangSC-Regular;
+            font-size: 11px;
+            color: #FFFFFF;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hot_span{
+            width: 100%;
+            margin: 5px 0 0 0;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .waring-span{
+            color: #FF3E3E;
+            margin-left: 5px;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        .confirm_btn{
+            font-family: PingFangSC-Medium;
+            font-size: 16px;
+            color: #007EE5;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 500;
+            border: 0;
+            background-color: white;
+            outline: none;
+        }
+        #refreshImg {
+            transition: transform 1s ease-in-out;
+            cursor: pointer;
+            border: none;
+        }
+        @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+        .rotate-animation {
+            animation: rotate360 1s linear;
+            border: none;
+        }
+        .modal-dev {
+            position: absolute; /* 使用绝对定位 */
+            top: 50%; /* 垂直居中 */
+            left: 50%; /* 水平居中 */
+            transform: translate(-50%, -50%); /* 调整位置 */
+            z-index: 1000; /* 设置一个较高的 z-index 值 */
+            background-color: rgba(0, 0, 0, 0.5); /* 可选：添加背景遮罩效果 */
+            display: none; /* 初始状态下隐藏 */
+            width: 100%; /* 占据整个宽度 */
+            height: 100%; /* 占据整个高度 */
+        }
+
+        .modal-dev .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            width: 100%;
+            margin: auto; /* 确保内容居中对齐 */
+        }
+    </style>
+    <div class="frame" id="suggestion_frame" style="display: none">
+        <div class="frame-header">
+            <span class="title">意见反馈</span>
+            <span class="close-frame">一</span>
+        </div>
+        <div class="frame-body">
+            <input type="hidden" id="formtk" name="formtk" value="">
+            <div class="question-content">
+                <p style="margin-bottom: 10px;">输入您遇到的问题</p>
+                <textarea id="content" name="content" placeholder="请输入您要反馈的问题"></textarea>
+                <p class="textarea-num"><b id="textCount" style="color: #333333">0</b>/520</p>
+            </div>
+            <div id="email_content" class="frame-item">
+                <input name="suggestion_email" id="suggestion_email" type="email" value="" placeholder="请输入您的邮箱地址">
+            </div>
+            <div id="phoneframe" class="frame-item" style="border: 1px solid #E5E5E5;height: 48px;width: 100%;">
+                <div style="width:100%;height: 48px;line-height: 48px;float: left;position: relative;display: flex;justify-content: flex-start;">
+                    <div id="ckctry" style="padding-left: 10px;display: flex;align-items: flex-start;flex-wrap: nowrap;">
+                        <span style="float: left;white-space: nowrap;" id="citydiv">中国</span>
+                        <span style="float: left;white-space: nowrap;"><span id="citynum">+86</span><span class="iconfont icon-menu "></span></span>
+                        <span style="float: left;white-space: nowrap;margin-left: 5px;border-left: 1px solid #CDCDCD;margin-top: 14px;height: 20px">&nbsp;</span>
+                    </div>
+                    <div id="selectctry" class="selectctry" style="display: none;position: absolute;">
+                      
+                    <div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">阿富汗</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+93</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">阿尔巴尼亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+355</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">阿尔及利亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+213</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">美属萨摩亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1684</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">安道尔</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+376</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">安哥拉</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+244</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">安圭拉岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1264</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">南极洲</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+0</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">安提瓜岛和巴布达</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1268</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">阿根廷</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+54</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">亚美尼亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+374</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">阿鲁巴岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+297</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">澳大利亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+61</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">奥地利</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+43</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">阿塞拜疆</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+994</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">巴哈马群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1242</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">巴林</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+973</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">孟加拉国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+880</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">巴巴多斯</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1246</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">白俄罗斯</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+375</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">比利时</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+32</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">伯利兹</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+501</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">贝宁</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+229</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">百慕大</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1441</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">不丹</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+975</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">玻利维亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+591</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">波斯尼亚和黑塞哥维那</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+387</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">博茨瓦纳</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+267</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">布维岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+0</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">巴西</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+55</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">英属印度洋领地</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+246</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">文莱达鲁萨兰国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+673</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">保加利亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+359</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">布吉纳法索</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+226</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">布隆迪</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+257</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">柬埔寨</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+855</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">喀麦隆</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+237</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">加拿大</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">佛得角</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+238</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">开曼群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1345</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">中非共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+236</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">乍得</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+235</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">智利</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+56</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">中国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+86</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">圣诞岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+61</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">COCOS(KEELING)岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+672</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">哥伦比亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+57</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">科摩罗</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+269</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">刚果</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+242</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">刚果民主共和国的</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+242</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">库克群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+682</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">哥斯达黎加</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+506</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">科特迪瓦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+225</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">克罗地亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+385</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">古巴</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+53</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">塞浦路斯</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+357</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">捷克共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+420</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">丹麦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+45</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">吉布提</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+253</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">多米尼加</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1767</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">多米尼加共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1809</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">厄瓜多尔</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+593</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">埃及</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+20</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">萨尔瓦多</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+503</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">赤道几内亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+240</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">厄立特里亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+291</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">爱沙尼亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+372</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">埃塞俄比亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+251</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">福克兰群岛(马尔维纳斯)</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+500</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">法罗群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+298</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">斐济</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+679</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">芬兰</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+358</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">法国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+33</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">法属圭亚那</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+594</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">法属波利尼西亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+689</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">法国南部地区</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+0</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">加蓬</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+241</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">冈比亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+220</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">乔治亚州</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+995</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">德国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+49</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">加纳</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+233</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">直布罗陀</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+350</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">希腊</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+30</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">格陵兰岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+299</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">格林纳达</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1473</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">瓜德罗普岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+590</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">关岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1671</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">危地马拉</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+502</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">几内亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+224</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">几内亚比绍</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+245</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">圭亚那</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+592</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">海地</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+509</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">听到岛和麦当劳的岛屿</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+0</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">教廷(梵蒂冈)</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+39</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">洪都拉斯</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+504</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">香港</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+852</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">匈牙利</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+36</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">冰岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+354</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">印度</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+91</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">印尼</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+62</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">伊朗伊斯兰共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+98</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">伊拉克</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+964</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">爱尔兰</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+353</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">以色列</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+972</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">意大利</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+39</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">牙买加</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1876</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">日本</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+81</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">约旦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+962</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">哈萨克斯坦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+7</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">肯尼亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+254</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">基里巴斯</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+686</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">朝鲜民主主义人民共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+850</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">朝鲜共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+82</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">科威特</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+965</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">吉尔吉斯斯坦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+996</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">老挝人民民主共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+856</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">拉脱维亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+371</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">黎巴嫩</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+961</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">莱索托</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+266</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">利比里亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+231</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">阿拉伯利比亚民众国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+218</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">列支敦斯登</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+423</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">立陶宛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+370</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">卢森堡</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+352</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">澳门</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+853</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">前南斯拉夫马其顿共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+389</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">马达加斯加</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+261</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">马拉维</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+265</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">马来西亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+60</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">马尔代夫</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+960</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">马里</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+223</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">马耳他</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+356</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">马绍尔群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+692</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">马提尼克岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+596</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">毛利塔尼亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+222</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">毛里求斯</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+230</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">马约特岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+269</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">墨西哥</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+52</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">密克罗尼西亚联邦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+691</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">摩尔多瓦共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+373</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">摩纳哥</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+377</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">蒙古</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+976</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">蒙特塞拉特</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1664</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">摩洛哥</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+212</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">MOZAMBIQUE</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+258</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">缅甸</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+95</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">纳米比亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+264</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">瑙鲁</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+674</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">尼泊尔</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+977</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">荷兰</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+31</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">荷属安的列斯群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+599</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">新喀里多尼亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+687</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">新西兰</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+64</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">尼加拉瓜</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+505</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">尼日尔</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+227</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">尼日利亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+234</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">纽埃岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+683</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">诺福克岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+672</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">北马里亚纳群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1670</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">挪威</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+47</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">阿曼</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+968</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">巴基斯坦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+92</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">帕劳</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+680</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">巴勒斯坦的领土,占领</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+970</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">巴拿马</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+507</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">巴布新几内亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+675</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">巴拉圭</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+595</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">秘鲁</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+51</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">菲律宾</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+63</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">皮特克恩</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+0</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">波兰</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+48</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">葡萄牙</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+351</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">波多黎各</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1787</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">卡塔尔</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+974</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">团聚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+262</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">罗马尼亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+40</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">俄罗斯联邦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+70</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">卢旺达</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+250</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">圣赫勒拿</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+290</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">圣基茨和尼维斯</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1869</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">圣卢西亚岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1758</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">圣皮埃尔和MIQUELON</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+508</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">圣文森特和格林纳丁斯</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1784</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">萨摩亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+684</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">圣马力诺</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+378</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">圣多美和王子</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+239</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">沙特阿拉伯</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+966</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">塞内加尔</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+221</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">塞尔维亚和黑山</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+381</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">塞舌尔</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+248</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">塞拉利昂</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+232</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">新加坡</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+65</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">斯洛伐克</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+421</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">斯洛文尼亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+386</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">所罗门群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+677</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">索马里</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+252</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">南非</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+27</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">南乔治亚岛和南桑威奇群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+0</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">西班牙</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+34</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">斯里兰卡</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+94</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">苏丹</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+249</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">苏里南</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+597</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">斯瓦尔巴群岛和扬马延岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+47</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">斯威士兰</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+268</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">瑞典</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+46</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">瑞士</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+41</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">阿拉伯叙利亚共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+963</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">台湾,中国的省份</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+886</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">塔吉克斯坦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+992</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">坦桑尼亚联合共和国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+255</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">泰国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+66</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">东帝汶</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+670</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">多哥</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+228</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">托克劳</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+690</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">汤加</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+676</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">特立尼达和多巴哥</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1868</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">突尼斯</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+216</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">土耳其</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+90</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">土库曼斯坦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+7370</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">特克斯和凯科斯群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1649</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">图瓦卢</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+688</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">乌干达</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+256</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">乌克兰</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+380</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">阿拉伯联合酋长国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+971</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">联合王国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+44</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">美国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">美国小离岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">乌拉圭</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+598</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">乌兹别克斯坦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+998</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">瓦努阿图</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+678</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">委内瑞拉</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+58</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">越南</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+84</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">维尔京群岛,英国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1284</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">维尔京群岛,美国</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+1340</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">瓦利斯群岛和富图纳群岛</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+681</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">西撒哈拉</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+212</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">也门</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+967</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">赞比亚</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+260</div></div><div class="selectctry-item"><div style="width: auto;height: 48px;overflow: auto;float: left;color: #000000;">津巴布韦</div><div style="width: auto;height: 48px;overflow: auto;float: right;color: #333333;">+263</div></div></div>
+                    <input name="suggestion_phone" id="suggestion_phone" type="tel" class="phone-input" value="" placeholder="请输入您的手机号" oninput="value=value.replace(/[^\d]/g,'')">
+                </div>
+            </div>
+            <div style="margin-top:10px;display: flex;align-items: center;justify-content: start;">
+                <p style="margin-right: 15px;max-width: 72px;">上传图片</p>
+                <div style="margin-top: 10px;overflow-y: hidden;display:flex;align-items: center;justify-content: start;flex-shrink: 0;" id="fileWrap">
+                    <div id="imgBox" style="display: flex;flex-direction: row;justify-content: start;align-items: center;flex-wrap: wrap;max-width: 265px;">
+                    </div>
+                    <div id="img-line">
+                        <img src="/resources/images/btn_addphoto.png" class="add-img">
+                        <input type="file" title="请选择图片" id="file" multiple="" accept="image/png,image/jpg,image/gif,image/jpeg">
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 10px;" class="wariningp"><span style="color: #F04646;line-height: 20px;">*</span><span style="line-height: 20px;color: #3F3F3F;">最多可以上传2张图片，每张图片不能超过3M.</span></p>
+            <button type="button" class="blue-solid-button" id="openSuggestionCaptcha">提交</button>
+            <!--热点-->
+            <div>
+                <p style="text-align: left;color: #333333;margin-top: 10px;">热点问题</p>
+                <div class="hot_span" style="display: flex;justify-content: flex-start;align-items: center;">
+                    <span id="open-verify-phone" style="color: #FF3E3E;">手机无法登陆，快速绑定邮箱</span>
+                    <div class="hot_div">
+                        <span class="hot_font">重要</span>
+                    </div>
+                </div>
+
+                <div class="hot_span" style="display: flex;align-content: flex-start;align-items: center;">
+                    <a href="/faq?md=whyBindEmail">为什么需要使用邮箱注册？</a>
+                    <div class="hot_div">
+                        <span class="hot_font">重要</span>
+                    </div>
+                </div>
+                <div class="hot_span">
+                    <a href="/apps">如何下载Potato最新版？</a>
+                </div>
+                <div class="hot_span">
+                    <a href="/faq?md=RegMsgNotCode">注册/登录显示发送验证码失败怎么办？</a>
+                </div>
+                <div class="hot_span">
+                    <a href="/faq">常见问题</a>
+                </div>
+            </div>
+            <!--客服-->
+            <div id="service">
+                <div id="support-bot-div">
+                    <div id="support-bot">
+                        <a href="pt://resolve?domain=support_bot"></a>
+                    </div>
+                    <div id="support-bot-txt">在线客服</div>
+                </div>
+            </div>
+        </div>
+
+        <!--意见反馈图形验证码-->
+        <div class="modal-dev" id="suggestionCaptchaModal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="suggestionCaptchaModal">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" style="position: absolute;top:10px;right: 10px;" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <div style="display: flex;justify-content: center;margin-top: 15px;">
+                        <p style="text-align: center;font-size: 16px;" id="captchaModalLabel">图形验证</p>
+                    </div>
+                    <div class="modal-body" style="padding:2px;flex-direction: column;justify-content: center;">
+                        <input type="hidden" id="suggestionCaptchaToken">
+                        <div style="margin-bottom: 20px;display: flex; flex-direction: row;justify-content: space-around;align-items: center">
+                            <div style="width: 25px;height: 5px;"></div>
+                            <div>
+                                <img id="suggestion_captcha_img" alt="captcha" style="max-width: 270px;max-height: 80px;background: #F8F8F8;border-radius: 10px;display: none;" src="">
+                            </div>
+                            <button type="button" style="border: none;outline:none;padding:0;background-color: white;margin-right: 5px;" onclick="suggestionRefreshCaptcha()">
+                                <img id="refreshImg" src="/resources/images/email/icon_refresh.png" alt="refresh">
+                            </button>
+                        </div>
+                        <div style="display: flex;justify-content: center;">
+                            <input type="text" id="suggestion_captcha_code" name="suggestion_captcha_code" autofocus="autofocus" value="" style="background: #F8F8F8;border: 0;border-radius: 10px;width: 270px;height: 40px;padding: 5px;outline: none;" placeholder="请输入图形验证码">
+                        </div>
+                        <div id="suggestionVerCaptchaCode" class="hidden waring-span" style="text-align: center;margin-top: 5px;">"</div>
+                    </div>
+                    <span style="border-bottom: 1px solid #FFFFFF;"></span>
+                    <div class="modal-footer" style="justify-content: center;">
+                        <!--data-dismiss="modal"-->
+                        <button type="button" class="confirm_btn" id="suggestionSubmitBtn">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        var imgSrc = []; //
+        var imgFile = []; //
+        var imgName = []; //
+
+        function imgUpload(obj) {
+            var oInput = '#' + obj.inputId;
+            var imgBox = '#' + obj.imgBox;
+            var btn = '#' + obj.buttonId;
+            $(oInput).on("change", function () {
+                var fileImg = $(oInput)[0];
+                var fileList = fileImg.files;
+
+                if (fileList.length > obj.num || (fileList.length + imgFile.length) > obj.num) {
+                    const alert_content = "\u6700\u591A\u4E0A\u4F20{num}\u5F20\u56FE\u7247";
+                    alert(alert_content.replace("{num}", obj.num));
+                }
+
+                for (var i = 0; i < fileList.length; i++) {
+                    var imgSrcI = getObjectURL(fileList[i]);
+                    imgName.push(fileList[i].name);
+                    var fileType = fileList[i].name.substring(fileList[i].name.lastIndexOf("."));
+                    fileType = fileType.toLowerCase();
+                    if (fileType === ".jpg" || fileType === ".jpeg" || fileType === ".png" || fileType === ".bmp" || fileType === ".gif") {
+                        if (fileList[i].size < 3145728) {
+                            if (imgSrc.length > 1) {
+                            } else {
+                                imgSrc.push(imgSrcI);
+                                imgFile.push(fileList[i]);
+                            }
+                        } else {
+                            const alert_content = "\u6BCF\u4E2A\u6587\u4EF6\u5927\u5C0F\u6700\u591A\u4E0D\u8D85\u8FC73M";
+                            alert(alert_content);
+                        }
+                    } else {
+                        const alert_content = "\u4E0A\u4F20\u6587\u4EF6\u7684\u683C\u5F0F\u4E3Ajpg\u3001png\u3001bmp\u6216\u8005gif";
+                        alert(alert_content);
+                    }
+
+                }
+                addNewContent(imgBox);
+
+                if (imgFile.length >= obj.num) {
+                    $("#img-line").css("display", "none");
+                }
+            });
+
+
+            $("#content").keyup(function () {
+                if ($("#content").val() === null || $("#content").val().trim() === "") {
+                    $("#content").css("border", " 1px solid red");
+                } else if ($("#content").val().length > 600) {
+                    $("#content").css("border", " 1px solid red");
+                } else {
+                    $("#content").css("border", " 1px solid #E5E5E5");
+                }
+            });
+
+            $("#openSuggestionCaptcha").on('click',  function () {
+                if ($("#content").val() === null || $("#content").val().trim() === "") {
+                    $("#content").css("border", " 1px solid red");
+                    return;
+                } else if ($("#content").val().length > 600) {
+                    $("#content").css("border", " 1px solid red");
+                    return;
+                } else {
+                    $("#content").css("border", " 1px solid #E5E5E5");
+                }
+
+                const ph = $("#suggestion_phone").val();
+                const email = $("#suggestion_email").val();
+                if (!ph && !email){
+                    $("#phoneframe").css("border", " 1px solid red");
+                    $("#email_content").css("border", " 1px solid red");
+                    return;
+                }
+
+                if (!email && (!ph || ph.length < 4 || ph.length > 20)) {
+                    $("#phoneframe").css("border", " 1px solid red");
+                    return;
+                } else {
+                    $("#phoneframe").css("border", " 1px solid #E5E5E5");
+                }
+
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!ph && (!email || !emailRegex.test(email))) {
+                    $("#email_content").css("border", " 1px solid red");
+                    return;
+                } else {
+                    $("#email_content").css("border", " 1px solid #E5E5E5");
+                }
+
+                if (!limitNum(obj.num)) {
+                    const alert_content = "\u6700\u591A\u4E0A\u4F20{num}\u5F20\u56FE\u7247";
+                    alert(alert_content.replace("{num}", obj.num));
+                    return;
+                }
+                $('#suggestionCaptchaModal').modal('show');
+            })
+
+            $("#suggestionSubmitBtn").on('click', function () {
+                const answer = $("#suggestion_captcha_code").val();
+                if (answer.trim().length === 0){
+                    const err_info = "\u8BF7\u8F93\u5165\u56FE\u5F62\u9A8C\u8BC1\u7801";
+                    $("#suggestionVerCaptchaCode").text(err_info).removeClass("hidden");
+                    return;
+                }
+                //formDate
+                var fd = new FormData();
+                for (var i = 0; i < imgFile.length; i++) {
+                    fd.append(obj.data + "[]", imgFile[i]);
+                }
+                submitPicture(fd);
+            });
+        }
+
+        function suggestionRefreshCaptcha() {
+            $("#refreshImg").css("transform", "rotate(360deg)");
+            let captcha_img = document.getElementById("suggestion_captcha_img");
+            $.ajax({
+                type: "POST",
+                url: "/captcha",
+                async: true,
+                processData: false,
+                contentType: false,
+                success: function (result) {
+                    if (result.code === 0 && result.data) {
+                        $("#suggestionCaptchaToken").val(result.data.captchaId);
+                        if (result.data.imageData){
+                            captcha_img.src = result.data.imageData;
+                            captcha_img.style.display = "block";
+                        }
+                    } else if (result.code === 7) {
+                        // 操作频繁
+                        const err_info =  "\u64CD\u4F5C\u9891\u7E41\uFF0C\u8BF7\u7A0D\u540E\u518D\u8BD5";
+                        $("#tips_content").text(err_info);
+                        $("#tipsModal").modal('show');
+                    }
+                },
+                error: function (result) {
+                    $.alert({
+                        title: '提示',
+                        content: service_busy,
+                        size: "sm"
+                    });
+                }
+            });
+        }
+
+        function addNewContent(obj) {
+            $(imgBox).html("");
+            const del = "\u5220\u9664";
+            let box = '';
+            for (let a = 0; a < imgSrc.length; a++) {
+                box += '<div class="imgContainer"><img title=' + imgName[a] + ' alt=' + imgName[a] + ' src=' + imgSrc[a] + ' ><p onclick="removeImg(this,' + a + ')" class="imgDelete">'+del+'</p></div>';
+            }
+            $(obj).html(box);
+        }
+        //delete
+        function removeImg(obj, index) {
+            imgSrc.splice(index, 1);
+            imgFile.splice(index, 1);
+            imgName.splice(index, 1);
+            var boxId = "#" + $(obj).parent('.imgContainer').parent().attr("id");
+            addNewContent(boxId);
+            if (imgFile.length < 2) {
+                $("#img-line").css("display", "inline-block");
+            }
+            $('#file').val('');
+        }
+        //limit
+        function limitNum(num) {
+            if (!num) {
+                return true;
+            } else if (imgFile.length > num) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        var post_flag = false;
+        function submitPicture(data) {
+            if (post_flag) return;
+            post_flag = true;
+            data.append("captchaId", $("#suggestionCaptchaToken").val());
+            data.append("captchaCode", $("#suggestion_captcha_code").val());
+            data.append('content', $("#content").val());
+            data.append('phone', $("#suggestion_phone").val());
+            data.append('email', $("#suggestion_email").val());
+            data.append('countryCode', $("#countryCode").val());
+            data.append('lang', $("#localelang").val());
+            data.append('os', "");
+            data.append('version', "");
+            data.append('formtk', $("#formtk").val());
+
+            url = '/addSuggestion';
+
+            if (url && data) {
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    async: true,
+                    data: data,
+                    processData: false,
+                    dataType: "json",
+                    contentType: false,
+                    success: function (data) {
+                        post_flag = false;
+                        if (data.code === 0) {
+                            resetInputs();
+                            $("#sugok").show();
+                            $("body").css("overflow", "hidden");
+                            setTimeout(function () {
+                                $("#sugok").hide();
+                                $("body").css("overflow", "auto");
+                                $("#suggestad").toggle();
+                                $("#textCount").html(0);
+                                window.location.reload();
+                            }, 1500);
+                        } else if (data.code === 100) {
+                            const err_info =  "\u9A8C\u8BC1\u7801\u6709\u8BEF";
+                            $("#suggestionVerCaptchaCode").text(err_info).removeClass("hidden");
+                            suggestionRefreshCaptcha();
+                        } else {
+                            resetInputs();
+                            $("#sugok").show();
+                            $("body").css("overflow", "hidden");
+                            setTimeout(function () {
+                                $("#sugok").hide();
+                                $("body").css("overflow", "auto");
+                                $("#suggestad").toggle();
+                                $("#textCount").html(0);
+                                window.location.reload();
+                            }, 1500);
+                        }
+                    },
+                    error: function () {
+                        post_flag = false;
+                        resetInputs();
+                        $("#sugok").show();
+                        $("body").css("overflow", "hidden");
+                        setTimeout(function () {
+                            $("#sugok").hide();
+                            $("body").css("overflow", "auto");
+                            $("#suggestad").toggle();
+                            $("#textCount").html(0);
+                            window.location.reload();
+                        }, 1500);
+
+                    }
+                });
+            }
+        }
+
+        function resetInputs() {
+            $("#content").val('');
+            $("#suggestion_email").val('');
+            $("#suggestion_phone").val('');
+            $("#countryCode").val('');
+            $("#select").val($('#select option:first').val() || '');
+            $("#file").val('');
+            $("#suggestion_captcha_code").val('');
+
+            $(imgBox).html('');
+            imgSrc.splice(0, imgSrc.length);
+            imgFile.splice(0, imgFile.length);
+            imgName.splice(0, imgName.length);
+        }
+
+        //
+        function imgDisplay(obj) {
+            var src = $(obj).attr("src");
+            var imgHtml = '<div style="width: 100%;height: 100vh;overflow: auto;background: rgba(0,0,0,0.5);text-align: center;position: fixed;top: 0;left: 0;z-index: 1000;"><img src=' + src + ' style="margin-top: 100px;width: 70%;margin-bottom: 100px;"/><p style="font-size: 50px;position: fixed;top: 30px;right: 30px;color: white;cursor: pointer;" onclick="closePicture(this)">×</p></div>';
+            $('body').append(imgHtml);
+        }
+        //
+        function closePicture(obj) {
+            $(obj).parent("div").remove();
+        }
+
+        //
+        function getObjectURL(file) {
+            var url = null;
+            if (window.createObjectURL != undefined) { // basic
+                url = window.createObjectURL(file);
+            } else if (window.URL != undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL != undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file);
+            }
+            return url;
+        }
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            // $(".rbar").hide();
+
+            $("#content").click(function () {
+                $("#selectctry").hide();
+            });
+
+            $("#suggestion_email").click(function () {
+                $("#selectctry").hide();
+            });
+            $(".sgtitle").click(function () {
+                $("#selectctry").hide();
+            });
+            $(".api-text3").click(function () {
+                $("#selectctry").hide();
+            });
+            $("#suggestion_phone").click(function () {
+                $("#selectctry").hide();
+            });
+            $('#refreshImg').on('click', function() {
+                $(this).addClass('rotate-animation');
+                // 确保动画结束后移除类，以便下次点击时动画重新播放
+                $(this).one('animationend', function() {
+                    $(this).removeClass('rotate-animation');
+                });
+            });
+            $('#suggestionCaptchaModal').on('show.bs.modal', function (e) {
+                $('#suggestionVerCaptchaCode').text("&quot;").addClass("hidden")
+                $('#suggestion_captcha_code').val("");
+                suggestionRefreshCaptcha();
+                post_flag = false;
+            });
+            $('#suggestion_captcha_code').on('input', function () {
+                $('#suggestionVerCaptchaCode').text("&quot;").addClass("hidden")
+            });
+
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            $('#suggestion_email').on('input', function () {
+                const email = $(this).val();
+                if (!emailRegex.test(email)) {
+                    $("#email_content").css("border", " 1px solid red");
+                } else {
+                    $('#email_content').css("border", "1px solid #FFFFFF");
+                    const phone = $("#phone").val();
+                    if (!phone){
+                         $('#phoneframe').css("border", "1px solid #FFFFFF");
+                    }
+                }
+            });
+            $('#suggestion_phone').on('input', function () {
+                const ph = $(this).val();
+                if (!ph || ph.length < 4 || ph.length > 20){
+                    $('#phoneframe').css("border", " 1px solid red");
+                } else {
+                    $('#phoneframe').css("border", "1px solid #FFFFFF");
+                    const email = $("#email").val();
+                    if (!email){
+                         $('#email_content').css("border", "1px solid #FFFFFF");
+                    }
+                }
+            });
+            $('#content').on('input', function () {
+                if ($(this).val().length > 0){
+                    $('#content').css("border", "1px solid #FFFFFF");
+                }
+            });
+
+            $('#countryCode').bind('input keyup', function () {
+                var codp = "+"+$(this).val();
+                var  guojia=$("#errocode").text();
+                var code="";
+                $(".selectctry-item").each(function () {
+                    if($(this).children("div:eq(1)").text() == codp){
+                        guojia = $(this).children("div:first").text();
+                        code = $(this).children("div:eq(1)").text();
+                        return;
+                    }
+                });
+                if(lenszie(guojia) > 8){
+                    guojia = guojia.substring(0,4)+"...";
+                }
+
+                if(code.startsWith("+")){
+                    code = "("+code+")";
+                }else {
+                    code = "(+"+code+")";
+                }
+
+                $("#citydiv").text(guojia);
+                $("#citynum").text(code);
+            });
+
+            let hash = window.location.hash;
+            switch(true) {
+                case hash.startsWith("#phone="):
+                    let phone = hash.substr("#phone=".length);
+                    $.get({
+                        url: `/help/phone/${phone}`,
+                        success: function(data) {
+                            if(data.country_code){
+                                var codp = "+"+data.country_code;
+                                var guojia=$("#errocode").text();
+                                var code="";
+                                $(".selectctry-item").each(function () {
+                                    if($(this).children("div:eq(1)").text() == codp){
+                                        guojia = $(this).children("div:first").text();
+                                        code = $(this).children("div:eq(1)").text();
+                                        return;
+                                    }
+                                });
+
+                                if(lenszie(guojia) > 8){
+                                    guojia = guojia.substring(0,4)+"...";
+                                }
+                                if(code.startsWith("+")){
+                                    code = "("+code+")";
+                                }else {
+                                    code = "(+"+code+")";
+                                }
+                                $("#citydiv").text(guojia);
+                                $("#citynum").text(code);
+                            }
+
+                            if(data.phone_no) {
+                                $("#suggestion_phone").val(data.phone_no);
+                            }
+                        }
+                    });
+                    break;
+                case hash.startsWith("#country="):
+                    let code = hash.substr("#country=".length);
+                    $.get({
+                        url: `/help/region/${code}`,
+                        success: function(data) {
+                            if(data.country_code) {
+                                var codp = "+"+data.country_code;
+                                var guojia=$("#errocode").text();
+                                var code="";
+                                $(".selectctry-item").each(function () {
+                                    if($(this).children("div:eq(1)").text() == codp){
+                                        guojia = $(this).children("div:first").text();
+                                        code = $(this).children("div:eq(1)").text();
+                                        return;
+                                    }
+                                });
+
+                                if(lenszie(guojia) > 8){
+                                    guojia = guojia.substring(0,4)+"...";
+                                }
+                                if(code.startsWith("+")){
+                                    code = "("+code+")";
+                                }else {
+                                    code = "(+"+code+")";
+                                }
+                                $("#citydiv").text(guojia);
+                                $("#citynum").text(code);
+                            }
+                        }
+                    });
+                    break;
+            }
+
+
+            $('textarea').bind('input propertychange', function () {
+
+                if ($(this).val().trim().length > 521) {
+                    $(this).val($(this).val().substring(0,521));
+                }else{
+                    $("#textCount").css("color","black");
+                };
+                $("#textCount").html($(this).val().trim().length);
+            });
+
+            $("#content").keyup(function () {
+                if ($("#content").val() === null || $("#content").val().trim() === "") {
+                    $("#content").css("border"," 1px solid red");
+
+                } else if ($("#content").val().length > 521) {
+                    $("#content").css("border"," 1px solid red");
+                }else {
+                    $("#content").css("border"," 1px solid #E5E5E5");
+                }
+            });
+
+            $(".selectctry-item").click(function () {
+                var tmguojia = $(this).children("div").eq(0).html();
+                var tmcode = $(this).children("div").eq(1).html();
+                if(lenszie(tmguojia) > 8){
+                    tmguojia = tmguojia.substring(0,4)+"...";
+                }
+                tmcode = "("+tmcode+")";
+
+                $("#citydiv").text(tmguojia);
+                $("#citynum").text(tmcode);
+            });
+
+            $("#ckctry").click(function () {
+                console.log("======>dddd")
+                $("#selectctry").toggle();
+                $("#downioc").toggle();
+                $("#upioc").toggle();
+            });
+
+            $("#menuicon").click(function () {
+                $("#selectctry").hide();
+            });
+
+            var vns = $("#newversion").val();
+            if(vns!=""){
+                $("#bbhsp").text("v"+vns)
+                showWindow();
+                $('textarea').removeAttr("disabled");
+            }else {
+                $('textarea').removeAttr("disabled");
+            }
+
+        });
+
+        function showWindow() {
+        $('#showdiv').show();
+        $('#cover').css('display','block');
+        $('#cover').css('height',document.body.clientHeight+'px');
+      }
+        function closeWindow() {
+        $('#showdiv').hide();
+        $('#cover').css('display','none');
+      }
+
+        function lenszie(charstr) {
+            var len = 0;
+            for (var i=0; i<charstr.length; i++) {
+                if (charstr.charCodeAt(i)>127 || charstr.charCodeAt(i)==94) {
+                    len += 2;
+                } else {
+                    len ++;
+                }
+            }
+            return len;
+        }
+    </script>
+
+</div>
+    <div>
+    <style>
+        .input-with-label {
+            padding-left: 15px;
+            position: relative;
+            box-sizing: border-box;
+            background: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .input-with-label input {
+            width: 100px;
+            height: 48px;
+            padding: 10px 10px 10px 15px;
+            border: 0;
+            border-radius: 4px 0 0 4px;
+            text-align: left;
+            outline: none;
+        }
+
+        .input-with-button {
+            border: 1px solid #E5E5E5;
+            position: relative;
+        }
+
+        .input-with-button input {
+            padding: 10px;
+            width: 200px;
+            border: 0 solid #ccc;
+            border-radius: 4px;
+            padding-right: 70px; /* 为按钮留出空间 */
+        }
+
+        .input-with-button button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding: 10px 10px;
+            border: none;
+            background-color: #fff;
+            color: #007EE5;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .label{
+            font-family: PingFangSC-Regular;
+            font-size: 16px;
+            color: #323232;
+            letter-spacing: -0px;
+            text-align: left;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .disabled-button {
+            color: gray !important;
+            cursor: not-allowed;
+        }
+
+        .input_phone_inline {
+            margin-top: 10px;
+            display: flex;
+            border: 1px solid #E5E5E5;
+            /*border: 1px solid rgba(229,229,229,1);*/
+        }
+
+        .phone_div{
+            width: 100%;
+            height: 48px;
+        }
+
+        .phone_input {
+            width: 100%;
+            height: 48px;
+            padding: 10px 10px 10px 15px;
+            border: 0;
+            border-radius: 0 4px 4px 0;
+            text-align: left;
+            outline: none;
+        }
+
+        .country_select {
+            padding: 10px;
+            height: 48px;
+            border: 1px solid #E5E5E5;
+            border-radius: 4px;
+            background-color: #fff;
+            /*appearance: none; !* 去除默认样式 *!*/
+            /*-webkit-appearance: none;*/
+            /*-moz-appearance: none;*/
+            cursor: pointer;
+            width: 100%;
+            outline: none;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+        .waring-span{
+            color: #FF3E3E;
+            margin-left: 5px;
+        }
+        .confirm_btn{
+            font-family: PingFangSC-Medium;
+            font-size: 16px;
+            color: #007EE5;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 500;
+            border: 0;
+            background-color: white;
+        }
+
+        #refreshImg {
+            transition: transform 1s ease-in-out;
+            cursor: pointer;
+            border: none;
+        }
+
+        @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+        .rotate-animation {
+            animation: rotate360 1s linear;
+            border: none;
+        }
+        .modal-dev {
+            position: absolute; /* 使用绝对定位 */
+            top: 50%; /* 垂直居中 */
+            left: 50%; /* 水平居中 */
+            transform: translate(-50%, -50%); /* 调整位置 */
+            z-index: 1000; /* 设置一个较高的 z-index 值 */
+            background-color: rgba(0, 0, 0, 0.5); /* 可选：添加背景遮罩效果 */
+            display: none; /* 初始状态下隐藏 */
+            width: 100%; /* 占据整个宽度 */
+            height: 100%; /* 占据整个高度 */
+        }
+
+        .modal-dev .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            width: 100%;
+            margin: auto; /* 确保内容居中对齐 */
+        }
+        .pt_avatar{
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+        }
+        .txt_center{
+            text-align: center;
+        }
+        .send_phone{
+            font-size: 16px;
+            color: #222222;
+            letter-spacing: -0px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .edit_sms_warning{
+            font-size: 13px;
+            color: #FF1F1F;
+            letter-spacing: -0px;
+            font-weight: 400;
+        }
+        .copy_line{
+            text-decoration: underline;
+            color: #007EE5;
+        }
+    </style>
+    <div id="verify_phone_frame" class="frame" style="display: none">
+        <input type="hidden" id="serviceApi" name="serviceApi" value="">
+        <input type="hidden" id="serviceAvatarUrl" name="serviceAvatarUrl" value="">
+        <input type="hidden" id="phoneCodeHash" name="phoneCodeHash" value="">
+        <div class="frame-header">
+            <span class="title">绑定邮箱</span>
+            <span class="close-frame">一</span>
+        </div>
+        <div class="frame-body">
+            <!--手机号验证-->
+            <div id="bind_step1" style="">
+                <div style="position: relative;margin-bottom: 30px">
+                    <p class="label">请输入您的手机号</p>
+                    <div>
+                        <select id="countrySelector" class="country_select"><option value="93">阿富汗,+93</option><option value="355">阿尔巴尼亚,+355</option><option value="213">阿尔及利亚,+213</option><option value="1684">美属萨摩亚,+1684</option><option value="376">安道尔,+376</option><option value="244">安哥拉,+244</option><option value="1264">安圭拉岛,+1264</option><option value="0">南极洲,+0</option><option value="1268">安提瓜岛和巴布达,+1268</option><option value="54">阿根廷,+54</option><option value="374">亚美尼亚,+374</option><option value="297">阿鲁巴岛,+297</option><option value="61">澳大利亚,+61</option><option value="43">奥地利,+43</option><option value="994">阿塞拜疆,+994</option><option value="1242">巴哈马群岛,+1242</option><option value="973">巴林,+973</option><option value="880">孟加拉国,+880</option><option value="1246">巴巴多斯,+1246</option><option value="375">白俄罗斯,+375</option><option value="32">比利时,+32</option><option value="501">伯利兹,+501</option><option value="229">贝宁,+229</option><option value="1441">百慕大,+1441</option><option value="975">不丹,+975</option><option value="591">玻利维亚,+591</option><option value="387">波斯尼亚和黑塞哥维那,+387</option><option value="267">博茨瓦纳,+267</option><option value="0">布维岛,+0</option><option value="55">巴西,+55</option><option value="246">英属印度洋领地,+246</option><option value="673">文莱达鲁萨兰国,+673</option><option value="359">保加利亚,+359</option><option value="226">布吉纳法索,+226</option><option value="257">布隆迪,+257</option><option value="855">柬埔寨,+855</option><option value="237">喀麦隆,+237</option><option value="1">加拿大,+1</option><option value="238">佛得角,+238</option><option value="1345">开曼群岛,+1345</option><option value="236">中非共和国,+236</option><option value="235">乍得,+235</option><option value="56">智利,+56</option><option value="86" selected="selected">中国,+86</option><option value="61">圣诞岛,+61</option><option value="672">COCOS(KEELING)岛,+672</option><option value="57">哥伦比亚,+57</option><option value="269">科摩罗,+269</option><option value="242">刚果,+242</option><option value="242">刚果民主共和国的,+242</option><option value="682">库克群岛,+682</option><option value="506">哥斯达黎加,+506</option><option value="225">科特迪瓦,+225</option><option value="385">克罗地亚,+385</option><option value="53">古巴,+53</option><option value="357">塞浦路斯,+357</option><option value="420">捷克共和国,+420</option><option value="45">丹麦,+45</option><option value="253">吉布提,+253</option><option value="1767">多米尼加,+1767</option><option value="1809">多米尼加共和国,+1809</option><option value="593">厄瓜多尔,+593</option><option value="20">埃及,+20</option><option value="503">萨尔瓦多,+503</option><option value="240">赤道几内亚,+240</option><option value="291">厄立特里亚,+291</option><option value="372">爱沙尼亚,+372</option><option value="251">埃塞俄比亚,+251</option><option value="500">福克兰群岛(马尔维纳斯),+500</option><option value="298">法罗群岛,+298</option><option value="679">斐济,+679</option><option value="358">芬兰,+358</option><option value="33">法国,+33</option><option value="594">法属圭亚那,+594</option><option value="689">法属波利尼西亚,+689</option><option value="0">法国南部地区,+0</option><option value="241">加蓬,+241</option><option value="220">冈比亚,+220</option><option value="995">乔治亚州,+995</option><option value="49">德国,+49</option><option value="233">加纳,+233</option><option value="350">直布罗陀,+350</option><option value="30">希腊,+30</option><option value="299">格陵兰岛,+299</option><option value="1473">格林纳达,+1473</option><option value="590">瓜德罗普岛,+590</option><option value="1671">关岛,+1671</option><option value="502">危地马拉,+502</option><option value="224">几内亚,+224</option><option value="245">几内亚比绍,+245</option><option value="592">圭亚那,+592</option><option value="509">海地,+509</option><option value="0">听到岛和麦当劳的岛屿,+0</option><option value="39">教廷(梵蒂冈),+39</option><option value="504">洪都拉斯,+504</option><option value="852">香港,+852</option><option value="36">匈牙利,+36</option><option value="354">冰岛,+354</option><option value="91">印度,+91</option><option value="62">印尼,+62</option><option value="98">伊朗伊斯兰共和国,+98</option><option value="964">伊拉克,+964</option><option value="353">爱尔兰,+353</option><option value="972">以色列,+972</option><option value="39">意大利,+39</option><option value="1876">牙买加,+1876</option><option value="81">日本,+81</option><option value="962">约旦,+962</option><option value="7">哈萨克斯坦,+7</option><option value="254">肯尼亚,+254</option><option value="686">基里巴斯,+686</option><option value="850">朝鲜民主主义人民共和国,+850</option><option value="82">朝鲜共和国,+82</option><option value="965">科威特,+965</option><option value="996">吉尔吉斯斯坦,+996</option><option value="856">老挝人民民主共和国,+856</option><option value="371">拉脱维亚,+371</option><option value="961">黎巴嫩,+961</option><option value="266">莱索托,+266</option><option value="231">利比里亚,+231</option><option value="218">阿拉伯利比亚民众国,+218</option><option value="423">列支敦斯登,+423</option><option value="370">立陶宛,+370</option><option value="352">卢森堡,+352</option><option value="853">澳门,+853</option><option value="389">前南斯拉夫马其顿共和国,+389</option><option value="261">马达加斯加,+261</option><option value="265">马拉维,+265</option><option value="60">马来西亚,+60</option><option value="960">马尔代夫,+960</option><option value="223">马里,+223</option><option value="356">马耳他,+356</option><option value="692">马绍尔群岛,+692</option><option value="596">马提尼克岛,+596</option><option value="222">毛利塔尼亚,+222</option><option value="230">毛里求斯,+230</option><option value="269">马约特岛,+269</option><option value="52">墨西哥,+52</option><option value="691">密克罗尼西亚联邦,+691</option><option value="373">摩尔多瓦共和国,+373</option><option value="377">摩纳哥,+377</option><option value="976">蒙古,+976</option><option value="1664">蒙特塞拉特,+1664</option><option value="212">摩洛哥,+212</option><option value="258">MOZAMBIQUE,+258</option><option value="95">缅甸,+95</option><option value="264">纳米比亚,+264</option><option value="674">瑙鲁,+674</option><option value="977">尼泊尔,+977</option><option value="31">荷兰,+31</option><option value="599">荷属安的列斯群岛,+599</option><option value="687">新喀里多尼亚,+687</option><option value="64">新西兰,+64</option><option value="505">尼加拉瓜,+505</option><option value="227">尼日尔,+227</option><option value="234">尼日利亚,+234</option><option value="683">纽埃岛,+683</option><option value="672">诺福克岛,+672</option><option value="1670">北马里亚纳群岛,+1670</option><option value="47">挪威,+47</option><option value="968">阿曼,+968</option><option value="92">巴基斯坦,+92</option><option value="680">帕劳,+680</option><option value="970">巴勒斯坦的领土,占领,+970</option><option value="507">巴拿马,+507</option><option value="675">巴布新几内亚,+675</option><option value="595">巴拉圭,+595</option><option value="51">秘鲁,+51</option><option value="63">菲律宾,+63</option><option value="0">皮特克恩,+0</option><option value="48">波兰,+48</option><option value="351">葡萄牙,+351</option><option value="1787">波多黎各,+1787</option><option value="974">卡塔尔,+974</option><option value="262">团聚,+262</option><option value="40">罗马尼亚,+40</option><option value="70">俄罗斯联邦,+70</option><option value="250">卢旺达,+250</option><option value="290">圣赫勒拿,+290</option><option value="1869">圣基茨和尼维斯,+1869</option><option value="1758">圣卢西亚岛,+1758</option><option value="508">圣皮埃尔和MIQUELON,+508</option><option value="1784">圣文森特和格林纳丁斯,+1784</option><option value="684">萨摩亚,+684</option><option value="378">圣马力诺,+378</option><option value="239">圣多美和王子,+239</option><option value="966">沙特阿拉伯,+966</option><option value="221">塞内加尔,+221</option><option value="381">塞尔维亚和黑山,+381</option><option value="248">塞舌尔,+248</option><option value="232">塞拉利昂,+232</option><option value="65">新加坡,+65</option><option value="421">斯洛伐克,+421</option><option value="386">斯洛文尼亚,+386</option><option value="677">所罗门群岛,+677</option><option value="252">索马里,+252</option><option value="27">南非,+27</option><option value="0">南乔治亚岛和南桑威奇群岛,+0</option><option value="34">西班牙,+34</option><option value="94">斯里兰卡,+94</option><option value="249">苏丹,+249</option><option value="597">苏里南,+597</option><option value="47">斯瓦尔巴群岛和扬马延岛,+47</option><option value="268">斯威士兰,+268</option><option value="46">瑞典,+46</option><option value="41">瑞士,+41</option><option value="963">阿拉伯叙利亚共和国,+963</option><option value="886">台湾,中国的省份,+886</option><option value="992">塔吉克斯坦,+992</option><option value="255">坦桑尼亚联合共和国,+255</option><option value="66">泰国,+66</option><option value="670">东帝汶,+670</option><option value="228">多哥,+228</option><option value="690">托克劳,+690</option><option value="676">汤加,+676</option><option value="1868">特立尼达和多巴哥,+1868</option><option value="216">突尼斯,+216</option><option value="90">土耳其,+90</option><option value="7370">土库曼斯坦,+7370</option><option value="1649">特克斯和凯科斯群岛,+1649</option><option value="688">图瓦卢,+688</option><option value="256">乌干达,+256</option><option value="380">乌克兰,+380</option><option value="971">阿拉伯联合酋长国,+971</option><option value="44">联合王国,+44</option><option value="1">美国,+1</option><option value="1">美国小离岛,+1</option><option value="598">乌拉圭,+598</option><option value="998">乌兹别克斯坦,+998</option><option value="678">瓦努阿图,+678</option><option value="58">委内瑞拉,+58</option><option value="84">越南,+84</option><option value="1284">维尔京群岛,英国,+1284</option><option value="1340">维尔京群岛,美国,+1340</option><option value="681">瓦利斯群岛和富图纳群岛,+681</option><option value="212">西撒哈拉,+212</option><option value="967">也门,+967</option><option value="260">赞比亚,+260</option><option value="263">津巴布韦,+263</option></select>
+                        <div class="input_phone_inline">
+                            <div class="input-with-label">
+                                <span>+&nbsp;</span>
+                                <input id="v_countryCode" type="text" value="" placeholder="国家码" oninput="value=value.replace(/[^\d]/g,'')">
+                            </div>
+                            <div class="phone_div">
+                                <input id="v_phone" name="v_phone" class="phone_input" value="" oninput="value=value.replace(/[^\d]/g,'')" autofocus="autofocus" maxlength="20" placeholder="12345678">
+                            </div>
+                        </div>
+                        <div id="verPhone" class="hidden waring-span">"</div>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <p class="label">请输入手机验证码</p>
+                    <div class="input-with-button">
+                        <input name="verificationCode" id="verificationCode" type="number" placeholder="请输入手机验证码" value="" style="outline: none;width: 100%;border: 0px;height: 48px;padding-left: 10px" oninput="value=value.replace(/[^\d]/g,'')">
+                        <button type="button" id="sendPhoneCode" onclick="openCaptcha()">获取验证码</button>
+                    </div>
+                    <div id="verCode" class="hidden waring-span">"</div>
+                </div>
+                <button type="button" class="blue-solid-button" onclick="verifyPhoneNextButton()">下一步</button>
+            </div>
+            <!--编辑短信发送-->
+            <div id="edit_sms" style="display: none;">
+                <div class="flex_center">
+                    <div style="margin: 20px auto">
+                        <img class="pt_avatar" alt="logo" src="/resources/images/email/logo@2x.png">
+                    </div>
+                    <div class="send_phone">
+                        <span>请发送短信至对应号码完成验证</span>
+                    </div>
+                    <div class="txt_center" style="margin-bottom: 10px;white-space: pre-line;font-size: 14px;" id="editSmsMsgContent">
+                        <span>电信用户请编辑短信 <span id="dxCode" class="copy_line" onclick="copyToClipboard('dxCode')">1111</span>
+                        发送至:<span id="dxPhone" class="copy_line" onclick="copyToClipboard('dxPhone')">1234</span></span><br>
+                        <span>移动用户请编辑短信 <span id="ydCode" class="copy_line" onclick="copyToClipboard('ydCode')">2222</span>
+                        发送至:<span id="ydPhone" class="copy_line" onclick="copyToClipboard('ydPhone')">2234</span></span><br>
+                        <span>联通用户请编辑短信 <span id="ltCode" class="copy_line" onclick="copyToClipboard('ltCode')">3333</span>
+                        发送至:<span id="ltPhone" class="copy_line" onclick="copyToClipboard('ltPhone')">3234</span></span>
+                    </div>
+                    <div class="txt_center">
+                        <span class="edit_sms_warning">确保已正确输入手机号和信息内容，避免发送错误。</span>
+                    </div>
+                </div>
+                <button type="button" class="blue-solid-button" onclick="verifyPhoneNextButton()">已发送</button>
+            </div>
+            <!--账户信息页面-->
+            <div id="bind_step2" style="display: none">
+                <style>
+                    .flex_center{
+                        display: flex; flex-direction: column;align-items: center;justify-content: center;
+                    }
+                    .top20{
+                        margin-top: 20px;
+                    }
+                    .show_phone{
+                        font-family: Helvetica;
+                        font-size: 24px;
+                        color: #007EE5;
+                        letter-spacing: -0px;
+                        text-align: center;
+                        font-weight: 400;
+                    }
+                    .nick_name{
+                        font-family: PingFangSC-Medium;
+                        font-size: 20px;
+                        color: #222222;
+                        letter-spacing: -0px;
+                        font-weight: 500;
+                        text-align: center;
+                    }
+                    .user_name{
+                        font-family: PingFangSC-Regular;
+                        font-size: 14px;
+                        color: #939393;
+                        letter-spacing: -0px;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+                    .user_avatar{
+                        width: 96px;
+                        height: 96px;
+                        border-radius: 50%;
+                    }
+                    .already_bound{
+                        color: #FF1F1F;
+                        letter-spacing: -0px;
+                        font-weight: 400;
+                    }
+                    .customer_service{
+                        color: #007EE5;
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                    .default_avatar{
+                        width: 96px;
+                        height: 96px;
+                        border-radius: 50%;
+                        padding: 5px;
+                        background-color: #FFF;
+                        border: 2px #007ee5 solid;
+                    }
+                    .default_avatar .inner {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        background-color: #fa790f;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        top:50%;
+                        transform:translateY(-50%);
+                    }
+                    .default_avatar span {
+                        color:#FFFFFF;
+                        font-size:25px;
+                        text-align:center;
+                    }
+                </style>
+                <div class="flex_center">
+                    <div class="show_phone top20">
+                        <span id="show_phone">+899 66668888</span>
+                    </div>
+                    <div class="top20">
+                        <img id="avatar" class="user_avatar" alt="avatar" src="" style="display: none;">
+                        <div id="default_avatar" class="default_avatar" style="display: none;">
+                            <div class="inner">
+                                <span id="avatar_txt"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nick_name top20">
+                        <p style="margin: auto;">
+                            <span>用户昵称</span>
+                            <span id="nickName"></span>
+                        </p>
+                        <p class="user_name">
+                            <span>用户名</span>
+                            <span id="userName"></span>
+                        </p>
+                    </div>
+
+                    <div class="txt_center" id="bind_already" style="display: none;">
+                        <p class="already_bound top20">
+                            <span>该账号已经绑定邮箱：</span>
+                            <span id="bind_already_email">e****mail@email.com</span>
+                        </p>
+                        <p class="top20">
+                            <span>如有疑问请</span>
+                            <a class="customer_service" href="">联系客服</a>
+                        </p>
+                    </div>
+                    <div class="txt_center top20" id="bind_success" style="display: none;">
+                        <p>
+                            <span>已经成功绑定邮箱</span>
+                            <span id="bind_success_email" class="customer_service"></span>
+                        </p>
+                        <p>
+                            <span>请使用邮箱进行登陆</span>
+                        </p>
+                    </div>
+                    <div id="bind_start" class="txt_center top20" style="display: none;">
+                        <p>您将对该账号绑定邮箱</p>
+                    </div>
+                </div>
+                <button type="button" id="nextBtnText" class="blue-solid-button" onclick="nextBindButton()">下一步</button>
+                <div id="acc_last_step" style="display:none;">
+                    <span class="last-step-button" onclick="lastStepButton(1)">上一步</span>
+                </div>
+                <style>
+                    #download-panel{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                    }
+                    #download-panel div{
+                        height: 24px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        margin-left: 8px;
+                    }
+                   .download-title{
+                        display: block;
+                        margin: 20px 0 10px 0;
+                        font-family: PingFangSC-Regular;
+                        font-size: 15px;
+                        color: #222222;
+                        letter-spacing: -0px;
+                        font-weight: 400;
+                   }
+                    .download-type{
+                        font-family: PingFangSC-Semibold;
+                        font-size: 14px;
+                        color: #333333;
+                        letter-spacing: 0;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+                    .download-type-label{
+                        font-family: PingFangSC-Medium;
+                        font-size: 14px;
+                        color: #007EE5;
+                        letter-spacing: 0;
+                        font-weight: 500;
+                    }
+                    #download-panel img{
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 8px;
+                    }
+                    #download-panel a {text-decoration: none;}
+                </style>
+                <div id="download-link" style="display: none;">
+                    <div id="download-panel">
+                        <span class="download-title">下载地址：</span>
+                        <span class="download-type">移动端</span>
+                        <div>
+                            <a id="download_android" href="https://jgzj.szwlxd.com/android/latest.apk">
+                                <img src="/resources/images/email/icon_apps_android.png" alt="android">
+                                <span class="download-type-label">Potato 安卓端</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a id="download" href="javascript:void(0);" target="_blank">
+                                <img src="/resources/images/email/icon_apps_ios.png" alt="iphone">
+                                <span class="download-type-label">Potato iPhone</span>
+                            </a>
+                        </div>
+                        <span class="download-type">桌面端</span>
+                        <div>
+                            <a id="download_windows" href="https://ptdesk.ffvjei.com/win/Potato_Desktop2.47.28.zip">
+                                <img src="/resources/images/email/icon_apps_win.png" alt="windows">
+                                <span class="download-type-label">Potato Windows 桌面端</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a id="download_mac" href="https://ptdesk.ffvjei.com/mac/Potato_Desktop2.47.3.dmg">
+                                <img src="/resources/images/email/icon_apps_macos.png" alt="macos">
+                                <span class="download-type-label">Potato MacOS 桌面端</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a id="download_linux" href="https://ptdesk.ffvjei.com/linux/Potato_Desktop.2.37.tar.gz">
+                                <img src="/resources/images/email/icon_apps_linux.png" alt="linux">
+                                <span class="download-type-label">Potato Linux 桌面端</span>
+                            </a>
+                        </div>
+                        <!--<span class="download-type" th:text="#{BindEmail.download_other}">其他</span>
+                        <div>
+                            <a href="https://github.com/potatogm/potato/releases" target="_blank" >
+                                <img src="/resources/images/email/icon_apps_other.png" alt="other">
+                                <span class="download-type-label" th:text="#{BindEmail.download_other_github}">Potato GitHub</span>
+                            </a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <!--设置邮箱页面-->
+            <div id="bind_step3" style="display: none;">
+                <input type="hidden" id="bindEmailHashCode" name="bindEmailHashCode">
+                <div style="position: relative;margin-bottom: 30px">
+                    <p class="label">请输入您的邮箱地址</p>
+                    <input id="set_email" type="email" placeholder="email@email.com" autofocus="autofocus" value="" maxlength="50" style="outline: none;width: 100%;border: 1px solid #E5E5E5;height: 48px;padding-left: 10px;">
+                    <div id="verEmail" class="hidden waring-span">"</div>
+                </div>
+                <div style="position: relative;">
+                    <p class="label">请输入邮箱验证码</p>
+                    <div class="input-with-button">
+                        <input name="emailVerifyCode" id="emailVerifyCode" type="number" placeholder="请输入邮箱验证码" value="" style="outline: none;width: 100%;border: 0;height: 48px;padding-left: 10px" oninput="value=value.replace(/[^\d]/g,'')">
+                        <button type="button" id="sendEmailCode">获取验证码</button>
+                    </div>
+                    <div id="verEmailCode" class="hidden waring-span">"</div>
+                </div>
+                <button type="button" class="blue-solid-button" onclick="bindEmailButton()">下一步</button>
+                <span class="last-step-button" onclick="lastStepButton(2)">上一步</span>
+            </div>
+        </div>
+        <div class="modal-dev" id="captchaModal" tabindex="-1" role="dialog" aria-labelledby="captchaModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" style="position: absolute;top:10px;right: 10px;" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <div style="display: flex;justify-content: center;margin-top: 15px;">
+                        <p style="text-align: center;font-size: 16px;" id="captchaModalLabel">图形验证</p>
+                    </div>
+                    <div class="modal-body" style="padding:2px;flex-direction: column;justify-content: center;">
+                        <input type="hidden" id="captchaToken">
+                        <div style="margin-bottom: 20px;display: flex; flex-direction: row;justify-content: space-around;align-items: center">
+                            <div style="width: 25px;height: 5px;"></div>
+                            <div>
+                                <img id="captcha_img" alt="captcha" style="max-width: 270px;max-height: 80px;background: #F8F8F8;border-radius: 10px;display: none;" src="">
+                                <audio controls="" id="captcha_audio" style="display: none;max-width: 270px;" src="" autoplay="autoplay">
+                                    <p>您的浏览器不支持audio，请刷新验证方式</p>
+                                </audio>
+                            </div>
+                            <button type="button" style="border: none;outline:none;padding:0;background-color: white;margin-right: 5px;" onclick="refreshCaptcha()">
+                                <img id="refreshImg" src="/resources/images/email/icon_refresh.png" alt="refresh">
+                            </button>
+                        </div>
+                        <div style="display: flex;justify-content: center;">
+                            <input type="text" id="captcha_code" name="captcha_code" autofocus="autofocus" value="" style="background: #F8F8F8;border: 0;border-radius: 10px;width: 270px;height: 40px;padding: 5px;" placeholder="请输入图形验证码">
+                        </div>
+                        <div id="verCaptchaCode" class="hidden waring-span" style="width: 270px;">"</div>
+                    </div>
+                    <span style="border-bottom: 1px solid #FFFFFF;"></span>
+                    <div class="modal-footer" style="justify-content: center;">
+                        <!--data-dismiss="modal"-->
+                        <button type="button" class="confirm_btn" onclick="captchaCheck()">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-dev" id="tipsModal" tabindex="-1" role="dialog" aria-labelledby="tipsModal" aria-hidden="false">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div style="display: flex;justify-content: center;margin-top: 15px;">
+                        <p style="text-align: center;font-size: 17px;font-weight: 400;">提示</p>
+                    </div>
+                    <div class="modal-body" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                        <p id="tips_content"></p>
+                    </div>
+                    <span style="border-bottom: 1px solid #FFFFFF;"></span>
+                    <div class="modal-footer" style="justify-content: center;">
+                        <button type="button" style="font-size: 17px;color: #007EE5;border: 0;background-color: white;font-weight: 400;" data-dismiss="modal">知道啦</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sendTips" class="modal-dev">
+            <div class="dyok">
+                <div style="width: 55.3%;
+                    margin: 49.7% auto auto;
+                    background: #FFFFFF;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border-radius: 15px;">
+                    <div id="alert_content" style="text-align: center;font-size: 14px;color: #333333;line-height: 18px">发送成功</div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            let SERVICE_API = "";
+            let countdown = 60; // 1分钟
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const service_busy =  "\u670D\u52A1\u7E41\u5FD9\uFF0C\u8BF7\u7A0D\u540E\u518D\u8BD5";
+            function showTips(message, duration) {
+                var $sendTips = $("#sendTips");
+                $sendTips.show();
+                if (message) {
+                    $("#alert_content").text(message);
+                }
+                setTimeout(function () {
+                    $sendTips.hide();
+                }, duration || 1500);
+            }
+
+            function copyToClipboard(elementId) {
+                // 获取要复制的文本
+                const text = document.getElementById(elementId).innerText;
+                // 创建一个临时的textarea元素
+                const tempTextarea = document.createElement("textarea");
+                tempTextarea.value = text;
+                document.body.appendChild(tempTextarea);
+                // 选择textarea中的文本
+                tempTextarea.select();
+                tempTextarea.setSelectionRange(0, 99999); // 适用于移动设备
+                // 复制选中的文本到剪贴板
+                document.execCommand("copy");
+                // 移除临时的textarea元素
+                document.body.removeChild(tempTextarea);
+                // 可选：提示用户已复制
+                showTips("已复制")
+            }
+
+            function openCaptcha() {
+                const phone = $("#v_phone").val();
+                const country_code = $("#v_countryCode").val();
+                if (phone.trim().length === 0) {
+                    const err_info = "\u8BF7\u8F93\u5165\u624B\u673A\u53F7";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (phone.trim().length < 7) {
+                    const err_info = "\u8BF7\u8F93\u5165\u6B63\u786E\u7684\u624B\u673A\u53F7";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (country_code.trim().length === 0) {
+                    const err_info = "\u8BF7\u9009\u62E9\u56FD\u5BB6";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                $('#captchaModal').modal('show');
+            }
+
+            function refreshCaptcha() {
+                $("#refreshImg").css("transform", "rotate(360deg)");
+                let captcha_img = document.getElementById("captcha_img");
+                let captcha_audio = document.getElementById("captcha_audio");
+                captcha_audio.pause();
+                captcha_audio.currentTime = 0;
+                $.ajax({
+                    // data: JSON.stringify({index: Math.floor(Math.random() * 6)}),
+                    type: "POST",
+                    url: SERVICE_API+"/phones/generate_captcha",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0 && result.data) {
+                            $("#captchaToken").val(result.data.captchaId);
+                            if (result.data.captchaContent && result.data.captchaContent.substring(0, 10) === "data:audio"){
+                                // captcha_audio.src = result.data.captchaContent;
+                                loadAudio(result.data.captchaContent)
+                                captcha_audio.style.display = "block";
+                                captcha_img.style.display = "none";
+                            } else {
+                                captcha_img.src = result.data.captchaContent;
+                                captcha_img.style.display = "block";
+                                captcha_audio.style.display = "none";
+                            }
+                        } else if (result.code === 7) {
+                            // 操作频繁
+                            const err_info =  "\u64CD\u4F5C\u9891\u7E41\uFF0C\u8BF7\u7A0D\u540E\u518D\u8BD5";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        }
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    }
+                });
+            }
+
+            function captchaCheck() {
+                const answer = $("#captcha_code").val();
+                if (answer.trim().length === 0){
+                    const err_info = "\u8BF7\u8F93\u5165\u56FE\u5F62\u9A8C\u8BC1\u7801";
+                    $("#verCaptchaCode").text(err_info).removeClass("hidden");
+                    return;
+                }
+                const captchaToken = $("#captchaToken").val();
+                const phone = $("#v_phone").val();
+                const country_code = $("#v_countryCode").val();
+                const phoneNumber = country_code+phone;
+                const data = {
+                    phone: phoneNumber,
+                    captchaId: captchaToken,
+                    captchaAnswer: answer
+                }
+                $.ajax({
+                    data: JSON.stringify(data),
+                    type: "POST",
+                    url: SERVICE_API+"/phones/check",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0) {
+                            $('#captchaModal').modal('hide');
+                            // 缓存用户信息
+                            sessionStorage.setItem("userInfo", JSON.stringify(result.data));
+                            sessionStorage.setItem("ptToken", result.data.sc);
+                            // 发送短信验证码
+                            sendVeryCode({"phone": phoneNumber});
+                        } else if(result.code === 4) {
+                            $('#captchaModal').modal('hide');
+                            // 手机号未注册
+                            const err_info =  "\u8BE5\u624B\u673A\u53F7\u672A\u6CE8\u518C\u8D26\u53F7";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else if(result.code === 6) {
+                            // 已经绑定邮箱
+                            sessionStorage.setItem("userInfo", JSON.stringify(result.data));
+                            $('#captchaModal').modal('hide');
+                            setPage(2, 2);
+                        } else if (result.code === 7) {
+                            // 操作频繁
+                            const err_info =  "\u64CD\u4F5C\u9891\u7E41\uFF0C\u8BF7\u7A0D\u540E\u518D\u8BD5";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else if(result.code === 8) {
+                            // 图形验证码错误
+                            const err_info =  "\u9A8C\u8BC1\u7801\u6709\u8BEF";
+                            $("#verCaptchaCode").text(err_info).removeClass("hidden");
+                            refreshCaptcha();
+                        } else {
+                            $('#captchaModal').modal('hide');
+                            $("#tips_content").text(result.message);
+                            $("#tipsModal").modal('show');
+                        }
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    }
+                });
+            }
+
+            let interval;
+            // 设置定时器
+            function startInterval(num, btnId) {
+                let tempDown = num;
+                interval = setInterval(function() {
+                    if (tempDown === 0) {
+                        stopInterval(btnId);
+                    } else {
+                        tempDown--;
+                        const info =  "\u91CD\u65B0\u53D1\u9001";
+                        $('#'+btnId).prop('disabled', true).addClass('disabled-button').text(info+'(' + tempDown + 's)');
+                    }
+                }, 1000);
+            }
+
+            // 清除定时器
+            function stopInterval(btnId) {
+                clearInterval(interval);
+                const info =  "\u83B7\u53D6\u9A8C\u8BC1\u7801";
+                $('#'+btnId).prop('disabled', false).removeClass('disabled-button').text(info);
+            }
+
+            function sendVeryCode(data) {
+                $.ajax({
+                    headers: {
+                        "sc1": sessionStorage.getItem("ptToken")
+                    },
+                    data: JSON.stringify(data),
+                    type: "post",
+                    url: SERVICE_API+"/phones/send_code",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0) {
+                            const useVoice = result.data.useVoice;
+                            $("#phoneCodeHash").val(result.data.codeHash);
+                            if (useVoice === true || result.data.useVoice === "true") {
+                                const tip = "\u60A8\u7684\u4FE1\u606F\u5DF2\u9A8C\u8BC1\uFF0C\u8BF7\u7559\u610F\u6765\u81EA{number}\u5F00\u5934\u7684\u6765\u7535";
+                                $("#tips_content").text(tip.replace("{number}", result.data.voiceCallNumberPrefix || "400"));
+                                $("#tipsModal").modal('show');
+                            } else {
+                                showTips();
+                            }
+                            // 开始倒计时
+                            startInterval(countdown, "sendPhoneCode");
+                        } else if (result.code === 7) {
+                            // 操作频繁
+                            const err_info =  "\u64CD\u4F5C\u9891\u7E41\uFF0C\u8BF7\u7A0D\u540E\u518D\u8BD5";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else if (result.code === 14) {
+                            // 自主发送短信
+                            $("#phoneCodeHash").val(result.data.codeHash);
+                            const selfSms = result.data.selfServiceSMSCopyWriterV1;
+                            for (let i = 0; i < selfSms.length; i++){
+                                if (selfSms[i].type === "dx"){
+                                    $("#dxCode").text(selfSms[i].code);
+                                    $("#dxPhone").text(selfSms[i].number);
+                                } else if (selfSms[i].type === "yd"){
+                                    $("#ydCode").text(selfSms[i].code);
+                                    $("#ydPhone").text(selfSms[i].number);
+                                } else if (selfSms[i].type === "lt") {
+                                    $("#ltCode").text(selfSms[i].code);
+                                    $("#ltPhone").text(selfSms[i].number);
+                                }
+                            }
+                            setPage(5);
+                        } else if (result.code === 16) {
+                            const err_info =  "\u77ED\u4FE1\u901A\u9053\u5DF2\u5173\u95ED\uFF0C\u8BF7\u524D\u5F80\u79FB\u52A8\u7AEF\u4F7F\u7528\u90AE\u7BB1\u6CE8\u518C\u65B0\u5E10\u53F7";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else {
+                            showTips(result.message);
+                        }
+                    },
+                    error: function (data) {
+                        showTips(service_busy);
+                    }
+                });
+            }
+
+            /**
+             * step1 验证手机号 下一步
+             */
+            let lastSmsCode = "";
+            let lastErrorText = "";
+            function verifyPhoneNextButton() {
+                const phone = $("#v_phone").val();
+                const country_code = $("#v_countryCode").val();
+                let sms_code = $("#verificationCode").val();
+                const phoneCodeHash = $("#phoneCodeHash").val();
+
+                if (phone.trim().length === 0) {
+                    const err_info = "\u8BF7\u8F93\u5165\u624B\u673A\u53F7";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (phone.trim().length < 7) {
+                    const err_info = "\u8BF7\u8F93\u5165\u6B63\u786E\u7684\u624B\u673A\u53F7";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (country_code.trim().length === 0) {
+                    const err_info = "\u8BF7\u9009\u62E9\u56FD\u5BB6";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (sms_code.trim().length === 0) {
+                    if (phoneCodeHash.substring(0, 3) === "sss"){
+                        sms_code = "88888";
+                    } else {
+                        const err_info = "\u8BF7\u8F93\u5165\u9A8C\u8BC1\u7801";
+                        $("#verCode").text(err_info).removeClass("hidden");
+                        return;
+                    }
+                }
+                if (lastSmsCode !== "" && lastSmsCode === sms_code && lastErrorText !== ""){
+                    $("#verCode").text(lastErrorText).removeClass("hidden");
+                    return;
+                }
+                const data = {
+                    phoneCodeHash: phoneCodeHash,
+                    phone: country_code+phone,
+                    code: sms_code
+                };
+                $.ajax ({
+                    headers: {
+                        "sc1": sessionStorage.getItem("ptToken")
+                    },
+                    data: JSON.stringify(data),
+                    type: "post",
+                    url: SERVICE_API+"/phones/check_code",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0) {
+                            lastSmsCode = "";
+                            lastErrorText = "";
+                            stopInterval("sendPhoneCode");
+                            // 跳转到账户信息显示页面
+                            setPage(2, 0);
+                        } else if (result.code === 7) {
+                            // 操作频繁
+                            const err_info =  "\u64CD\u4F5C\u9891\u7E41\uFF0C\u8BF7\u7A0D\u540E\u518D\u8BD5";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else if(result.code === 10) {
+                            // 验证码错误
+                            const err_info =  "\u9A8C\u8BC1\u7801\u6709\u8BEF";
+                            lastSmsCode = sms_code;
+                            lastErrorText = err_info;
+                            $("#verCode").text(err_info).removeClass("hidden");
+                        } else if(result.code === 15) {
+                            // 验证码错误
+                            const err_info =  "\u672A\u6536\u5230{phone}\u53D1\u9001\u7684\u77ED\u4FE1\uFF0C\u8BF7\u786E\u8BA4\u53D1\u9001\u624B\u673A\u53F7\u7801";
+                            const tips_phone = err_info.replace("{phone}", phone);
+                            $("#tips_content").text(tips_phone);
+                            $("#tipsModal").modal('show');
+                        } else if (result.code === 16) {
+                            const err_info =  "\u77ED\u4FE1\u901A\u9053\u5DF2\u5173\u95ED\uFF0C\u8BF7\u524D\u5F80\u79FB\u52A8\u7AEF\u4F7F\u7528\u90AE\u7BB1\u6CE8\u518C\u65B0\u5E10\u53F7";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else {
+                            // 没有发送短信
+                            let err_info = "\u64CD\u4F5C\u5931\u8D25";
+                            if (phoneCodeHash.trim().length === 0) {
+                                err_info =  "\u8BF7\u5148\u53D1\u9001\u77ED\u4FE1\u9A8C\u8BC1\u7801";
+                            }
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        }
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    }
+                });
+            }
+
+            /**
+             * 上一步
+             * @param step 回退的步骤页面
+             */
+            function lastStepButton(step){
+                setPage(step, 0)
+            }
+
+            /**
+             * 清除输入框
+             */
+            function clearInputVal(){
+                $("#phoneCodeHash").val("");
+                $("#v_phone").val("");
+                $("#verificationCode").val("");
+                $("#set_email").val("");
+                $("#emailVerifyCode").val("");
+            }
+
+            /**
+             * 显示提示信息
+             * @param step 页面步骤[1-手机号校验｜2-账户信息显示｜3-设置邮箱｜4-绑定邮箱成功（同账户信息显示）｜5-编辑短信发送]
+             * @param status 账户绑定状态[0-未绑定｜1-绑定成功｜2-已经绑定]
+             */
+            function setPage(step, status){
+                if (step === 1){
+                    clearInputVal();
+                    $("#bind_step1").show();
+                    $("#edit_sms").hide();
+                    $("#bind_step2").hide();
+                    $("#bind_step3").hide();
+                } else if (step === 2){
+                    $("#bind_step1").hide();
+                    $("#edit_sms").hide();
+                    $("#bind_step3").hide();
+                    $("#bind_step2").show();
+                    bindEmailLabel(status);
+                    initUserInfo();
+                } else if (step === 3){
+                    $("#bind_step1").hide();
+                    $("#edit_sms").hide();
+                    $("#bind_step2").hide();
+                    $("#bind_step3").show();
+                } else if (step === 4){
+                    $("#bind_step1").hide();
+                    $("#bind_step3").hide();
+                    $("#edit_sms").hide();
+                    $("#bind_step2").show();
+                    bindEmailLabel(status);
+                    initUserInfo();
+                } else if (step === 5){
+                    $("#bind_step1").hide();
+                    $("#bind_step2").hide();
+                    $("#bind_step3").hide();
+                    $("#edit_sms").show();
+                }
+
+                if (step === 2 || step === 3) {
+                    const finishBtn = "\u5B8C\u6210";
+                    const nextBtn = "\u4E0B\u4E00\u6B65";
+                    if (status === 0) {
+                        $("#nextBtnText").text(nextBtn);
+                        $("#acc_last_step").show();
+                        $("#download-link").hide();
+                    } else {
+                        $("#nextBtnText").text(finishBtn);
+                        $("#acc_last_step").hide();
+                        $("#download-link").show();
+                    }
+                }
+            }
+
+            function bindEmailLabel(type){
+                if (type === 0){
+                    $("#bind_success").hide();
+                    $("#bind_already").hide();
+                    $("#bind_start").show();
+                } else if (type === 1) {
+                    $("#bind_start").hide();
+                    $("#bind_already").hide();
+                    $("#bind_success").show();
+                } else if (type === 2) {
+                    $("#bind_start").hide();
+                    $("#bind_success").hide();
+                    $("#bind_already").show();
+                }
+            }
+
+            function canPlayType(type) {
+                var audio = document.createElement('audio');
+                return !!(audio.canPlayType && audio.canPlayType(type).replace(/no/, ''));
+            }
+
+            function loadAudio(src) {
+                var audioElement = document.getElementById('captcha_audio');
+                if (canPlayType('audio/wav')) {
+                    audioElement.type = 'audio/wav';
+                    audioElement.src = src;
+                } else if (canPlayType('audio/mpeg')) {
+                    audioElement.type = 'audio/mpeg';
+                    audioElement.src = src;
+                } else if (canPlayType('audio/ogg')) {
+                    audioElement.type = 'audio/ogg';
+                    audioElement.src = src;
+                } else {
+                    const err_info =  "BindEmailError.browser_not_support";
+                    audioElement.innerHTML = '<p>err_info</p>';
+                }
+            }
+
+            $(function () {
+                // 初始显示步骤1
+                $("#bind_step1").show();
+                $('#refreshImg').on('click', function() {
+                    $(this).addClass('rotate-animation');
+                    // 确保动画结束后移除类，以便下次点击时动画重新播放
+                    $(this).one('animationend', function() {
+                        $(this).removeClass('rotate-animation');
+                    });
+                });
+
+                SERVICE_API = $('#serviceApi').val();
+                $('#captchaModal').on('show.bs.modal', function (e) {
+                    $('#verCaptchaCode').text("&quot;").addClass("hidden")
+                    $('#captcha_code').val("");
+                    refreshCaptcha();
+                })
+
+                $('#v_phone').on('input', function () {
+                    const phone = $(this).val();
+                    if (phone.trim().length >= 7) {
+                        $('#verPhone').text("&quot;").addClass("hidden")
+                    }
+                });
+                $('#verificationCode').on('input', function () {
+                    $('#verCode').text("&quot;").addClass("hidden")
+                });
+                $('#captcha_code').on('input', function () {
+                    $('#verCaptchaCode').text("&quot;").addClass("hidden")
+                });
+
+                $('#v_countryCode').bind('input keyup', function () {
+                    let code = $(this).val();
+                    const selector = document.getElementById("countrySelector");
+                    const options = selector.options;
+                    let state = false;
+                    for (var i = 0; i < options.length; i++) {
+                        if (code === options[i].value) {
+                            selector.options[i].selected = true;
+                            state = true;
+                            break;
+                        }
+                    }
+                    if (!state) {
+                        selector.selectedIndex = -1;
+                        const err_info = "\u56FD\u5BB6\u7801\u4E0D\u5339\u914D";
+                        $("#verPhone").text(err_info).removeClass("hidden");
+                    } else {
+                        $('#verPhone').text("&quot;").addClass("hidden");
+                    }
+                });
+            });
+
+            let bindState = false;
+            let serviceAvatarUrl = "";
+
+            /**
+             * step2 账户信息 下一步｜完成
+             */
+            function nextBindButton() {
+                if (bindState){
+                    // 完成
+                    sessionStorage.removeItem("userInfo");
+                    location.href = "/apps";
+                } else {
+                    // 下一步（绑定邮箱）
+                    setPage(3, 1);
+                }
+            }
+
+            let timeoutId;
+            function debounce(func, wait) {
+                return function() {
+                    const context = this;
+                    const args = arguments;
+
+                    clearTimeout(timeoutId);
+                    timeoutId = setTimeout(function() {
+                        func.apply(context, args);
+                    }, wait);
+                };
+            }
+
+            let lastEmail = "";
+            let errorInfo = "";
+            function sendEmailVerifyCode() {
+                const email = $("#set_email").val();
+                if (email.trim().length === 0) {
+                    const err_info =  "\u8BF7\u8F93\u5165\u90AE\u7BB1\u5730\u5740";
+                    $("#verEmail").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (!emailRegex.test(email)) {
+                    const err_info =  "\u8BF7\u8F93\u5165\u6B63\u786E\u7684\u90AE\u7BB1\u5730\u5740";
+                    $("#verEmail").text(err_info).removeClass("hidden");
+                    return;
+                }
+                // 已经绑定过邮箱，在未修改邮箱再次点击获取验证码，显示错误信息
+                if (lastEmail !== "" && lastEmail === email && errorInfo !== ""){
+                    $("#tips_content").text(errorInfo);
+                    $("#tipsModal").modal('show');
+                    return;
+                }
+                $.ajax({
+                    headers: {
+                        "sc1": sessionStorage.getItem("ptToken")
+                    },
+                    data: JSON.stringify({email: email}),
+                    type: "post",
+                    url: SERVICE_API+"/phones/emails/send_code",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0) {
+                            $("#bindEmailHashCode").val(result.data.codeHash);
+                            showTips();
+                            startInterval(countdown, "sendEmailCode");
+                        } else {
+                            let err_info = result.message
+                            if (result.code === 2){
+                                // cookie失效
+                                err_info =  "\u64CD\u4F5C\u5931\u8D25\uFF0C\u8BF7\u8FD4\u56DE\u9996\u9875\u91CD\u8BD5";
+                            } else if (result.code === 7){
+                                // 操作频繁
+                                err_info =  "\u64CD\u4F5C\u9891\u7E41\uFF0C\u8BF7\u7A0D\u540E\u518D\u8BD5";
+                            } else if (result.code === 11){
+                                // 此邮箱已绑定账号
+                                err_info =  "\u6B64\u90AE\u7BB1\u5DF2\u7ED1\u5B9A\u8D26\u53F7";
+                                lastEmail = email;
+                                errorInfo = err_info;
+                            } else if (result.code === 12){
+                                // 获取邮箱验证码失败
+                                err_info =  "\u83B7\u53D6\u90AE\u7BB1\u9A8C\u8BC1\u7801\u5931\u8D25";
+                            } else if (result.code === 16) {
+                                //短信通道已关闭 请注册新帐号
+                                err_info =  "\u77ED\u4FE1\u901A\u9053\u5DF2\u5173\u95ED\uFF0C\u8BF7\u524D\u5F80\u79FB\u52A8\u7AEF\u4F7F\u7528\u90AE\u7BB1\u6CE8\u518C\u65B0\u5E10\u53F7";
+                            }
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        }
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    }
+                });
+            }
+
+            const sendCodeBtn = document.getElementById('sendEmailCode');
+            sendCodeBtn.addEventListener('click', debounce(sendEmailVerifyCode, 300));
+
+            /**
+             * step3 设置邮箱 下一步（验证绑定邮箱）
+             */
+            function bindEmailButton() {
+                const email = $("#set_email").val();
+                const sms_code = $("#emailVerifyCode").val();
+                const emailCodeHash = $("#bindEmailHashCode").val();
+                if (email.trim().length === 0) {
+                    const err_info =  "\u8BF7\u8F93\u5165\u90AE\u7BB1\u5730\u5740";
+                    $("#verEmail").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (sms_code.trim().length === 0) {
+                    const err_info =  "\u8BF7\u8F93\u5165\u9A8C\u8BC1\u7801";
+                    $("#verEmailCode").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (emailCodeHash.trim().length === 0) {
+                    const err_info =  "\u8BF7\u5148\u53D1\u9001\u90AE\u7BB1\u9A8C\u8BC1\u7801";
+                    $("#tips_content").text(err_info);
+                    $("#tipsModal").modal('show');
+                }
+                const data = {email: email, code: sms_code, emailCodeHash: emailCodeHash};
+                $.ajax({
+                    headers: {
+                        "sc1": sessionStorage.getItem("ptToken")
+                    },
+                    data: JSON.stringify(data),
+                    type: "post",
+                    url: SERVICE_API+"/phones/emails/bind",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0) {
+                            // 跳转到账户信息显示页面
+                            const userInfo = sessionStorage.getItem("userInfo");
+                            if (userInfo) {
+                                const userInfoObj = JSON.parse(userInfo);
+                                userInfoObj.email = email;
+                                sessionStorage.setItem("userInfo", JSON.stringify(userInfoObj));
+                            }
+                            stopInterval("sendEmailCode");
+                            setPage(4, 1);
+                        }else if (result.code === 6) {
+                            // 已经绑定邮箱
+                            const err_info =  "\u8BE5\u8D26\u53F7\u5DF2\u7ECF\u7ED1\u5B9A\u90AE\u7BB1\uFF1A";
+                            $("#verEmailCode").text(err_info).removeClass("hidden");
+                        } else if (result.code === 7) {
+                            // 操作频繁
+                            const err_info =  "\u64CD\u4F5C\u9891\u7E41\uFF0C\u8BF7\u7A0D\u540E\u518D\u8BD5";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else if (result.code === 13) {
+                            const err_info =  "\u9A8C\u8BC1\u7801\u6709\u8BEF";
+                            $("#verEmailCode").text(err_info).removeClass("hidden");
+                        } else if (result.code === 16) {
+                            const err_info =  "\u77ED\u4FE1\u901A\u9053\u5DF2\u5173\u95ED\uFF0C\u8BF7\u524D\u5F80\u79FB\u52A8\u7AEF\u4F7F\u7528\u90AE\u7BB1\u6CE8\u518C\u65B0\u5E10\u53F7";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else {
+                            // 没有发送短信
+                            let err_info = "\u64CD\u4F5C\u5931\u8D25";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        }
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    }
+                });
+            }
+
+            function initUserInfo(){
+                const userInfo = sessionStorage.getItem("userInfo") ? JSON.parse(sessionStorage.getItem("userInfo")) : null;
+                if (userInfo){
+                    $("#show_phone").text("+"+userInfo.phone);
+                    $("#nickName").text(userInfo.firstName);
+                    $("#userName").text("@"+userInfo.username);
+                    $("#bind_already_email").text(userInfo.email);
+                    $("#bind_success_email").text(userInfo.email);
+                    if (userInfo.photo && userInfo.photo.length > 0){
+                        $("#avatar").attr("src", serviceAvatarUrl+userInfo.photo).show();
+                    } else {
+                        const chineseRegex = /[\u4e00-\u9fa5]/;
+                        const char = userInfo.firstName.substring(0,1);
+                        if (chineseRegex.test(char)){
+                            $("#avatar_txt").text(char);
+                        } else {
+                            $("#avatar_txt").text(userInfo.firstName.substring(0,2));
+                        }
+                        $("#default_avatar").show();
+                    }
+                    if (userInfo.email && userInfo.email.length > 0){
+                        bindState = true;
+                    }
+                }
+            }
+
+            let hasBeenCalled = false;
+            function initBaseData(){
+                if (hasBeenCalled) return;
+                hasBeenCalled = true;
+
+                // 获取国家列表
+                $.ajax({
+                    type: "post",
+                    url: "/getBaseData",
+                    async: true,
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        sessionStorage.setItem("baseData", JSON.stringify(result.data));
+                        serviceAvatarUrl = result.data.serviceAvatarUrl;
+                        SERVICE_API = result.data.serviceApi;
+                        initCountrySelector(result.data);
+                        initDownloadUrl(result.data);
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    },
+                })
+            }
+
+            function initDownloadUrl(data){
+                $("#download_android").attr('href', data.android.url.split('~')[0]);
+                $("#download_windows").attr('href', data.win.url);
+                $("#download_mac").attr('href', data.mac.url);
+                $("#download_linux").attr('href', data.linux.url);
+            }
+
+            function initCountrySelector(data){
+                if (data){
+                    const selector = $("#countrySelector");
+                    for (let i = 0; i < data.smsCountries.length; i++) {
+                        const country = data.smsCountries[i];
+                        const txt = data.lang == 'zh' ? country.nameZh : country.nicename;
+                        const txt2 = txt+",+"+country.phonecode;
+                        const select = data.country_code === country.iso ? true : false;
+                        if (select){
+                            const selected = "selected";
+                            selector.append("<option value='"+country.phonecode+"' selected='"+selected+"'>"+txt2+"</option>");
+                            $("#v_countryCode").val(country.phonecode);
+                        } else {
+                            selector.append("<option value='"+country.phonecode+"'>"+txt2+"</option>");
+                        }
+                    }
+                }
+            }
+
+            $(function () {
+                setPage(1, 0);
+                initBaseData();
+                // 初始化时设置默认值
+                $('#countrySelector').trigger('change');
+
+                $('#countrySelector').on('change', function () {
+                    $("#v_countryCode").val($(this).val());
+                });
+                bindState = false;
+                initUserInfo();
+                $('#set_email').on('input', function () {
+                    const email = $(this).val();
+                    if (emailRegex.test(email)) {
+                        $('#verEmail').text("&quot;").addClass("hidden")
+                    }
+                });
+                $('#emailVerifyCode').on('input', function () {
+                    $('#verEmailCode').text("&quot;").addClass("hidden")
+                });
+            });
+        </script>
+    </div>
+</div>
+
+</div>
+    <div class="topbanner" style="width: 100%;height: auto;overflow: hidden;min-height: 450px;min-width: 1200px;background: url('/resources/images/banner/banner_news_bg.png');height: 450px;background-position: bottom;padding-left: 20px;">
+        <div style="padding-top: 100px;width: 1200px;margin: auto;height: auto;overflow: hidden" class="indextxt">
+            <p class="text1">POTATO 新闻</p>
+            <p class="text2" style="max-width: 570px">展示potato相关新闻，方便用户更好的了解potato。</p>
+        </div>
+    </div>
+
+
+
+
+        <div class="apps-list">
+            <a href="/news/14">
+                <input name="fbtime" type="hidden" value="2023/01/17">
+                <div class="box-lef" style="border-radius: 20px;background: #F9FCFF;border: 1px solid rgba(0,140,255,0.10);">
+                    <div class="date1" style="border-radius: 20px;">17</div>
+                    <div class="date2">2023/01</div>
+                </div>
+
+                <div class="box-rigth">
+                    <p class="text-title">新的一年 新的Potato</p>
+<!--                    <span class="contentp" style="display: none"><th:block th:utext="${item.content}">title</th:block></span>-->
+                    <textarea class="contentp" style="display: none">&lt;p&gt;Potato推出多年以来得到了大家喜爱与支持，伴随新的一年的到来，Potato也迎来了他新的开始，让我们一起看看potato带来的改变吧&lt;/p&gt;
+
+&lt;img src="/resources/images/202301/video/1.jpg" style="width:100%" /&gt;
+
+&lt;h2 style="color:#007EE5;"&gt;PT换新颜&lt;/h2&gt;
+&lt;p&gt;新年Potato换新颜，给你带来新的体验&lt;/p&gt;
+&lt;p&gt;新的Potato采用了新的布局，精简了底部导航栏，「我的」功能移动到了左上角；&lt;/p&gt;
+&lt;p&gt;同时聊天消息栏中，我们扩展了信息的容量，你可以看到更多的内容，同时我们也优化了在收到重要消息时的展现方式&lt;/p&gt;
+
+&lt;video src="/resources/images/202301/video/2.mp4" controls="false" loop="loop" muted="muted" style="height: 600px;width: 100%;margin-bottom: 40px;margin-top: 40px;"&gt;&lt;/video&gt;
+
+&lt;h2 style="color:#007EE5;"&gt;展现您特有的个性&lt;/h2&gt;
+&lt;p&gt;我们优化了个性签名和个人状态设置，现在您可以随时设置或者变更您的状态，记录下你特有的个性签名，并向您的朋友们进行展示&lt;/p&gt;
+
+&lt;h2 style="color:#007EE5;"&gt;第一时间了解朋友最新动态&lt;/h2&gt;
+&lt;p&gt;朋友发布的动态，您将会得到最快的通知，在发现页面中直接就可以看到朋友发不的动态，并且可以直接查看朋友的动态并进行回复&lt;/p&gt;
+
+&lt;video src="/resources/images/202301/video/4.mov" controls="false" loop="loop" muted="muted" style="height: 600px;width: 100%;margin-bottom: 40px;margin-top: 40px;"&gt;&lt;/video&gt;
+
+&lt;h2 style="color:#007EE5;"&gt;新的登录注册流程&lt;/h2&gt;
+&lt;p&gt;在IOS和安卓上，我们优化了登录和注册流程，新的登录风格和流程，希望能带给您更好的体验&lt;/p&gt;
+
+&lt;video src="/resources/images/202301/video/5.mp4" controls="false" loop="loop" muted="muted" style="height: 600px;width: 100%;margin-bottom: 40px;margin-top: 40px;"&gt;&lt;/video&gt;
+
+&lt;h2 style="color:#007EE5;"&gt;视频边播放边下载&lt;/h2&gt;
+&lt;p&gt;在IOS和安卓上，播放视频不再等待，打开视频就可以一边看一边播放&lt;/p&gt;
+
+&lt;video src="/resources/images/202301/video/6.mp4" controls="false" loop="loop" muted="muted" style="height: 600px;width: 100%;margin-bottom: 40px;margin-top: 40px;"&gt;&lt;/video&gt;
+
+&lt;h2 style="color:#007EE5;"&gt;改进小程序管理功能&lt;/h2&gt;
+&lt;p&gt;在安卓和IOS小程序管理功能中，我们增加了重新加入小程序和复制链接功能，您可以直接复制小程序的链接发给你的朋友们&lt;/p&gt;
+&lt;p&gt;安卓中，你可以直接将你的小程序放置到您手机的桌面中，直接在手机桌面中直接打开小程序&lt;/p&gt;
+
+&lt;video src="/resources/images/202301/video/7.mp4" controls="false" loop="loop" muted="muted" style="height: 600px;width: 100%;margin-bottom: 40px;margin-top: 40px;"&gt;&lt;/video&gt;
+</textarea>
+                    <p class="text-desc">Potato推出多年以来得到了大家喜爱与支持，伴随新的一年的到来，Potato也迎来了他新的开始，让我们一起看看potato带来的改变吧
+
+
+
+PT换新颜
+新年Potato换新颜，给你带来新的体验
+新的Potato采用了新的布局，精简了底部导航栏，「我的」功能移动到了左上角；
+同时聊天消息栏中，我们扩展了信息的容量，你可以看到更多的内容，同时我们也优化了在收到重要消息时的展现方式
+
+
+
+展现您特有的个性
+我们优化了个性签名和个人状态设置，现在您可以随时设置或者变更您的状态，记录下你特有的个性签名，并向您的朋友们进行展示
+
+第一时间了解朋友最新动态
+朋友发布的动态，您将会得到最快的通知，在发现页面中直接就可以看到朋友发不的动态，并且可以直接查看朋友的动态并进行回复
+
+
+
+新的登录注册流程
+在IOS和安卓上，我们优化了登录和注册流程，新的登录风格和流程，希望能带给您更好的体验
+
+
+
+视频边播放边下载
+在IOS和安卓上，播放视频不再等待，打开视频就可以一边看一边播放
+
+
+
+改进小程序管理功能
+在安卓和IOS小程序管理功能中，我们增加了重新加入小程序和复制链接功能，您可以直接复制小程序的链接发给你的朋友们
+安卓中，你可以直接将你的小程序放置到您手机的桌面中，直接在手机桌面中直接打开小程序
+
+
+</p>
+                </div>
+            </a>
+        </div>
+
+
+
+
+
+
+        <div class="apps-list">
+            <a href="/news/11">
+                <input name="fbtime" type="hidden" value="2020/06/24">
+                <div class="box-lef" style="border-radius: 20px;background: #F9FCFF;border: 1px solid rgba(0,140,255,0.10);">
+                    <div class="date1" style="border-radius: 20px;">24</div>
+                    <div class="date2">2020/06</div>
+                </div>
+
+                <div class="box-rigth">
+                    <p class="text-title">Potato小程序是一种免安装、体验便捷的应用</p>
+<!--                    <span class="contentp" style="display: none"><th:block th:utext="${item.content}">title</th:block></span>-->
+                    <textarea class="contentp" style="display: none">  
+&lt;p&gt;小程序介绍：&lt;/p&gt;
+&lt;p&gt;Potato小程序是一种无需下载安装即可体验的应用，它可以在Potato Chat内便捷体验和传播，并支持多类型应用，例如：游戏、购物、新闻资讯、视频、音乐、导航、出行、学习、理财、计算器等。
+&lt;p&gt;开发者可以快速开发小程序，为用户提供良好的用户体验，并有机会分享Potato Chat流量。&lt;/p&gt;
+&lt;br /&gt;
+&lt;p&gt;小程序体验方法：&lt;/p&gt;
+
+&lt;p&gt;方法1：消息列表界面，消息列表处于最顶端时，手指在屏幕上进行下滑操作，会弹出小程序列表。&lt;/p&gt;
+&lt;video src="/resources/images/seltap.mp4" controls="false" loop="loop" autoplay="autoplay" muted="muted" style="height: 600px;width: 100%;margin-bottom: 40px;margin-top: 40px;"&gt;
+您的浏览器不支持 video 标签。
+&lt;/video&gt;
+
+
+&lt;p&gt;方法2：依次点击菜单栏“发现”—“小程序”，可进入小程列表界面。&lt;/p&gt;
+&lt;video src="/resources/images/faxian.mp4" controls="false" loop="loop" autoplay="autoplay" muted="muted" style="height: 600px;width: 100%;margin-bottom: 40px;margin-top: 40px;"&gt;
+您的浏览器不支持 video 标签。
+&lt;/video&gt;
+
+&lt;p&gt;方法3：任意对话框中输入“@app + 空格”，在弹出的小程序列表中选择想要体验的小程。或者输入“@app + 空格+小程序应用名”，可准确找到指定的小程序。&lt;/p&gt;
+&lt;video src="/resources/images/atap.mp4" controls="false" loop="loop" autoplay="autoplay" muted="muted" style="height: 600px;width: 100%;margin-bottom: 40px;margin-top: 40px;"&gt;
+您的浏览器不支持 video 标签。
+&lt;/video&gt;
+
+
+&lt;br /&gt;
+&lt;p&gt;开发者招募：&lt;/p&gt;
+&lt;p&gt;Potato开发者正在火热招募中，欢迎更多开发者加入Potato开放平台，和我们一起打造和谐共赢的Potato生态，更多详情见 &lt;a href="https://Developer.potato.im/"&gt;https://Developer.potato.im/&lt;/a&gt;&lt;/p&gt;
+
+
+
+  </textarea>
+                    <p class="text-desc">  
+小程序介绍：
+Potato小程序是一种无需下载安装即可体验的应用，它可以在Potato Chat内便捷体验和传播，并支持多类型应用，例如：游戏、购物、新闻资讯、视频、音乐、导航、出行、学习、理财、计算器等。
+开发者可以快速开发小程序，为用户提供良好的用户体验，并有机会分享Potato Chat流量。
+
+小程序体验方法：
+
+方法1：消息列表界面，消息列表处于最顶端时，手指在屏幕上进行下滑操作，会弹出小程序列表。
+
+您的浏览器不支持 video 标签。
+
+
+
+方法2：依次点击菜单栏“发现”—“小程序”，可进入小程列表界面。
+
+您的浏览器不支持 video 标签。
+
+
+方法3：任意对话框中输入“@app + 空格”，在弹出的小程序列表中选择想要体验的小程。或者输入“@app + 空格+小程序应用名”，可准确找到指定的小程序。
+
+您的浏览器不支持 video 标签。
+
+
+
+
+开发者招募：
+Potato开发者正在火热招募中，欢迎更多开发者加入Potato开放平台，和我们一起打造和谐共赢的Potato生态，更多详情见 https://Developer.potato.im/
+
+
+
+  </p>
+                </div>
+            </a>
+        </div>
+
+
+
+
+
+
+        <div class="apps-list">
+            <a href="/news/1">
+                <input name="fbtime" type="hidden" value="2019/08/04">
+                <div class="box-lef" style="border-radius: 20px;background: #F9FCFF;border: 1px solid rgba(0,140,255,0.10);">
+                    <div class="date1" style="border-radius: 20px;">04</div>
+                    <div class="date2">2019/08</div>
+                </div>
+
+                <div class="box-rigth">
+                    <p class="text-title">Potato是一款安全、高效的即时通讯应用</p>
+<!--                    <span class="contentp" style="display: none"><th:block th:utext="${item.content}">title</th:block></span>-->
+                    <textarea class="contentp" style="display: none">&lt;p&gt;Potato是一款注重速度和安全性的即时通讯应用。它超快，简单，安全且免费。您可以发送无限量的消息，照片，视频和任何类型的文件（.doc，.zip，.pdf等）。Potato群组可添加群成员高达200,000名，您可以创建频道向无限数量的订阅者广播消息。我们开发Potato，以便在没有通常的警告的情况下快速安全地发送消息。&lt;/p&gt;
+
+&lt;p&gt;Potato适合所有想要快速，安全可靠的消息传递的人。人人都可使用Potato。对于商业用户和小型团队，Potato提供大型群组，桌面应用和强大的文件共享选项;&nbsp;Potato群组可添加群成员高达200,000名，我们支持回复，提及和标签，以帮助维持秩序并保持大型社区的有效沟通。&lt;/p&gt;
+
+&lt;p&gt;如果您对图片更感兴趣，Potato提供了gif动画搜索，这是一个最先进的照片编辑器和一个开放的贴纸平台（在这里或这里找到一些很酷的贴纸）。更重要的是，您无需担心设备上的磁盘空间。Potato拥有云服务和缓存管理选项，它几乎不会占用您的手机空间。&lt;/p&gt;
+
+&lt;p&gt;Potato可用于智能手机，平板电脑和PC，并且Potato支持ios（6及更高版本），Android（4及更高版本）。您还可以使用Windows或OSX桌面应用程序进行安装。随时随地，您可以在大多数设备上使用您自己的手机号码登录并使用Potato。&lt;/p&gt;
+
+&lt;p&gt;在这个数据泛滥的时代，Potato非常关注用户的隐私。在这个问题上，我们一致认为最重要的是： 1.保护用户的聊天信息，防止第三方（如官员，雇主等）窥探 2.保护用户的个人资料，禁止第三方（如营销人员，广告商等）获取该信息。我们知道，每个用户都极其重视隐私问题，这也与每个用户的生活密切相关，所以保护用户的隐私，是Potato的首要任务。我们会努力做，并且会做得更好。&lt;/p&gt;</textarea>
+                    <p class="text-desc">Potato是一款注重速度和安全性的即时通讯应用。它超快，简单，安全且免费。您可以发送无限量的消息，照片，视频和任何类型的文件（.doc，.zip，.pdf等）。Potato群组可添加群成员高达200,000名，您可以创建频道向无限数量的订阅者广播消息。我们开发Potato，以便在没有通常的警告的情况下快速安全地发送消息。
+
+Potato适合所有想要快速，安全可靠的消息传递的人。人人都可使用Potato。对于商业用户和小型团队，Potato提供大型群组，桌面应用和强大的文件共享选项;&nbsp;Potato群组可添加群成员高达200,000名，我们支持回复，提及和标签，以帮助维持秩序并保持大型社区的有效沟通。
+
+如果您对图片更感兴趣，Potato提供了gif动画搜索，这是一个最先进的照片编辑器和一个开放的贴纸平台（在这里或这里找到一些很酷的贴纸）。更重要的是，您无需担心设备上的磁盘空间。Potato拥有云服务和缓存管理选项，它几乎不会占用您的手机空间。
+
+Potato可用于智能手机，平板电脑和PC，并且Potato支持ios（6及更高版本），Android（4及更高版本）。您还可以使用Windows或OSX桌面应用程序进行安装。随时随地，您可以在大多数设备上使用您自己的手机号码登录并使用Potato。
+
+在这个数据泛滥的时代，Potato非常关注用户的隐私。在这个问题上，我们一致认为最重要的是： 1.保护用户的聊天信息，防止第三方（如官员，雇主等）窥探 2.保护用户的个人资料，禁止第三方（如营销人员，广告商等）获取该信息。我们知道，每个用户都极其重视隐私问题，这也与每个用户的生活密切相关，所以保护用户的隐私，是Potato的首要任务。我们会努力做，并且会做得更好。</p>
+                </div>
+            </a>
+        </div>
+
+
+
+
+
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center" style="margin-bottom: 82px;margin-top: 42px">
+        
+        
+        
+            <li class="page-item">
+                
+                <span>1</span>
+            </li>
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+        
+    </ul>
+</nav>
+
+
+    <div style="width: 100%;padding-left: 20px;">
+        <div class="home-privacy" id="home-privacy">
+            <div class="botmfdiv">
+                <div class="botmdiv">
+                    <ul>
+                        <li class="li-title">手机应用</li>
+                        <li> <a href="/changelog#mAndroid">Android</a></li>
+                        <li><a href="/changelog#miOS">iOS</a></li>
+                        <!--<li><a href="https://github.com/potatogm/potato/releases" target="_blank">GitHub</a></li>-->
+                        <!--<li><a href="https://play.google.com/store/apps/details?id=org.potato.messenger.play"
+                                target="_blank">Google Play</a></li>-->
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="botmdiv" style="margin-left: 160px">
+                    <ul>
+                        <li class="li-title">桌面应用</li>
+                        <li><a href="/changelog#mMacOS">macOS</a></li>
+                        <li><a href="/changelog#mWindows">Windows</a></li>
+                        <li><a href="/changelog#mLinux">Linux</a></li>
+                        <!--<li><a href="/resources/files/POTATO.pdf" th:text="#{WhitePaper}" target="_blank">White
+                                Paper</a></li>-->
+                        <!--                    <li><a href="/changelog#mGitHub">GitHub</a></li>-->
+                    </ul>
+                </div>
+
+                <div class="botmdiv" style="margin-left: 160px;width: 180px">
+                    <ul>
+                        <li class="li-title">官方社群</li>
+                        <li><a href="https://twitter.com/PotatoChatApp" target="_blank">关注Twitter账号</a></li>
+                        <li><a href="mailto:business@potato.im" target="_blank">商务洽谈官方邮箱</a></li>
+                        <li><a href="mailto:support@potato.im" target="_blank">技术支持官方邮箱</a>
+                        </li>
+                        <li><a href="mailto:webadmin@potato.im" target="_blank">管理员邮箱</a></li>
+                    </ul>
+                </div>
+
+                <div class="botmdiv" style="margin-right: 0px;float: right;width: 240px">
+                    <ul>
+                        <li class="li-title">订阅我们</li>
+                        <li>
+                            <di><input id="email" type="email" class="emailtxt" placeholder="输入您的邮箱进行订阅"></di>
+                            <div id="emsg" style="color:red;font-size:12px;display:none">邮箱地址错误，请重新输入</div>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <input id="emailbtn" type="button" value="邮箱订阅" style=" cursor: pointer;color: #FFFFFF;outline: none;font-family: PingFangSC-Regular;background: #007EE5;border-radius: 16px;border: none;width: 240px;height: 32px;font-size: 14px;text-align: center;">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sugok" class="alertmsg" style="display:none">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 80px;color: #007EE5;text-align: center;">
+                    </div>
+                
+                    <div style="text-align: center;font-size: 16px;color: #333333;line-height: 24px;height: 24px;margin-top: 20px">
+                        反馈成功！</div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dyok" class="alertmsg" style="display:none">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 80px;color: #007EE5;text-align: center;">
+                    </div>
+                <div style="text-align: center;font-size: 16px;color: #333333;line-height: 24px;height: 24px;margin-top: 20px">恭喜您，订阅成功</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dynook" class="alertmsg" style="display:none">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 80px;color: #F04646;text-align: center;">
+                    </div>
+                <div style="text-align: center;font-size: 16px;color: #333333;line-height: 24px;height: 24px;margin-top: 20px">对不起，订阅失败</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ydynook" class="alertmsg" style="display:none">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 80px;color: #F04646;text-align: center;">
+                    </div>
+                <div style="text-align: center;font-size: 16px;color: #333333;line-height: 24px;height: 24px;margin-top: 20px">对不起，订阅失败</div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="/resources/vendor/jquery/jquery-3.3.1.min.js"></script>
+<script src="/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/resources/vendor/qrcode/jquery.qrcode.min.js"></script>
+<script src="/resources/js/common.js?_=1578896754992"></script>
+<script src="/resources/vendor/confirm/jquery-confirm.min.js"></script>
+
+    
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-145422758-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-145422758-2');
+
+
+            imgUpload({
+                inputId: 'file',
+                imgBox: 'imgBox',
+                buttonId: 'btn',
+                data: 'file1',
+                num: "2"
+            });
+
+            window.onload = () => {
+                document.getElementsByTagName("body")[0].style.height = document.body.scrollHeight + "px";
+                document.getElementsByTagName("body")[0].style.width = document.body.scrollWidth + "px";
+            }
+
+            $(function () {
+
+                $('#countryCode').bind('input keyup', function () {
+                    var codp = "+" + $(this).val();
+                    var guojia = $("#errocode").text();
+                    var code = "";
+                    $(".selectctry-item").each(function () {
+                        if ($(this).children("div:eq(1)").text() == codp) {
+                            guojia = $(this).children("div:first").text();
+                            code = $(this).children("div:eq(1)").text();
+                            return;
+                        }
+                    });
+                    $("#citydiv").text(guojia);
+                    $("#citynum").text(code);
+                });
+
+
+                $.ajax({
+                    type: 'POST',
+                    url: "/ctysg",
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded;charset=utf-8",
+                    success: function (result) {
+                        var countryCode = result.countryCode;
+                        result = result.country;
+                        if ($("#localelang").val() == "en" || typeof $("#localelang").val() === "undefined") {
+                            for (var i = 0; i < result.length; i++) {
+                                if (countryCode == result[i].iso) {
+                                    $("#citydiv").text(result[i].nicename);
+                                    $("#citynum").text("+" + result[i].phonecode);
+                                    $("#countryCode").val(result[i].phonecode);
+                                }
+                                $("#selectctry").append("<div class='selectctry-item'><div style='width: auto;height: 48px;overflow: auto;float: left;color: #000000;'>" + result[i].nicename + "</div>" +
+                                    "<div style='width: auto;height: 48px;overflow: auto;float: right;color: #333333;'>+" + result[i].phonecode + "</div></div>");
+                            }
+                        } else {
+                            for (var i = 0; i < result.length; i++) {
+                                if (countryCode == result[i].iso) {
+                                    $("#citydiv").text(result[i].nameZh);
+                                    $("#citynum").text("+" + result[i].phonecode);
+                                    $("#countryCode").val(result[i].phonecode);
+                                }
+                                $("#selectctry").append("<div class='selectctry-item'><div style='width: auto;height: 48px;overflow: auto;float: left;color: #000000;'>" + result[i].nameZh + "</div>" +
+                                    "<div style='width: auto;height: 48px;overflow: auto;float: right;color: #333333;'>+" + result[i].phonecode + "</div></div>");
+                            }
+                        }
+                        $(".selectctry-item").click(function () {
+                            $("#citydiv").text($(this).children("div").eq(0).html());
+                            $("#citynum").text($(this).children("div").eq(1).html());
+                            var shocode = $(this).children("div").eq(1).html();
+                            $("#countryCode").val(shocode.substring(1, shocode.length));
+                            $("#selectctry").toggle();
+                        });
+                    }, error: function (result) {
+                        console.log("System error！");
+                    }
+                });
+
+
+                $('textarea').bind('input propertychange', function () {
+
+                    if ($(this).val().trim().length > 520) {
+                        $(this).val($(this).val().substring(0, 520));
+                    } else {
+                        $("#textCount").css("color", "black");
+                    };
+                    $("#textCount").html($(this).val().trim().length);
+                });
+
+
+                $(".suga").click(function () {
+                    $("#suggestion_frame").show();
+                    // 打开弹窗时清除数据
+                    // resetInputs();
+                    $("#verify_phone_frame").hide();
+                });
+
+                $("#open-verify-phone").click(function () {
+                    $("#verify_phone_frame").show();
+                    // $("#suggestion_frame").hide();
+                    setPage(1);
+                });
+
+
+                $("#email").keyup(function () {
+                    var emaild = $("#email").val();
+                    var myReg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+                    if (!myReg.test(emaild)) {
+                        $("#email").css("border", " 1px solid red");
+                    } else {
+                        $("#emsg").hide();
+                        $("#email").css("border", " 1px solid #007EE5");
+                    }
+                });
+
+                $("#emailbtn").click(function () {
+                    var emaild = $("#email").val();
+                    var myReg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+                    if (!myReg.test(emaild)) {
+                        $("#email").css("border", " 1px solid red");
+                        $("#emsg").show();
+                        return;
+                    } else {
+                        $("#emsg").hide();
+                        $("#email").css("border", " 1px solid #007EE5");
+                    }
+
+                    $.ajax({
+                        type: "get",
+                        url: "/news/email",
+                        data: "email=" + $('#rss-email').val(),
+                        success: function (data) {
+                            if (data.email == $('#rss-email').val()) {
+                                $("#ydynook").show();
+                                setTimeout(function () {
+                                    $("#ydynook").hide();
+                                }, 2000);
+                            } else {
+
+                                $.ajax({
+                                    type: "post",
+                                    url: "/news/email",
+                                    data: "email=" + $('#rss-email').val(),
+                                    error: function () {
+                                        $("#dynook").show();
+                                        setTimeout(function () {
+                                            $("#dynook").hide();
+                                        }, 3000);
+                                    },
+                                    success: function (data) {
+                                        $("#dyok").show();
+                                        $("body").css("overflow", "hidden");
+                                        setTimeout(function () {
+                                            $("#dyok").hide();
+                                            $("body").css("overflow", "auto");
+                                        }, 3000);
+                                    }
+                                });
+
+                            }
+                        }
+                    });
+
+
+                });
+
+            });
+        </script>
+    
+
+<script>
+
+    $(function () {
+
+        $("textarea.contentp").each(function () {
+            var txt = $(this).text()
+            txt = txt.replace(/<.*?>/ig,"");
+            $(this).next().text(txt);
+        });
+
+        $(".fold-open").click(function () {
+            if($(this).hasClass('none')){
+                $(this).removeClass('none').siblings('i').addClass('none');
+                $(this).parent().parent().siblings().show(500);
+
+            }else{
+                $(this).addClass('none').siblings('i').removeClass('none');
+                $(this).parent().parent().siblings().hide(500);
+            }
+
+        });
+        $(".fold-shrink").click(function () {
+            if($(this).hasClass('none')){
+                $(this).removeClass('none').siblings('i').addClass('none');
+                $(this).parent().parent().siblings().hide(500);
+            }else{
+                $(this).addClass('none').siblings('i').removeClass('none');
+                $(this).parent().parent().siblings().show(500);
+
+            }
+
+        });
+
+        $("input[name=fbtime]").each(function () {
+            var times = $(this).val();
+            $($(this).next().children("div").get(0)).html(times.split("/")[2]);
+            $($(this).next().children("div").get(1)).html(times.split("/")[0]+"/"+times.split("/")[1]);
+        });
+
+    });
+
+    function to(id, obj) {
+        var target = document.getElementById(id);
+        $(obj).addClass('active').siblings().removeClass('active')
+        if (!target) return;
+        var targetOffset = $(target).offset().top - 80;
+        $('html,body').animate({
+                scrollTop: targetOffset
+            },
+            300);
+        return false;
+    }
+</script>
+
+
+</body></html>

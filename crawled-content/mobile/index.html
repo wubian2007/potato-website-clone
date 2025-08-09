@@ -1,0 +1,586 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no maximum-scale=1 user-scalable=0">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="description" content="Potato是一个专注于安全的即时通讯工具。它更快、更安全、更开放且完全免费。可在IOS、Android、Windows 、MacOS和Linux上使用。可创建20万成员的超级群，超级频道，支持语音和视频通话、发照片、发视频、贴纸和Gif，而且文件大小没有限制等。它为你提供了全方面的隐私设置，以及最安全和最稳定的聊天环境。此外，Potato也是保护你的数字货币的专家。">
+    <meta name="keywords" content="Potato,聊天,手机,视频,语音,消息,发送消息,发送照片,免费,im,potato.im,聊天消息,聊天工具,即时消息,安全聊天,私密聊天,语音通话,视频通话,朋友圈,相册,应用程序,下载,发送图片,超级群,频道,钱包,数字钱包,AI,机器人,机器人API,开放平台">
+    <title>Potato</title>
+    <link href="/resources/images/ico.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="/resources/vendor/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="/resources/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/vendor/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/resources/css/main.css?_=1578896754992">
+    <link rel="stylesheet" href="/resources/css/slide.css">
+    <link rel="stylesheet" href="/resources/css/homesider.css">
+    <style>
+        .download-item{
+            height: 24px;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 10px;
+            margin-left: 8px;
+        }
+        .download-type{
+            font-size: 14px;
+            color: #333333;
+            letter-spacing: 0;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .download-type-label{
+            font-size: 14px;
+            color: #007EE5;
+            letter-spacing: 0;
+            font-weight: 500;
+            margin-left: 16px;
+        }
+        .download-btn-slid {
+            background: #007EE5;
+            border-radius: 49px;
+            text-align: center;
+            border: none;
+            width: 240px;
+            height: 49px;
+            font-size: 14px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DYL4XJVLNB"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        /*<![CDATA[*/
+        let gtagId = "G-DYL4XJVLNB";
+        gtag('config', gtagId);
+        /*]]>*/
+
+        // 上报渠道
+        function portChannel() {
+            let urlParams = new URLSearchParams(window.location.search);
+            // 检查是否包含特定参数
+            let channel = urlParams.get('channel')
+            if (channel === 'miyu') {
+                // 记录事件
+                gtag('event', 'channel_miyu_visit', {
+                    'type': 'mobile',
+                    'event_category': 'External Traffic',
+                    'event_label': 'Channel Miyu',
+                    'page_referrer': document.referrer
+                });
+            }
+        }
+
+        function gtag_report_conversion(type, version) {
+            /*<![CDATA[*/
+            let data = {};
+            if (version){
+                data = {'version': version}
+            } else {
+                if (type === 'download_android') {
+                    data = {'version': "2.45.200103"}
+                } else if (type === 'download_ios'){
+                    data = {'version': "2.43.207056"}
+                }
+            }
+            console.log("====>gtag type, data:",type, data)
+            gtag('event', type, data);
+            /*]]>*/
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+    <div class="modal fade" id="tipsModal" tabindex="-1" role="dialog" aria-labelledby="tipsModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div style="display: flex;justify-content: center;margin-top: 15px;">
+                    <p style="text-align: center;font-size: 17px;font-weight: 400;">提示</p>
+                </div>
+                <div class="modal-body" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                    <p id="tips_content"></p>
+                </div>
+                <span style="border-bottom: 1px solid #FFFFFF;"></span>
+                <div class="modal-footer" style="justify-content: center;">
+                    <button type="button" style="font-size: 17px;color: #007EE5;border: 0;background-color: white;font-weight: 400;" data-dismiss="modal">知道啦</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sendTips" class="dyok1">
+        <div class="dyok">
+            <div style="width: 55.3%;
+                    margin: 49.7% auto auto;
+                    background: #FFFFFF;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border-radius: 15px;">
+                <div id="alert_content" style="text-align: center;font-size: 14px;color: #333333;line-height: 18px">发送成功</div>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" id="usrck" value="0">
+    <nav class="navbar" id="mainNav">
+        <div class="container" style="position: relative;height: 100%">
+            <a href="/">
+                <i class="iconfont" style="font-size: 24px;color: #007EE5;"></i>
+            </a>
+            <span>
+                <th:bolck>
+                    <span style="font-size: 17px;font-weight:500">POTATO CHAT</span>
+                </th:bolck>
+                 
+                
+                
+                
+                 
+                 
+                
+                
+            </span>
+            <span id="menuicon">
+                <i class="iconfont icon-menu " style="font-size: 18px"></i>
+            </span>
+
+        </div>
+
+    </nav>
+
+    <div style="height:44px;"></div>
+
+    <div id="ydynook" class="menudiv">
+        <div class="menudivlet"></div>
+        <div class="menudivname">
+            <ul style="margin-top: 12px">
+                <a href="/">
+                    <li class="menu-item  active">
+                        <div class="ckline"></div>
+                        <div class="name">首页</div>
+                    </li>
+                </a>
+                <a href="/apps">
+                    <li class="menu-item ">
+                        <div class="ckline"></div>
+                        <div class="name">应用</div>
+                    </li>
+                </a>
+                <a href="/api">
+                    <li class="menu-item ">
+                        <div class="ckline"></div>
+                        <div class="name">开发者</div>
+                    </li>
+                </a>
+                <a href="/faq">
+                    <li class="menu-item ">
+                        <div class="ckline"></div>
+                        <div class="name">问答</div>
+                     </li>
+                </a>
+                <a href="/privacy">
+                    <li class="menu-item ">
+                        <div class="ckline"></div>
+                        <div class="name">隐私</div>
+                    </li>
+                </a>
+                <a href="/news">
+                    <li class="menu-item ">
+                        <div class="ckline"></div>
+                        <div class="name">新闻</div>
+                    </li>
+                </a>
+                <!--<a href="/resources/files/POTATO.pdf" target="_blank">
+                    <li class="menu-item ">
+                        <div class="ckline"></div>
+                        <div class="name" th:utext="#{WhitePaper}">White Paper</div>
+                    </li>
+                </a>-->
+            </ul>
+            idth=device-width, initial-scale=1.0, maximum-scale=1.0,
+            <div class="botmm">
+                <div class="sub" lang="en">En</div>
+                <div class="sub active" lang="zh">简</div>
+                <div class="sub" lang="zh_TW">繁</div>
+                <div class="suba">
+                    <a href="https://twitter.com/PotatoChatApp"><i class="iconfont icon-menu " style="font-size: 18px"></i></a></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="rbar">
+        <a class="feedback aa1" href="javascript:void(0)" id="toTop" style="display: none">
+            <i class="iconfont icon-menu " style="font-size: 40px"></i>
+        </a>
+        <div id="shmenu">
+        <a class="feedback" href="/p/suggestion">
+            <i class="iconfont icon-menu " style="font-size: 40px"></i>
+        </a>
+        <!-- <a class="feedback bb1" th:href="'https://m.pt.im/Support_Bot?lang=' + ${#locale.language} + (${#strings.isEmpty(#locale.country)}?'':'_' + ${#locale.country})">
+            <i class="iconfont icon-menu" style="font-size: 40px">&#xe68f;</i>
+        </a> -->
+        <!-- <a class="feedback bb1" th:href="'pt://resolve?domain=Support_Bot&'">
+            <i class="iconfont icon-menu" style="font-size: 40px">&#xe68f;</i>
+        </a> -->
+        <a class="feedback bb1" href="https://tdkh.gsxhtmy.com/chatIndex?kefu_id=kefu2&amp;extra=eyJhcHBfdmVyc2lvbiI6IiIsIm9zX3R5cGUiOiJ3ZWIiLCJrZXlfaWQiOiIiLCJ1c2VyX2lkIjoiIiwiYWNjb3VudCI6IiJ9">
+            <i class="iconfont icon-menu" style="font-size: 40px"></i>
+        </a>
+        <a class="feedback aa1" href="/news">
+            <i class="iconfont icon-menu " style="font-size: 40px"></i>
+        </a>
+        </div>
+        <a class="feedback aa1" href="javascript:void(0)" id="fdmenu">
+            <i class="iconfont icon-menu " style="font-size: 40px"></i>
+        </a>
+        <a class="feedback aa1" href="javascript:void(0)" id="fdmenuh" style="display: none">
+            <i class="iconfont icon-menu " style="font-size: 40px"></i>
+        </a>
+    </div>
+</div>
+
+    <div class="index-container">
+        <div>
+            <p class="text1">
+                <spn>简易・安全</spn><br>
+                <spn>可靠的消息发送</spn>
+            </p>
+            <!--<p class="text2" style="    text-align: center;  margin-top: 10px; margin-bottom: 0px;"> <span style="color: #007EE5;font-size: 16px;" id="useuser" th:text="${#numbers.formatInteger(registerCount, 0, 'COMMA')}">125,310,893</span> <span style="color: #151515;" th:text="#{DownloadByPeople}">人在使用</span></span></p>-->
+            <p class="text1" style="text-align: center;height: 1.9%;display: none;margin-top: 20px" id="androiload">
+                <a class="sinput" href="https://jgzj.szwlxd.com/android/latest.apk" style="width:240px;" onclick="gtag_report_conversion('download_android')">
+                    <span>
+                        <span class="iconfont icon-menu" style="margin: auto;font-size: 30px;float: left;"></span>
+                        <span style="margin: auto;float: left;">Android下载</span>
+                    </span>
+                </a>
+
+                
+            </p>
+            <p class="text1" style="text-align: center; height: 1.9%; margin-top: 20px;" id="iosload">
+                <a id="download" class="sinput" isen="true" href="https://itunes.apple.com/us/app/potato-chat/id1204726898" onclick="gtag_report_conversion('download_ios')">
+                    <span>
+                        <span class="iconfont icon-menu" style="margin: auto;font-size: 30px;float: left;"></span>
+                        <span style="margin: auto;float: left;">iPhone下载</span>
+                    </span>
+                </a>
+                <a id="download_enterprise_version" class="sinput" href="https://m.potato159.org/hp/testflight" isen="true" style="margin-top: 20px" onclick="gtag_report_conversion('download_ios','testflight')">
+                    <span>
+                        <span class="iconfont icon-menu " style="margin: auto;font-size: 30px;float: left;"></span>
+                        <span style="margin: auto;float: left;">中国大陆地区</span>
+                        
+                        <!-- <span class="iconfont icon-menu "
+                            style="margin: auto;font-size: 30px;float: left;">&#xe66a;</span>
+                        <span th:text="#{EnterpriseVersion2}" style="margin: auto;float: left;">Enterprise
+                            Version</span> -->
+                    </span>
+
+                </a>
+                </p><div id="tflt" isen="true" style="font-family: MicrosoftYaHei; font-size: 14px; color: rgb(0, 126, 229); text-align: center; margin-top: 15px;">
+                    <a href="/hp/ios_download_help">如何下载？</a>
+                    
+                </div>
+            <p></p>
+        </div>
+
+        <div class="androidshow" style="margin: 40px 20px 20px 20px">
+            <div class="download-type">Android本地下载</div>
+            
+                
+            
+                <div class="download-item">
+                    <a href="https://di150qofim6gn.cloudfront.net/android/latest.apk">
+                        <img src="/resources/images/apps/icon_apps_android@3x.png" alt="android" height="24px" width="24px">
+                        
+                        <span class="download-type-label">线路1</span>
+                    </a>
+                </div>
+            
+                <div class="download-item">
+                    <a href="https://txpt.szwlxd.com/android/latest.apk">
+                        <img src="/resources/images/apps/icon_apps_android@3x.png" alt="android" height="24px" width="24px">
+                        <span class="download-type-label">线路: 华为</span>
+                        
+                    </a>
+                </div>
+            
+            <div class="download-item">
+                <a href="/apps">
+                    <img src="/resources/images/apps/icon_apps_other@3x.png" alt="android" height="24px" width="24px">
+                    <span class="download-type-label">更多下载方式</span>
+                </a>
+            </div>
+        </div>
+        <p class="text1">优点和特色</p>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_cloudstorage.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">云端</p>
+                <p class="txtdes">支持多端登录，消息自动同步</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_safety.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">安全</p>
+                <p class="txtdes">采用最先进的加密技术保障信息安全</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_powerful.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">自由</p>
+                <p class="txtdes">对消息和文件大小没有限制</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_rapid.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">快速</p>
+                <p class="txtdes">为用户提供超快的连接和使用体验</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_wallet.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">钱包</p>
+                <p class="txtdes">支持多币种管理、支付及红包</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_permission.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">机器人</p>
+                <p class="txtdes">通过API自由创建机器人</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_grouping.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">群组</p>
+                <p class="txtdes">创建多达20万人的超级群组</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_privacy.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">隐私</p>
+                <p class="txtdes">信息加密可自定义销毁</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_open.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">开放</p>
+                <p class="txtdes">多元、自由的平台</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_taste.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">趣味</p>
+                <p class="txtdes">发现感兴趣的东西、遇到有趣的人</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_video.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">视频(通话)</p>
+                <p class="txtdes">免费体验高质量音视频通话</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_circleoffriends.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">朋友圈</p>
+                <p class="txtdes">分享和发布动态</p>
+            </div>
+        </div>
+
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_peoplenearby.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">附近的人</p>
+                <p class="txtdes">基于地理位置发现好友</p>
+            </div>
+        </div>
+        <div class="yditem" style="margin-top: 20px">
+            <div class="img">
+                <img src="/resources/images/yd/ic_applets.svg" width="160" height="160">
+            </div>
+            <div class="text">
+                <p class="txttl">小程序</p>
+                <p class="txtdes">无需下载安装，即可体验</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="indexbtmdiv">
+
+    <div style="margin-top: 20px;margin-left: 12px">
+        <div class="btmcline">&nbsp;</div>
+        <div class="btmcline2">官方社群</div>
+    </div>
+    <div class="icon icon-list">
+        <a href="https://twitter.com/PotatoChatApp"><i class="iconfont"></i><div>Twitter</div></a>
+        <a href="mailto:business@potato.im"><i class="iconfont"></i><div>商务</div></a>
+        <a href="mailto:support@potato.im"><i class="iconfont"></i><div>技术</div></a>
+        <a href="mailto:webadmin@potato.im"><i class="iconfont"></i><div>管理员</div></a>
+    </div>
+    <div style="margin-top: 20px;margin-left: 12px;margin-bottom: 20px">
+        <div class="btmcline">&nbsp;</div>
+        <div class="btmcline2">订阅我们</div>
+    </div>
+
+    <div class="yxdy" style="margin-left: 12px; padding-bottom: 20px;">
+        <div class="ibtmyx" style="float: left;overflow: auto;width: 65%;border-radius: 4px;padding: 0px">
+            <input id="txtemail" style="    border: 1px solid #CDCDCD;margin-left: 2px;" type="email" placeholder="输入您的邮箱进行订阅" class="ibtmyx">
+        </div>
+        <div class="anx" style="overflow: auto;height: 42px;width: 30%"><input id="emailrss" class="anxbtn" type="button" style="font-size: 14px" value="订阅"></div>
+    </div>
+
+
+    <div id="dyok" class="dyok1">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 60px;color: #007EE5;text-align: center;"></div>
+                <div style="text-align: center;font-size: 14px;color: #333333;line-height: 18px;height: 18px;margin-top: 20px">恭喜您，订阅成功</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dynook" class="dyok1">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 60px;color: #F04646;text-align: center;"></div>
+                <div style="text-align: center;font-size: 14px;color: #333333;line-height: 18px;height: 18px;margin-top: 20px">对不起，订阅失败</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ydynok" class="dyok1">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 60px;color: #F04646;text-align: center;"></div>
+                <div style="text-align: center;font-size: 14px;color: #333333;line-height: 18px;height: 18px;margin-top: 20px">对不起，订阅失败</div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+    <script src="/resources/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/resources/js/common.js?_=1578896754992"></script>
+    
+
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DYL4XJVLNB"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        /*<![CDATA[*/
+        let gtagId = "G-DYL4XJVLNB";
+        gtag('config', gtagId);
+        /*]]>*/
+    </script>
+<!--<th:block th:if="${#httpServletRequest.getAttribute('shortDomain')}">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145422758-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145422758-2');
+  gtag('config', 'UA-145422758-3');
+  gtag('config', 'UA-145422758-4');
+  gtag('config', 'UA-145422758-5');
+  gtag('config', 'UA-145422758-6');
+  gtag('config', 'UA-145422758-7');
+
+</script>
+</th:block>
+<th:block th:unless="${#httpServletRequest.getAttribute('shortDomain')}">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145422758-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-145422758-2');
+</script>
+</th:block>-->
+
+
+<script>
+    var nums = 0, timer = null;
+    function reg(num) {
+        $.ajax({
+            type: "post",
+            url: "/regs?num=" + num,
+            dataType: "json",
+            contentType: false,
+            success: function (num) {
+                nums = num;
+                $("#useuser").html(new Number(num).toLocaleString());
+            }
+        });
+    }
+    $(function () {
+        // 统计
+        portChannel();
+    });
+</script>
+
+</body></html>
