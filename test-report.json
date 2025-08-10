@@ -1,0 +1,286 @@
+{
+  "timestamp": "2025-08-10T01:03:25.623Z",
+  "duration": 15,
+  "summary": {
+    "total": 39,
+    "passed": 37,
+    "failed": 2,
+    "warning": 0,
+    "successRate": "94.9"
+  },
+  "results": [
+    {
+      "category": "文件存在",
+      "testName": "potato-perfect-clone.html",
+      "status": "PASS",
+      "description": "文件存在且可访问",
+      "timestamp": "2025-08-10T01:03:25.616Z"
+    },
+    {
+      "category": "文件存在",
+      "testName": "potato-perfect-clone.css",
+      "status": "PASS",
+      "description": "文件存在且可访问",
+      "timestamp": "2025-08-10T01:03:25.619Z"
+    },
+    {
+      "category": "文件存在",
+      "testName": "potato-perfect-clone.js",
+      "status": "PASS",
+      "description": "文件存在且可访问",
+      "timestamp": "2025-08-10T01:03:25.619Z"
+    },
+    {
+      "category": "文件存在",
+      "testName": "start-perfect-clone.sh",
+      "status": "PASS",
+      "description": "文件存在且可访问",
+      "timestamp": "2025-08-10T01:03:25.619Z"
+    },
+    {
+      "category": "文件存在",
+      "testName": "images/potato-logo.png",
+      "status": "PASS",
+      "description": "文件存在且可访问",
+      "timestamp": "2025-08-10T01:03:25.619Z"
+    },
+    {
+      "category": "文件存在",
+      "testName": "images/favicon.ico",
+      "status": "PASS",
+      "description": "文件存在且可访问",
+      "timestamp": "2025-08-10T01:03:25.619Z"
+    },
+    {
+      "category": "文件存在",
+      "testName": "images/potato-logo.svg",
+      "status": "PASS",
+      "description": "文件存在且可访问",
+      "timestamp": "2025-08-10T01:03:25.619Z"
+    },
+    {
+      "category": "内容完整性",
+      "testName": "中文标题",
+      "status": "PASS",
+      "description": "包含中文主标题",
+      "timestamp": "2025-08-10T01:03:25.620Z"
+    },
+    {
+      "category": "内容完整性",
+      "testName": "语言选择器",
+      "status": "FAIL",
+      "description": "缺少: 包含三种语言选项",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "内容完整性",
+      "testName": "官方 Logo",
+      "status": "PASS",
+      "description": "使用官方下载的 logo",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "内容完整性",
+      "testName": "下载链接",
+      "status": "PASS",
+      "description": "包含官方下载链接",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "内容完整性",
+      "testName": "功能特性",
+      "status": "PASS",
+      "description": "包含功能特性标题",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "内容完整性",
+      "testName": "热门问题",
+      "status": "PASS",
+      "description": "包含热门问题区域",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "图片资源",
+      "testName": "PNG Logo 质量",
+      "status": "PASS",
+      "description": "高质量 PNG logo (80.7KB)",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "图片资源",
+      "testName": "Favicon",
+      "status": "PASS",
+      "description": "Favicon 存在 (4.2KB)",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "图片资源",
+      "testName": "SVG Logo",
+      "status": "PASS",
+      "description": "SVG logo 格式正确",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "功能特性",
+      "testName": "语言切换",
+      "status": "PASS",
+      "description": "语言切换功能",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "功能特性",
+      "testName": "反馈弹窗",
+      "status": "PASS",
+      "description": "反馈弹窗功能",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "功能特性",
+      "testName": "邮件订阅",
+      "status": "PASS",
+      "description": "邮件订阅功能",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "功能特性",
+      "testName": "移动菜单",
+      "status": "PASS",
+      "description": "移动端菜单功能",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "功能特性",
+      "testName": "下载追踪",
+      "status": "PASS",
+      "description": "下载追踪功能",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "功能特性",
+      "testName": "滚动效果",
+      "status": "PASS",
+      "description": "滚动动画效果",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "功能特性",
+      "testName": "通知系统",
+      "status": "PASS",
+      "description": "通知系统功能",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "多语言支持",
+      "testName": "简体中文",
+      "status": "PASS",
+      "description": "简体中文支持",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "多语言支持",
+      "testName": "English",
+      "status": "PASS",
+      "description": "英文支持",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "多语言支持",
+      "testName": "繁體中文",
+      "status": "PASS",
+      "description": "繁体中文支持",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "多语言支持",
+      "testName": "语言切换逻辑",
+      "status": "PASS",
+      "description": "语言切换逻辑",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "多语言支持",
+      "testName": "默认中文",
+      "status": "PASS",
+      "description": "默认设置为简体中文",
+      "timestamp": "2025-08-10T01:03:25.621Z"
+    },
+    {
+      "category": "响应式设计",
+      "testName": "移动端断点",
+      "status": "PASS",
+      "description": "移动端响应式断点",
+      "timestamp": "2025-08-10T01:03:25.622Z"
+    },
+    {
+      "category": "响应式设计",
+      "testName": "小屏幕断点",
+      "status": "PASS",
+      "description": "小屏幕响应式断点",
+      "timestamp": "2025-08-10T01:03:25.622Z"
+    },
+    {
+      "category": "响应式设计",
+      "testName": "Flexbox 布局",
+      "status": "PASS",
+      "description": "使用 Flexbox 布局",
+      "timestamp": "2025-08-10T01:03:25.622Z"
+    },
+    {
+      "category": "响应式设计",
+      "testName": "Grid 布局",
+      "status": "PASS",
+      "description": "使用 Grid 布局",
+      "timestamp": "2025-08-10T01:03:25.622Z"
+    },
+    {
+      "category": "响应式设计",
+      "testName": "视口设置",
+      "status": "FAIL",
+      "description": "缺少: 正确的视口设置",
+      "timestamp": "2025-08-10T01:03:25.622Z"
+    },
+    {
+      "category": "性能",
+      "testName": "HTML 大小",
+      "status": "PASS",
+      "description": "HTML 文件大小适中 (18.9KB)",
+      "timestamp": "2025-08-10T01:03:25.622Z"
+    },
+    {
+      "category": "性能",
+      "testName": "CSS 大小",
+      "status": "PASS",
+      "description": "CSS 文件大小适中 (13.2KB)",
+      "timestamp": "2025-08-10T01:03:25.623Z"
+    },
+    {
+      "category": "性能",
+      "testName": "JS 大小",
+      "status": "PASS",
+      "description": "JavaScript 文件大小适中 (16.6KB)",
+      "timestamp": "2025-08-10T01:03:25.623Z"
+    },
+    {
+      "category": "性能优化",
+      "testName": "字体预加载",
+      "status": "PASS",
+      "description": "字体资源预连接",
+      "timestamp": "2025-08-10T01:03:25.623Z"
+    },
+    {
+      "category": "性能优化",
+      "testName": "CSS 优化",
+      "status": "PASS",
+      "description": "CSS 过渡动画优化",
+      "timestamp": "2025-08-10T01:03:25.623Z"
+    },
+    {
+      "category": "性能优化",
+      "testName": "图片优化",
+      "status": "PASS",
+      "description": "图片显示优化",
+      "timestamp": "2025-08-10T01:03:25.623Z"
+    }
+  ]
+}
