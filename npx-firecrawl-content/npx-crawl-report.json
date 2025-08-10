@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-08-10T02:04:44.365Z",
+  "summary": {
+    "totalPages": 2,
+    "successfulPages": 0,
+    "failedPages": 2,
+    "successRate": "0.00%"
+  },
+  "results": [
+    {
+      "url": "https://potato.im/",
+      "filename": "index.html",
+      "options": {
+        "mobile": false
+      },
+      "result": {
+        "success": false,
+        "error": "Scrape timeout after 60 seconds"
+      },
+      "timestamp": "2025-08-10T02:03:42.356Z"
+    },
+    {
+      "url": "https://m.potato.im/",
+      "filename": "index.html",
+      "options": {
+        "mobile": true
+      },
+      "result": {
+        "success": false,
+        "error": "Scrape timeout after 60 seconds"
+      },
+      "timestamp": "2025-08-10T02:04:44.365Z"
+    }
+  ],
+  "outputDirectory": "./npx-firecrawl-content"
+}

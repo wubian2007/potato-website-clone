@@ -1,0 +1,135 @@
+/* Potato 网站自定义样式 */
+:root {
+    --primary-color: #007EE5;
+    --secondary-color: #F2FAFF;
+    --text-color: #333333;
+    --border-color: #E5E5E5;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+    color: white;
+    padding: 80px 0;
+}
+
+.feature-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.download-section {
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+}
+
+/* 动画效果 */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 版本选择器样式 */
+.version-selector {
+    position: absolute;
+    left: 225px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 5;
+    padding: 20px;
+    min-width: 180px;
+    width: auto;
+    display: none;
+}
+
+.float-box {
+    height: 40px;
+    padding: 6px 22px;
+    width: auto;
+    color: #333333;
+    border: 1px solid rgba(229, 229, 229, 1);
+    border-radius: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+}
+
+.float-box:hover {
+    color: #ffffff !important;
+    background: #007EE5 !important;
+    border: 0;
+    text-decoration: none;
+}
+
+.type-btn {
+    height: 40px;
+    width: 200px;
+    font-size: 16px;
+    color: #333333;
+    background: #F2FAFF;
+    border-radius: 30px;
+    border: 0;
+    transition: all ease 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.type-btn:hover {
+    background: #007EE5;
+    color: white;
+    text-decoration: none;
+}
