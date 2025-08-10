@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-08-10T01:47:49.807Z",
+  "summary": {
+    "totalPages": 2,
+    "successfulPages": 2,
+    "failedPages": 0,
+    "successRate": "100.00%"
+  },
+  "results": [
+    {
+      "url": "https://potato.im/",
+      "filename": "index.html",
+      "options": {
+        "mobile": false
+      },
+      "result": {
+        "success": true,
+        "size": 135120,
+        "method": "curl/wget"
+      },
+      "timestamp": "2025-08-10T01:47:47.587Z"
+    },
+    {
+      "url": "https://m.potato.im/",
+      "filename": "index.html",
+      "options": {
+        "mobile": true
+      },
+      "result": {
+        "success": true,
+        "size": 133650,
+        "method": "curl/wget"
+      },
+      "timestamp": "2025-08-10T01:47:49.807Z"
+    }
+  ],
+  "outputDirectory": "./curl-potato-content"
+}

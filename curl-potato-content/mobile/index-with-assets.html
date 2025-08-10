@@ -1,0 +1,2952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Potato is an instant messenger focused on security. It is faster, more secure, more open and completely free. Available on IOS, Android, Windows , MacOS and Linux. You can create super groups with 200,000 members, super channels, support voice and video calls, send photos, send videos, stickers and Gifs, and there is no file size limit, etc. It provides you with full privacy settings and the most secure and stable chat environment. Moreover, Potato is an expert in protecting your digital currency.">
+    <meta name="keywords" content="Potato,chat,mobile,video,voice,message,send message,send photo,free,im,potato.im,chat messenger,chat tool,instant message,secure chats,private chats,voice call,video call,Moments,Album,Apps,Download,send pictures,super group,channel,wallet,digital wallet,AI,Bot,Bot API,opening platform">
+    <title>Potato</title>
+    <link href="/resources/images/ico.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <meta property="og:url" content="https://www.potato.im">
+    <meta property="og:title" content="Potato – a new era of messaging">
+    <meta property="og:image" content="https://www.potato.im/resources/images/logo1024.png">
+    <meta property="og:site_name" content="Potato">
+    <meta property="og:description" content="Fast. Secure. Powerful.">
+    <meta property="fb:app_id" content="1222245288686627">
+    <style>/* 添加版本信息展示框样式 */
+    .version-selector {
+        position: absolute;
+        left: 225px; /* 显示在右侧并保留箭头空间 */
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 5;
+        padding: 20px;
+        min-width: 180px;
+        width: auto;
+        display: none;
+    }
+
+    .float-box {
+        height: 40px;
+        padding: 6px 22px;
+        width: auto;
+        color: #333333;
+        border: 1px solid rgba(229, 229, 229, 1);
+        border-radius: 30px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    .float-box:hover {
+        color: #ffffff !important;
+        background: #007EE5 !important;
+        border: 0;
+    }
+    /* 聊天框箭头 */
+    .version-selector::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        border-width: 8px 10px 8px 0;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent;
+        filter: drop-shadow(-2px 0 2px rgba(0,0,0,0.1));
+        z-index: -1;
+    }
+    #win_download_float::before {
+        top: 28% !important; /* 统一使用百分比定位 */
+        transform: translateY(-28%); /* 精确垂直居中 */
+    }
+    #mac_download_float::before {
+        top: 50% !important; /* 统一使用百分比定位 */
+        transform: translateY(-50%); /* 精确垂直居中 */
+    }
+    /*#android_download_float::before {
+        top: 50%;
+    }*/
+    #android_download_float::before {
+        top: 50% !important; /* 统一使用百分比定位 */
+        transform: translateY(-50%); /* 精确垂直居中 */
+    }
+    #ios_download_float::before {
+        top: 50% !important; /* 统一使用百分比定位 */
+        transform: translateY(-50%); /* 精确垂直居中 */
+    }
+
+    .version-selector.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .type-btn {
+        height: 40px;
+        width: 200px;
+        font-size: 16px;
+        color: #333333;
+        background: #F2FAFF;
+        border-radius: 30px;
+        border: 0;
+        transition: all ease 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .type-btn:hover {
+        color: #ffffff !important;
+        background: #007EE5 !important;
+        border: 0;
+    }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRTXRBS924"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        /*<![CDATA[*/
+        let gtagId = "G-WRTXRBS924";
+        gtag('config', gtagId);
+        /*]]>*/
+
+        // 上报渠道
+        function portChannel() {
+            let urlParams = new URLSearchParams(window.location.search);
+            // 检查是否包含特定参数
+            let channel = urlParams.get('channel')
+            if (channel === 'miyu') {
+                // 记录事件
+                gtag('event', 'channel_miyu_visit', {
+                    'type': 'pc',
+                    'event_category': 'External Traffic',
+                    'event_label': 'Channel Miyu',
+                    'page_referrer': document.referrer
+                });
+            }
+        }
+
+        function gtag_report_conversion(type, version) {
+            /*<![CDATA[*/
+            let data = {};
+            if (version){
+                data = {'version': version}
+            } else {
+                if (type === 'download_linux'){
+                    data = {'version': "2.37.200402"}
+                } else if (type === 'download_mac') {
+                    data = {'version': "2.47.200503"}
+                } else if (type === 'download_windows') {
+                    data = {'version': "2.47.200329"}
+                } else if (type === 'download_android') {
+                    data = {'version': "2.45.200103"}
+                } else if (type === 'download_ios'){
+                    data = {'version': "2.43.207056"}
+                }
+            }
+            gtag('event', type, data);
+            /*]]>*/
+        }
+    </script>
+</head>
+<body style="background-color:#fff;width: auto">
+
+<div style="width: 100%;min-width: 1200px;">
+    <link href="./assets/css/float-frame.css" rel="stylesheet" type="text/css">
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <input type="hidden" id="usrck" value="1">
+    <input type="hidden" id="localelang" value="en">
+    <div class="ieshow">Your browser version is too low, some content may not display properly, please download the
+        latest version!</div>
+    <nav class="navbar  fixed-top" style="position: relative;padding-left: 20px;">
+        <div class="container" style="min-width: 1200px;padding: 0px;">
+            <a href="/"
+                style="background: url('/resources/images/banner/ic_header_logo.svg');height: 42px;width: 206px;    background-repeat: no-repeat !important;">
+            </a>
+            <nav class="my-2 my-md-0 mr-md-3" style=" margin-left: 134px;">
+                <a class="nav-item nav-active" href="/">
+                    <span>HOME</span>
+                </a>
+
+                <a class="nav-item" href="/apps">
+                    <span>APPS</span>
+                </a>
+                <a class="nav-item" href="/api">
+                    <span>DEVELOPER</span>
+                </a>
+                <a class="nav-item" href="/faq">
+                    <span>FAQ</span>
+                </a>
+                <a class="nav-item" href="/privacy">
+                    <span>PRIVACY</span>
+                </a>
+
+                <a class="nav-item" href="/news">
+                    <span>NEWS</span>
+                </a>
+            </nav>
+
+            <div class="nav-right">
+                <select class="lanselect" id="lanselect">
+                    <option value="zh">简体中文</option>
+                    <option value="en" selected="selected">English</option>
+                    <option value="zh_TW">繁體中文
+                    </option>
+                </select>
+                <span style="border: 1px solid #E5E5E5;height: 14px;width: 1px;margin-left: 14px;display: inline-block;"></span>
+                <a class="twitter-nav" href="https://twitter.com/PotatoChatApp" target="_blank"><i class="iconfont"
+                        style="font-size: 20px;">&#xe626;</i></a>
+            </div>
+
+
+            <div class="rbar">
+
+                <a id="toTop" class="feedback aa1" style="display: none">
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px;margin: 0;">&#xe624;</i></div>
+                </a>
+
+                <a class="feedback aa1 suga" href="javascript:void(0)">
+                    <div class="feedbackL a">Feedback</div>
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px;margin: 0;">&#xe621;</i></div>
+                </a>
+                <!-- <a class="feedback bb1" target="_blank" href="Support_Bot"
+                    th:href="(${#request.getAttribute('shortDomain')}?'':'https://ptcc.in') + '/Support_Bot?lang=' + ${#locale.language} + (${#strings.isEmpty(#locale.country)}?'':'_' + ${#locale.country})">
+                    <div class="feedbackL b" th:text="#{Service}">Service</div>
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px">&#xe68c;</i></div>
+                </a> -->
+                <!-- <a class="feedback bb1" target="_blank" href="Support_Bot"
+                    th:href="'pt://resolve?domain=Support_Bot&'">
+                    <div class="feedbackL b" th:text="#{Service}">Service</div>
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px">&#xe68c;</i></div>
+                </a> -->
+                <a class="feedback bb1" target="_blank" href="https://tdkh.gsxhtmy.com/chatIndex?kefu_id=kefu2&amp;extra=eyJhcHBfdmVyc2lvbiI6IiIsIm9zX3R5cGUiOiJ3ZWIiLCJrZXlfaWQiOiIiLCJ1c2VyX2lkIjoiIiwiYWNjb3VudCI6IiJ9">
+                    <div class="feedbackL b">Service</div>
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px">&#xe68c;</i></div>
+                </a>
+
+
+                <a class="feedback aa1" href="/news">
+                    <div class="feedbackL a">News</div>
+                    <div class="a1"> <i class="iconfont" style="font-size: 28px;margin: 0;">&#xe620;</i></div>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+    <div>
+    <style>
+        input,textarea{
+            outline: none;
+            border: 1px solid #E5E5E5;
+            font-size: 14px;
+        }
+        p{
+            font-size: 14px;
+        }
+        input{
+            width: 100%;
+            height: 48px;
+            padding: 5px 10px
+        }
+        textarea{
+            width:100%;
+            min-height:75px;
+            height:100px;
+            max-height: 120px;
+            background: #FFFFFF;
+            padding: 5px 10px;
+        }
+        .question-content{
+            font-size: 14px;
+            color: #333333;
+            letter-spacing: 0;
+            line-height: 22px;
+            position: relative;
+        }
+        .textarea-num{
+            margin: 0;
+            text-align: right;
+            position: absolute;
+            right: 6px;
+            bottom: 9px;
+            z-index: 9;
+            color: #b2b2b2;
+        }
+        .phone-input{
+            width: 100%;
+            height: 46px;
+            border: none;
+        }
+        .hot_div{
+            background: #FF3E3E;
+            border-radius: 100px 100px 100px 1px;
+            width: 35px;
+            min-width: 35px;
+            white-space: nowrap;
+            text-align: center;
+            margin-left: 10px;
+        }
+        .hot_font{
+            font-family: PingFangSC-Regular;
+            font-size: 11px;
+            color: #FFFFFF;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hot_span{
+            width: 100%;
+            margin: 5px 0 0 0;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .waring-span{
+            color: #FF3E3E;
+            margin-left: 5px;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        .confirm_btn{
+            font-family: PingFangSC-Medium;
+            font-size: 16px;
+            color: #007EE5;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 500;
+            border: 0;
+            background-color: white;
+            outline: none;
+        }
+        #refreshImg {
+            transition: transform 1s ease-in-out;
+            cursor: pointer;
+            border: none;
+        }
+        @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+        .rotate-animation {
+            animation: rotate360 1s linear;
+            border: none;
+        }
+        .modal-dev {
+            position: absolute; /* 使用绝对定位 */
+            top: 50%; /* 垂直居中 */
+            left: 50%; /* 水平居中 */
+            transform: translate(-50%, -50%); /* 调整位置 */
+            z-index: 1000; /* 设置一个较高的 z-index 值 */
+            background-color: rgba(0, 0, 0, 0.5); /* 可选：添加背景遮罩效果 */
+            display: none; /* 初始状态下隐藏 */
+            width: 100%; /* 占据整个宽度 */
+            height: 100%; /* 占据整个高度 */
+        }
+
+        .modal-dev .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            width: 100%;
+            margin: auto; /* 确保内容居中对齐 */
+        }
+    </style>
+    <div class="frame" id="suggestion_frame" style="display: none">
+        <div class="frame-header">
+            <span class="title">Feedback</span>
+            <span class="close-frame">一</span>
+        </div>
+        <div class="frame-body">
+            <input type="hidden" id="formtk" name="formtk" value="5c2c127d-ae89-4060-a842-1bc34e060843">
+            <div class="question-content">
+                <p style="margin-bottom: 10px;">Enter the problem you are experiencing</p>
+                <textarea id="content" name="content" placeholder="Please enter the question you want to feedback"></textarea>
+                <p class="textarea-num"><b id="textCount" style="color: #333333">0</b>/520</p>
+            </div>
+            <div id="email_content" class="frame-item">
+                <input name="suggestion_email" id="suggestion_email" type="email"  value="" placeholder="Please enter e-mail address">
+            </div>
+            <div id="phoneframe" class="frame-item" style="border: 1px solid #E5E5E5;height: 48px;width: 100%;">
+                <div style="width:100%;height: 48px;line-height: 48px;float: left;position: relative;display: flex;justify-content: flex-start;"  >
+                    <div id="ckctry" style="padding-left: 10px;display: flex;align-items: flex-start;flex-wrap: nowrap;">
+                        <span style="float: left;white-space: nowrap;" id="citydiv"></span>
+                        <span style="float: left;white-space: nowrap;"><span id="citynum">(+null)</span><span class="iconfont icon-menu " >&#xe659;</span></span>
+                        <span style="float: left;white-space: nowrap;margin-left: 5px;border-left: 1px solid #CDCDCD;margin-top: 14px;height: 20px">&nbsp;</span>
+                    </div>
+                    <div id="selectctry" class="selectctry" style="display: none;position: absolute;">
+                      
+                    </div>
+                    <input  name="suggestion_phone" id="suggestion_phone" type="tel" class="phone-input"  value="" placeholder="Please enter phone number" oninput="value=value.replace(/[^\d]/g,'')">
+                </div>
+            </div>
+            <div style="margin-top:10px;display: flex;align-items: center;justify-content: start;">
+                <p style="margin-right: 15px;max-width: 72px;">Upload photos</p>
+                <div style="margin-top: 10px;overflow-y: hidden;display:flex;align-items: center;justify-content: start;flex-shrink: 0;" id="fileWrap">
+                    <div id="imgBox" style="display: flex;flex-direction: row;justify-content: start;align-items: center;flex-wrap: wrap;max-width: 265px;">
+                    </div>
+                    <div id="img-line">
+                        <img src="./assets/images/btn_addphoto.png" class="add-img">
+                        <input type="file" title="请选择图片" id="file" multiple accept="image/png,image/jpg,image/gif,image/jpeg"/>
+                    </div>
+                </div>
+            </div>
+            <p  style="margin-top: 10px;" class="wariningp"><span style="color: #F04646;line-height: 20px;">*</span><span style="line-height: 20px;color: #3F3F3F;">Two pictures could be uploaded at most one time, and the network capacity size of every picture cannot be over 3M.</span></p>
+            <button type="button" class="blue-solid-button" id="openSuggestionCaptcha">Submit</button>
+            <!--热点-->
+            <div>
+                <p style="text-align: left;color: #333333;margin-top: 10px;">Hot issue</p>
+                <div class="hot_span"  style="display: flex;justify-content: flex-start;align-items: center;">
+                    <span id="open-verify-phone" style="color: #FF3E3E;">Mobile phone can not be logged in, quickly bind email address</span>
+                    <div class="hot_div">
+                        <span class="hot_font">HOT</span>
+                    </div>
+                </div>
+
+                <div class="hot_span" style="display: flex;align-content: flex-start;align-items: center;">
+                    <a href="/faq?md=whyBindEmail" >Why do I need to register by email?</a>
+                    <div class="hot_div">
+                        <span class="hot_font">HOT</span>
+                    </div>
+                </div>
+                <div class="hot_span">
+                    <a href="/apps" >How to download the latest version of Potato?</a>
+                </div>
+                <div class="hot_span">
+                    <a href="/faq?md=RegMsgNotCode">What if the registration/login fails to send the verification code?</a>
+                </div>
+                <div class="hot_span">
+                    <a href="/faq">Potato FAQ</a>
+                </div>
+            </div>
+            <!--客服-->
+            <div id="service">
+                <div id="support-bot-div">
+                    <div id="support-bot">
+                        <a href="pt://resolve?domain=support_bot"></a>
+                    </div>
+                    <div id="support-bot-txt">Service</div>
+                </div>
+            </div>
+        </div>
+
+        <!--意见反馈图形验证码-->
+        <div class="modal-dev" id="suggestionCaptchaModal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="suggestionCaptchaModal">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" style="position: absolute;top:10px;right: 10px;" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div style="display: flex;justify-content: center;margin-top: 15px;">
+                        <p style="text-align: center;font-size: 16px;" id="captchaModalLabel">Graphic verification</p>
+                    </div>
+                    <div class="modal-body" style="padding:2px;flex-direction: column;justify-content: center;">
+                        <input type="hidden" id="suggestionCaptchaToken">
+                        <div style="margin-bottom: 20px;display: flex; flex-direction: row;justify-content: space-around;align-items: center">
+                            <div style="width: 25px;height: 5px;"></div>
+                            <div>
+                                <img id="suggestion_captcha_img" alt="captcha" style="max-width: 270px;max-height: 80px;background: #F8F8F8;border-radius: 10px;display: none;" src="" />
+                            </div>
+                            <button type="button" style="border: none;outline:none;padding:0;background-color: white;margin-right: 5px;"
+                                    onclick="suggestionRefreshCaptcha()">
+                                <img id="refreshImg" src="./assets/images/icon_refresh.png" alt="refresh" />
+                            </button>
+                        </div>
+                        <div style="display: flex;justify-content: center;">
+                            <input type="text" id="suggestion_captcha_code" name="suggestion_captcha_code" autofocus="autofocus" value=""
+                                   style="background: #F8F8F8;border: 0;border-radius: 10px;width: 270px;height: 40px;padding: 5px;outline: none;" placeholder="verification code" />
+                        </div>
+                        <div id="suggestionVerCaptchaCode" class="hidden waring-span" style="text-align: center;margin-top: 5px;">&quot;</div>
+                    </div>
+                    <span style="border-bottom: 1px solid #FFFFFF;"></span>
+                    <div class="modal-footer" style="justify-content: center;">
+                        <!--data-dismiss="modal"-->
+                        <button type="button" class="confirm_btn" id="suggestionSubmitBtn">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        var imgSrc = []; //
+        var imgFile = []; //
+        var imgName = []; //
+
+        function imgUpload(obj) {
+            var oInput = '#' + obj.inputId;
+            var imgBox = '#' + obj.imgBox;
+            var btn = '#' + obj.buttonId;
+            $(oInput).on("change", function () {
+                var fileImg = $(oInput)[0];
+                var fileList = fileImg.files;
+
+                if (fileList.length > obj.num || (fileList.length + imgFile.length) > obj.num) {
+                    const alert_content = "Upload up to {num} images";
+                    alert(alert_content.replace("{num}", obj.num));
+                }
+
+                for (var i = 0; i < fileList.length; i++) {
+                    var imgSrcI = getObjectURL(fileList[i]);
+                    imgName.push(fileList[i].name);
+                    var fileType = fileList[i].name.substring(fileList[i].name.lastIndexOf("."));
+                    fileType = fileType.toLowerCase();
+                    if (fileType === ".jpg" || fileType === ".jpeg" || fileType === ".png" || fileType === ".bmp" || fileType === ".gif") {
+                        if (fileList[i].size < 3145728) {
+                            if (imgSrc.length > 1) {
+                            } else {
+                                imgSrc.push(imgSrcI);
+                                imgFile.push(fileList[i]);
+                            }
+                        } else {
+                            const alert_content = "The image cannot be larger than 3M";
+                            alert(alert_content);
+                        }
+                    } else {
+                        const alert_content = "The format of the image is jpg, png, bmp or gif";
+                        alert(alert_content);
+                    }
+
+                }
+                addNewContent(imgBox);
+
+                if (imgFile.length >= obj.num) {
+                    $("#img-line").css("display", "none");
+                }
+            });
+
+
+            $("#content").keyup(function () {
+                if ($("#content").val() === null || $("#content").val().trim() === "") {
+                    $("#content").css("border", " 1px solid red");
+                } else if ($("#content").val().length > 600) {
+                    $("#content").css("border", " 1px solid red");
+                } else {
+                    $("#content").css("border", " 1px solid #E5E5E5");
+                }
+            });
+
+            $("#openSuggestionCaptcha").on('click',  function () {
+                if ($("#content").val() === null || $("#content").val().trim() === "") {
+                    $("#content").css("border", " 1px solid red");
+                    return;
+                } else if ($("#content").val().length > 600) {
+                    $("#content").css("border", " 1px solid red");
+                    return;
+                } else {
+                    $("#content").css("border", " 1px solid #E5E5E5");
+                }
+
+                const ph = $("#suggestion_phone").val();
+                const email = $("#suggestion_email").val();
+                if (!ph && !email){
+                    $("#phoneframe").css("border", " 1px solid red");
+                    $("#email_content").css("border", " 1px solid red");
+                    return;
+                }
+
+                if (!email && (!ph || ph.length < 4 || ph.length > 20)) {
+                    $("#phoneframe").css("border", " 1px solid red");
+                    return;
+                } else {
+                    $("#phoneframe").css("border", " 1px solid #E5E5E5");
+                }
+
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!ph && (!email || !emailRegex.test(email))) {
+                    $("#email_content").css("border", " 1px solid red");
+                    return;
+                } else {
+                    $("#email_content").css("border", " 1px solid #E5E5E5");
+                }
+
+                if (!limitNum(obj.num)) {
+                    const alert_content = "Upload up to {num} images";
+                    alert(alert_content.replace("{num}", obj.num));
+                    return;
+                }
+                $('#suggestionCaptchaModal').modal('show');
+            })
+
+            $("#suggestionSubmitBtn").on('click', function () {
+                const answer = $("#suggestion_captcha_code").val();
+                if (answer.trim().length === 0){
+                    const err_info = "Please enter the verification code";
+                    $("#suggestionVerCaptchaCode").text(err_info).removeClass("hidden");
+                    return;
+                }
+                //formDate
+                var fd = new FormData();
+                for (var i = 0; i < imgFile.length; i++) {
+                    fd.append(obj.data + "[]", imgFile[i]);
+                }
+                submitPicture(fd);
+            });
+        }
+
+        function suggestionRefreshCaptcha() {
+            $("#refreshImg").css("transform", "rotate(360deg)");
+            let captcha_img = document.getElementById("suggestion_captcha_img");
+            $.ajax({
+                type: "POST",
+                url: "/captcha",
+                async: true,
+                processData: false,
+                contentType: false,
+                success: function (result) {
+                    if (result.code === 0 && result.data) {
+                        $("#suggestionCaptchaToken").val(result.data.captchaId);
+                        if (result.data.imageData){
+                            captcha_img.src = result.data.imageData;
+                            captcha_img.style.display = "block";
+                        }
+                    } else if (result.code === 7) {
+                        // 操作频繁
+                        const err_info =  "Frequent operation, please try again later";
+                        $("#tips_content").text(err_info);
+                        $("#tipsModal").modal('show');
+                    }
+                },
+                error: function (result) {
+                    $.alert({
+                        title: '提示',
+                        content: service_busy,
+                        size: "sm"
+                    });
+                }
+            });
+        }
+
+        function addNewContent(obj) {
+            $(imgBox).html("");
+            const del = "delete";
+            let box = '';
+            for (let a = 0; a < imgSrc.length; a++) {
+                box += '<div class="imgContainer"><img title=' + imgName[a] + ' alt=' + imgName[a] + ' src=' + imgSrc[a] + ' ><p onclick="removeImg(this,' + a + ')" class="imgDelete">'+del+'</p></div>';
+            }
+            $(obj).html(box);
+        }
+        //delete
+        function removeImg(obj, index) {
+            imgSrc.splice(index, 1);
+            imgFile.splice(index, 1);
+            imgName.splice(index, 1);
+            var boxId = "#" + $(obj).parent('.imgContainer').parent().attr("id");
+            addNewContent(boxId);
+            if (imgFile.length < 2) {
+                $("#img-line").css("display", "inline-block");
+            }
+            $('#file').val('');
+        }
+        //limit
+        function limitNum(num) {
+            if (!num) {
+                return true;
+            } else if (imgFile.length > num) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        var post_flag = false;
+        function submitPicture(data) {
+            if (post_flag) return;
+            post_flag = true;
+            data.append("captchaId", $("#suggestionCaptchaToken").val());
+            data.append("captchaCode", $("#suggestion_captcha_code").val());
+            data.append('content', $("#content").val());
+            data.append('phone', $("#suggestion_phone").val());
+            data.append('email', $("#suggestion_email").val());
+            data.append('countryCode', $("#countryCode").val());
+            data.append('lang', $("#localelang").val());
+            data.append('os', "");
+            data.append('version', "");
+            data.append('formtk', $("#formtk").val());
+
+            url = '/addSuggestion';
+
+            if (url && data) {
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    async: true,
+                    data: data,
+                    processData: false,
+                    dataType: "json",
+                    contentType: false,
+                    success: function (data) {
+                        post_flag = false;
+                        if (data.code === 0) {
+                            resetInputs();
+                            $("#sugok").show();
+                            $("body").css("overflow", "hidden");
+                            setTimeout(function () {
+                                $("#sugok").hide();
+                                $("body").css("overflow", "auto");
+                                $("#suggestad").toggle();
+                                $("#textCount").html(0);
+                                window.location.reload();
+                            }, 1500);
+                        } else if (data.code === 100) {
+                            const err_info =  "Captcha is wrong";
+                            $("#suggestionVerCaptchaCode").text(err_info).removeClass("hidden");
+                            suggestionRefreshCaptcha();
+                        } else {
+                            resetInputs();
+                            $("#sugok").show();
+                            $("body").css("overflow", "hidden");
+                            setTimeout(function () {
+                                $("#sugok").hide();
+                                $("body").css("overflow", "auto");
+                                $("#suggestad").toggle();
+                                $("#textCount").html(0);
+                                window.location.reload();
+                            }, 1500);
+                        }
+                    },
+                    error: function () {
+                        post_flag = false;
+                        resetInputs();
+                        $("#sugok").show();
+                        $("body").css("overflow", "hidden");
+                        setTimeout(function () {
+                            $("#sugok").hide();
+                            $("body").css("overflow", "auto");
+                            $("#suggestad").toggle();
+                            $("#textCount").html(0);
+                            window.location.reload();
+                        }, 1500);
+
+                    }
+                });
+            }
+        }
+
+        function resetInputs() {
+            $("#content").val('');
+            $("#suggestion_email").val('');
+            $("#suggestion_phone").val('');
+            $("#countryCode").val('');
+            $("#select").val($('#select option:first').val() || '');
+            $("#file").val('');
+            $("#suggestion_captcha_code").val('');
+
+            $(imgBox).html('');
+            imgSrc.splice(0, imgSrc.length);
+            imgFile.splice(0, imgFile.length);
+            imgName.splice(0, imgName.length);
+        }
+
+        //
+        function imgDisplay(obj) {
+            var src = $(obj).attr("src");
+            var imgHtml = '<div style="width: 100%;height: 100vh;overflow: auto;background: rgba(0,0,0,0.5);text-align: center;position: fixed;top: 0;left: 0;z-index: 1000;"><img src=' + src + ' style="margin-top: 100px;width: 70%;margin-bottom: 100px;"/><p style="font-size: 50px;position: fixed;top: 30px;right: 30px;color: white;cursor: pointer;" onclick="closePicture(this)">×</p></div>';
+            $('body').append(imgHtml);
+        }
+        //
+        function closePicture(obj) {
+            $(obj).parent("div").remove();
+        }
+
+        //
+        function getObjectURL(file) {
+            var url = null;
+            if (window.createObjectURL != undefined) { // basic
+                url = window.createObjectURL(file);
+            } else if (window.URL != undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL != undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file);
+            }
+            return url;
+        }
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            // $(".rbar").hide();
+
+            $("#content").click(function () {
+                $("#selectctry").hide();
+            });
+
+            $("#suggestion_email").click(function () {
+                $("#selectctry").hide();
+            });
+            $(".sgtitle").click(function () {
+                $("#selectctry").hide();
+            });
+            $(".api-text3").click(function () {
+                $("#selectctry").hide();
+            });
+            $("#suggestion_phone").click(function () {
+                $("#selectctry").hide();
+            });
+            $('#refreshImg').on('click', function() {
+                $(this).addClass('rotate-animation');
+                // 确保动画结束后移除类，以便下次点击时动画重新播放
+                $(this).one('animationend', function() {
+                    $(this).removeClass('rotate-animation');
+                });
+            });
+            $('#suggestionCaptchaModal').on('show.bs.modal', function (e) {
+                $('#suggestionVerCaptchaCode').text("&quot;").addClass("hidden")
+                $('#suggestion_captcha_code').val("");
+                suggestionRefreshCaptcha();
+                post_flag = false;
+            });
+            $('#suggestion_captcha_code').on('input', function () {
+                $('#suggestionVerCaptchaCode').text("&quot;").addClass("hidden")
+            });
+
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            $('#suggestion_email').on('input', function () {
+                const email = $(this).val();
+                if (!emailRegex.test(email)) {
+                    $("#email_content").css("border", " 1px solid red");
+                } else {
+                    $('#email_content').css("border", "1px solid #FFFFFF");
+                    const phone = $("#phone").val();
+                    if (!phone){
+                         $('#phoneframe').css("border", "1px solid #FFFFFF");
+                    }
+                }
+            });
+            $('#suggestion_phone').on('input', function () {
+                const ph = $(this).val();
+                if (!ph || ph.length < 4 || ph.length > 20){
+                    $('#phoneframe').css("border", " 1px solid red");
+                } else {
+                    $('#phoneframe').css("border", "1px solid #FFFFFF");
+                    const email = $("#email").val();
+                    if (!email){
+                         $('#email_content').css("border", "1px solid #FFFFFF");
+                    }
+                }
+            });
+            $('#content').on('input', function () {
+                if ($(this).val().length > 0){
+                    $('#content').css("border", "1px solid #FFFFFF");
+                }
+            });
+
+            $('#countryCode').bind('input keyup', function () {
+                var codp = "+"+$(this).val();
+                var  guojia=$("#errocode").text();
+                var code="";
+                $(".selectctry-item").each(function () {
+                    if($(this).children("div:eq(1)").text() == codp){
+                        guojia = $(this).children("div:first").text();
+                        code = $(this).children("div:eq(1)").text();
+                        return;
+                    }
+                });
+                if(lenszie(guojia) > 8){
+                    guojia = guojia.substring(0,4)+"...";
+                }
+
+                if(code.startsWith("+")){
+                    code = "("+code+")";
+                }else {
+                    code = "(+"+code+")";
+                }
+
+                $("#citydiv").text(guojia);
+                $("#citynum").text(code);
+            });
+
+            let hash = window.location.hash;
+            switch(true) {
+                case hash.startsWith("#phone="):
+                    let phone = hash.substr("#phone=".length);
+                    $.get({
+                        url: `/help/phone/${phone}`,
+                        success: function(data) {
+                            if(data.country_code){
+                                var codp = "+"+data.country_code;
+                                var guojia=$("#errocode").text();
+                                var code="";
+                                $(".selectctry-item").each(function () {
+                                    if($(this).children("div:eq(1)").text() == codp){
+                                        guojia = $(this).children("div:first").text();
+                                        code = $(this).children("div:eq(1)").text();
+                                        return;
+                                    }
+                                });
+
+                                if(lenszie(guojia) > 8){
+                                    guojia = guojia.substring(0,4)+"...";
+                                }
+                                if(code.startsWith("+")){
+                                    code = "("+code+")";
+                                }else {
+                                    code = "(+"+code+")";
+                                }
+                                $("#citydiv").text(guojia);
+                                $("#citynum").text(code);
+                            }
+
+                            if(data.phone_no) {
+                                $("#suggestion_phone").val(data.phone_no);
+                            }
+                        }
+                    });
+                    break;
+                case hash.startsWith("#country="):
+                    let code = hash.substr("#country=".length);
+                    $.get({
+                        url: `/help/region/${code}`,
+                        success: function(data) {
+                            if(data.country_code) {
+                                var codp = "+"+data.country_code;
+                                var guojia=$("#errocode").text();
+                                var code="";
+                                $(".selectctry-item").each(function () {
+                                    if($(this).children("div:eq(1)").text() == codp){
+                                        guojia = $(this).children("div:first").text();
+                                        code = $(this).children("div:eq(1)").text();
+                                        return;
+                                    }
+                                });
+
+                                if(lenszie(guojia) > 8){
+                                    guojia = guojia.substring(0,4)+"...";
+                                }
+                                if(code.startsWith("+")){
+                                    code = "("+code+")";
+                                }else {
+                                    code = "(+"+code+")";
+                                }
+                                $("#citydiv").text(guojia);
+                                $("#citynum").text(code);
+                            }
+                        }
+                    });
+                    break;
+            }
+
+
+            $('textarea').bind('input propertychange', function () {
+
+                if ($(this).val().trim().length > 521) {
+                    $(this).val($(this).val().substring(0,521));
+                }else{
+                    $("#textCount").css("color","black");
+                };
+                $("#textCount").html($(this).val().trim().length);
+            });
+
+            $("#content").keyup(function () {
+                if ($("#content").val() === null || $("#content").val().trim() === "") {
+                    $("#content").css("border"," 1px solid red");
+
+                } else if ($("#content").val().length > 521) {
+                    $("#content").css("border"," 1px solid red");
+                }else {
+                    $("#content").css("border"," 1px solid #E5E5E5");
+                }
+            });
+
+            $(".selectctry-item").click(function () {
+                var tmguojia = $(this).children("div").eq(0).html();
+                var tmcode = $(this).children("div").eq(1).html();
+                if(lenszie(tmguojia) > 8){
+                    tmguojia = tmguojia.substring(0,4)+"...";
+                }
+                tmcode = "("+tmcode+")";
+
+                $("#citydiv").text(tmguojia);
+                $("#citynum").text(tmcode);
+            });
+
+            $("#ckctry").click(function () {
+                console.log("======>dddd")
+                $("#selectctry").toggle();
+                $("#downioc").toggle();
+                $("#upioc").toggle();
+            });
+
+            $("#menuicon").click(function () {
+                $("#selectctry").hide();
+            });
+
+            var vns = $("#newversion").val();
+            if(vns!=""){
+                $("#bbhsp").text("v"+vns)
+                showWindow();
+                $('textarea').removeAttr("disabled");
+            }else {
+                $('textarea').removeAttr("disabled");
+            }
+
+        });
+
+        function showWindow() {
+        $('#showdiv').show();
+        $('#cover').css('display','block');
+        $('#cover').css('height',document.body.clientHeight+'px');
+      }
+        function closeWindow() {
+        $('#showdiv').hide();
+        $('#cover').css('display','none');
+      }
+
+        function lenszie(charstr) {
+            var len = 0;
+            for (var i=0; i<charstr.length; i++) {
+                if (charstr.charCodeAt(i)>127 || charstr.charCodeAt(i)==94) {
+                    len += 2;
+                } else {
+                    len ++;
+                }
+            }
+            return len;
+        }
+    </script>
+
+</div>
+    <div>
+    <style>
+        .input-with-label {
+            padding-left: 15px;
+            position: relative;
+            box-sizing: border-box;
+            background: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .input-with-label input {
+            width: 100px;
+            height: 48px;
+            padding: 10px 10px 10px 15px;
+            border: 0;
+            border-radius: 4px 0 0 4px;
+            text-align: left;
+            outline: none;
+        }
+
+        .input-with-button {
+            border: 1px solid #E5E5E5;
+            position: relative;
+        }
+
+        .input-with-button input {
+            padding: 10px;
+            width: 200px;
+            border: 0 solid #ccc;
+            border-radius: 4px;
+            padding-right: 70px; /* 为按钮留出空间 */
+        }
+
+        .input-with-button button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding: 10px 10px;
+            border: none;
+            background-color: #fff;
+            color: #007EE5;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .label{
+            font-family: PingFangSC-Regular;
+            font-size: 16px;
+            color: #323232;
+            letter-spacing: -0px;
+            text-align: left;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .disabled-button {
+            color: gray !important;
+            cursor: not-allowed;
+        }
+
+        .input_phone_inline {
+            margin-top: 10px;
+            display: flex;
+            border: 1px solid #E5E5E5;
+            /*border: 1px solid rgba(229,229,229,1);*/
+        }
+
+        .phone_div{
+            width: 100%;
+            height: 48px;
+        }
+
+        .phone_input {
+            width: 100%;
+            height: 48px;
+            padding: 10px 10px 10px 15px;
+            border: 0;
+            border-radius: 0 4px 4px 0;
+            text-align: left;
+            outline: none;
+        }
+
+        .country_select {
+            padding: 10px;
+            height: 48px;
+            border: 1px solid #E5E5E5;
+            border-radius: 4px;
+            background-color: #fff;
+            /*appearance: none; !* 去除默认样式 *!*/
+            /*-webkit-appearance: none;*/
+            /*-moz-appearance: none;*/
+            cursor: pointer;
+            width: 100%;
+            outline: none;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+        .waring-span{
+            color: #FF3E3E;
+            margin-left: 5px;
+        }
+        .confirm_btn{
+            font-family: PingFangSC-Medium;
+            font-size: 16px;
+            color: #007EE5;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 500;
+            border: 0;
+            background-color: white;
+        }
+
+        #refreshImg {
+            transition: transform 1s ease-in-out;
+            cursor: pointer;
+            border: none;
+        }
+
+        @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+        .rotate-animation {
+            animation: rotate360 1s linear;
+            border: none;
+        }
+        .modal-dev {
+            position: absolute; /* 使用绝对定位 */
+            top: 50%; /* 垂直居中 */
+            left: 50%; /* 水平居中 */
+            transform: translate(-50%, -50%); /* 调整位置 */
+            z-index: 1000; /* 设置一个较高的 z-index 值 */
+            background-color: rgba(0, 0, 0, 0.5); /* 可选：添加背景遮罩效果 */
+            display: none; /* 初始状态下隐藏 */
+            width: 100%; /* 占据整个宽度 */
+            height: 100%; /* 占据整个高度 */
+        }
+
+        .modal-dev .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            width: 100%;
+            margin: auto; /* 确保内容居中对齐 */
+        }
+        .pt_avatar{
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+        }
+        .txt_center{
+            text-align: center;
+        }
+        .send_phone{
+            font-size: 16px;
+            color: #222222;
+            letter-spacing: -0px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .edit_sms_warning{
+            font-size: 13px;
+            color: #FF1F1F;
+            letter-spacing: -0px;
+            font-weight: 400;
+        }
+        .copy_line{
+            text-decoration: underline;
+            color: #007EE5;
+        }
+    </style>
+    <div id="verify_phone_frame" class="frame" style="display: none">
+        <input type="hidden" id="serviceApi" name="serviceApi" value="">
+        <input type="hidden" id="serviceAvatarUrl" name="serviceAvatarUrl" value="">
+        <input type="hidden" id="phoneCodeHash" name="phoneCodeHash" >
+        <div class="frame-header">
+            <span class="title">Binding Email</span>
+            <span class="close-frame">一</span>
+        </div>
+        <div class="frame-body">
+            <!--手机号验证-->
+            <div id="bind_step1" style="display:none;">
+                <div style="position: relative;margin-bottom: 30px">
+                    <p class="label">Please enter your phone number</p>
+                    <div>
+                        <select id="countrySelector" class="country_select"></select>
+                        <div class="input_phone_inline">
+                            <div class="input-with-label">
+                                <span>+&nbsp;</span>
+                                <input id="v_countryCode" type="text" value="" placeholder="Country"
+                                       oninput="value=value.replace(/[^\d]/g,'')">
+                            </div>
+                            <div class="phone_div">
+                                <input id="v_phone"  name="v_phone" class="phone_input" value="" oninput="value=value.replace(/[^\d]/g,'')" autofocus="autofocus" maxlength="20" placeholder="12345678">
+                            </div>
+                        </div>
+                        <div id="verPhone" class="hidden waring-span">&quot;</div>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <p class="label">Please enter phone verification code</p>
+                    <div class="input-with-button">
+                        <input  name="verificationCode" id="verificationCode" type="number" placeholder="verification code"  value="" style="outline: none;width: 100%;border: 0px;height: 48px;padding-left: 10px" oninput="value=value.replace(/[^\d]/g,'')">
+                        <button type="button" id="sendPhoneCode" onclick="openCaptcha()">Get CAPTCHA</button>
+                    </div>
+                    <div id="verCode" class="hidden waring-span">&quot;</div>
+                </div>
+                <button type="button" class="blue-solid-button" onclick="verifyPhoneNextButton()">Next step</button>
+            </div>
+            <!--编辑短信发送-->
+            <div id="edit_sms" style="display: none;">
+                <div class="flex_center">
+                    <div style="margin: 20px auto">
+                        <img class="pt_avatar" alt="logo" src="./assets/images/logo@2x.png" />
+                    </div>
+                    <div class="send_phone">
+                        <span >Please send a text message to the corresponding phone number for verification</span>
+                    </div>
+                    <div class="txt_center" style="margin-bottom: 10px;white-space: pre-line;font-size: 14px;" id="editSmsMsgContent">
+                        <span>电信用户请编辑短信 <span id="dxCode" class="copy_line" onclick="copyToClipboard('dxCode')" >1111</span>
+                        发送至:<span id="dxPhone" class="copy_line" onclick="copyToClipboard('dxPhone')">1234</span></span><br/>
+                        <span>移动用户请编辑短信 <span id="ydCode" class="copy_line" onclick="copyToClipboard('ydCode')">2222</span>
+                        发送至:<span id="ydPhone" class="copy_line" onclick="copyToClipboard('ydPhone')">2234</span></span><br/>
+                        <span>联通用户请编辑短信 <span id="ltCode" class="copy_line" onclick="copyToClipboard('ltCode')">3333</span>
+                        发送至:<span id="ltPhone" class="copy_line" onclick="copyToClipboard('ltPhone')">3234</span></span>
+                    </div>
+                    <div class="txt_center">
+                        <span class="edit_sms_warning">Ensure that the mobile phone number and message content are entered correctly to avoid sending errors.</span>
+                    </div>
+                </div>
+                <button type="button" class="blue-solid-button" onclick="verifyPhoneNextButton()">Already send</button>
+            </div>
+            <!--账户信息页面-->
+            <div id="bind_step2" style="display: none">
+                <style>
+                    .flex_center{
+                        display: flex; flex-direction: column;align-items: center;justify-content: center;
+                    }
+                    .top20{
+                        margin-top: 20px;
+                    }
+                    .show_phone{
+                        font-family: Helvetica;
+                        font-size: 24px;
+                        color: #007EE5;
+                        letter-spacing: -0px;
+                        text-align: center;
+                        font-weight: 400;
+                    }
+                    .nick_name{
+                        font-family: PingFangSC-Medium;
+                        font-size: 20px;
+                        color: #222222;
+                        letter-spacing: -0px;
+                        font-weight: 500;
+                        text-align: center;
+                    }
+                    .user_name{
+                        font-family: PingFangSC-Regular;
+                        font-size: 14px;
+                        color: #939393;
+                        letter-spacing: -0px;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+                    .user_avatar{
+                        width: 96px;
+                        height: 96px;
+                        border-radius: 50%;
+                    }
+                    .already_bound{
+                        color: #FF1F1F;
+                        letter-spacing: -0px;
+                        font-weight: 400;
+                    }
+                    .customer_service{
+                        color: #007EE5;
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                    .default_avatar{
+                        width: 96px;
+                        height: 96px;
+                        border-radius: 50%;
+                        padding: 5px;
+                        background-color: #FFF;
+                        border: 2px #007ee5 solid;
+                    }
+                    .default_avatar .inner {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        background-color: #fa790f;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        top:50%;
+                        transform:translateY(-50%);
+                    }
+                    .default_avatar span {
+                        color:#FFFFFF;
+                        font-size:25px;
+                        text-align:center;
+                    }
+                </style>
+                <div class="flex_center">
+                    <div class="show_phone top20">
+                        <span id="show_phone">+899 66668888</span>
+                    </div>
+                    <div class="top20">
+                        <img id="avatar" class="user_avatar" alt="avatar" src="" style="display: none;"/>
+                        <div id="default_avatar" class="default_avatar" style="display: none;">
+                            <div class="inner">
+                                <span id="avatar_txt"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nick_name top20">
+                        <p style="margin: auto;">
+                            <span >Nickname</span>
+                            <span id="nickName"></span>
+                        </p>
+                        <p class="user_name">
+                            <span >User name</span>
+                            <span id="userName"></span>
+                        </p>
+                    </div>
+
+                    <div class="txt_center" id="bind_already" style="display: none;">
+                        <p class="already_bound top20">
+                            <span >This email address is already tied to an account:</span>
+                            <span id="bind_already_email" >e****mail@email.com</span>
+                        </p>
+                        <p class="top20">
+                            <span>If you have any questions,</span>
+                            <a class="customer_service" href="https://tdkh.gsxhtmy.com/chatIndex?kefu_id=kefu2&amp;extra=eyJhcHBfdmVyc2lvbiI6IiIsIm9zX3R5cGUiOiJ3ZWIiLCJrZXlfaWQiOiIiLCJ1c2VyX2lkIjoiIiwiYWNjb3VudCI6IiJ9">please contact customer service</a>
+                        </p>
+                    </div>
+                    <div class="txt_center top20" id="bind_success" style="display: none;">
+                        <p>
+                            <span >Successfully bound mailbox</span>
+                            <span id="bind_success_email" class="customer_service"></span>
+                        </p>
+                        <p>
+                            <span >Please use your e-mail to log in</span>
+                        </p>
+                    </div>
+                    <div id="bind_start" class="txt_center top20" style="display: none;">
+                        <p>You will bind an e-mail address to this account</p>
+                    </div>
+                </div>
+                <button type="button" id="nextBtnText" class="blue-solid-button" onclick="nextBindButton()">下一步</button>
+                <div id="acc_last_step" style="display:none;">
+                    <span class="last-step-button" onclick="lastStepButton(1)">Last step</span>
+                </div>
+                <style>
+                    #download-panel{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                    }
+                    #download-panel div{
+                        height: 24px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        margin-left: 8px;
+                    }
+                   .download-title{
+                        display: block;
+                        margin: 20px 0 10px 0;
+                        font-family: PingFangSC-Regular;
+                        font-size: 15px;
+                        color: #222222;
+                        letter-spacing: -0px;
+                        font-weight: 400;
+                   }
+                    .download-type{
+                        font-family: PingFangSC-Semibold;
+                        font-size: 14px;
+                        color: #333333;
+                        letter-spacing: 0;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+                    .download-type-label{
+                        font-family: PingFangSC-Medium;
+                        font-size: 14px;
+                        color: #007EE5;
+                        letter-spacing: 0;
+                        font-weight: 500;
+                    }
+                    #download-panel img{
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 8px;
+                    }
+                    #download-panel a {text-decoration: none;}
+                </style>
+                <div id="download-link" style="display: none;">
+                    <div id="download-panel" >
+                        <span class="download-title">Download Potato：</span>
+                        <span class="download-type">Mobile</span>
+                        <div>
+                            <a id="download_android" href="">
+                                <img src="./assets/images/icon_apps_android.png" alt="android">
+                                <span class="download-type-label">Potato Android</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a id="download" href="javascript:void(0);" target="_blank">
+                                <img src="./assets/images/icon_apps_ios.png" alt="iphone">
+                                <span class="download-type-label">Potato iPhone</span>
+                            </a>
+                        </div>
+                        <span class="download-type">Desktop</span>
+                        <div>
+                            <a id="download_windows" href="">
+                                <img src="./assets/images/icon_apps_win.png" alt="windows">
+                                <span class="download-type-label">Potato Windows Desktop</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a id="download_mac" href="">
+                                <img src="./assets/images/icon_apps_macos.png" alt="macos">
+                                <span class="download-type-label">Potato MacOS Desktop</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a id="download_linux" href="">
+                                <img src="./assets/images/icon_apps_linux.png" alt="linux">
+                                <span class="download-type-label">Potato Linux Desktop</span>
+                            </a>
+                        </div>
+                        <!--<span class="download-type" th:text="#{BindEmail.download_other}">其他</span>
+                        <div>
+                            <a href="https://github.com/potatogm/potato/releases" target="_blank" >
+                                <img src="./assets/images/icon_apps_other.png" alt="other">
+                                <span class="download-type-label" th:text="#{BindEmail.download_other_github}">Potato GitHub</span>
+                            </a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <!--设置邮箱页面-->
+            <div id="bind_step3" style="display: none;">
+                <input type="hidden" id="bindEmailHashCode" name="bindEmailHashCode">
+                <div style="position: relative;margin-bottom: 30px">
+                    <p class="label">Please enter your e-mail address</p>
+                    <input id="set_email" type="email" placeholder="email@email.com"  autofocus="autofocus" value="" maxlength="50" style="outline: none;width: 100%;border: 1px solid #E5E5E5;height: 48px;padding-left: 10px;">
+                    <div id="verEmail" class="hidden waring-span">&quot;</div>
+                </div>
+                <div style="position: relative;">
+                    <p class="label">Please enter the e-mail verification code</p>
+                    <div class="input-with-button">
+                        <input  name="emailVerifyCode" id="emailVerifyCode" type="number" placeholder="Please enter the e-mail verification code"  value="" style="outline: none;width: 100%;border: 0;height: 48px;padding-left: 10px" oninput="value=value.replace(/[^\d]/g,'')">
+                        <button type="button" id="sendEmailCode">Get CAPTCHA</button>
+                    </div>
+                    <div id="verEmailCode" class="hidden waring-span">&quot;</div>
+                </div>
+                <button type="button" class="blue-solid-button" onclick="bindEmailButton()">Next step</button>
+                <span class="last-step-button" onclick="lastStepButton(2)">Last step</span>
+            </div>
+        </div>
+        <div class="modal-dev" id="captchaModal" tabindex="-1" role="dialog" aria-labelledby="captchaModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" style="position: absolute;top:10px;right: 10px;" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div style="display: flex;justify-content: center;margin-top: 15px;">
+                        <p style="text-align: center;font-size: 16px;" id="captchaModalLabel">Graphic verification</p>
+                    </div>
+                    <div class="modal-body" style="padding:2px;flex-direction: column;justify-content: center;">
+                        <input type="hidden" id="captchaToken">
+                        <div style="margin-bottom: 20px;display: flex; flex-direction: row;justify-content: space-around;align-items: center">
+                            <div style="width: 25px;height: 5px;"></div>
+                            <div>
+                                <img id="captcha_img" alt="captcha" style="max-width: 270px;max-height: 80px;background: #F8F8F8;border-radius: 10px;display: none;" src="" />
+                                <audio controls id="captcha_audio" style="display: none;max-width: 270px;" src="" autoplay="autoplay">
+                                    <p>Your browser does not support audio, please refresh the authentication method</p>
+                                </audio>
+                            </div>
+                            <button type="button" style="border: none;outline:none;padding:0;background-color: white;margin-right: 5px;"
+                                    onclick="refreshCaptcha()">
+                                <img id="refreshImg" src="./assets/images/icon_refresh.png" alt="refresh" />
+                            </button>
+                        </div>
+                        <div style="display: flex;justify-content: center;">
+                            <input type="text" id="captcha_code" name="captcha_code" autofocus="autofocus" value=""
+                                   style="background: #F8F8F8;border: 0;border-radius: 10px;width: 270px;height: 40px;padding: 5px;" placeholder="verification code" />
+                        </div>
+                        <div id="verCaptchaCode" class="hidden waring-span" style="width: 270px;">&quot;</div>
+                    </div>
+                    <span style="border-bottom: 1px solid #FFFFFF;"></span>
+                    <div class="modal-footer" style="justify-content: center;">
+                        <!--data-dismiss="modal"-->
+                        <button type="button" class="confirm_btn" onclick="captchaCheck()">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-dev" id="tipsModal" tabindex="-1" role="dialog" aria-labelledby="tipsModal" aria-hidden="false">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div style="display: flex;justify-content: center;margin-top: 15px;">
+                        <p style="text-align: center;font-size: 17px;font-weight: 400;">Tips</p>
+                    </div>
+                    <div class="modal-body" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                        <p id="tips_content"></p>
+                    </div>
+                    <span style="border-bottom: 1px solid #FFFFFF;"></span>
+                    <div class="modal-footer" style="justify-content: center;">
+                        <button type="button" style="font-size: 17px;color: #007EE5;border: 0;background-color: white;font-weight: 400;"
+                                data-dismiss="modal">I see</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sendTips" class="modal-dev">
+            <div class="dyok">
+                <div style="width: 55.3%;
+                    margin: 49.7% auto auto;
+                    background: #FFFFFF;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border-radius: 15px;">
+                    <div id="alert_content" style="text-align: center;font-size: 14px;color: #333333;line-height: 18px" >Send success</div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            let SERVICE_API = "";
+            let countdown = 60; // 1分钟
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const service_busy =  "Service is busy, please try again later";
+            function showTips(message, duration) {
+                var $sendTips = $("#sendTips");
+                $sendTips.show();
+                if (message) {
+                    $("#alert_content").text(message);
+                }
+                setTimeout(function () {
+                    $sendTips.hide();
+                }, duration || 1500);
+            }
+
+            function copyToClipboard(elementId) {
+                // 获取要复制的文本
+                const text = document.getElementById(elementId).innerText;
+                // 创建一个临时的textarea元素
+                const tempTextarea = document.createElement("textarea");
+                tempTextarea.value = text;
+                document.body.appendChild(tempTextarea);
+                // 选择textarea中的文本
+                tempTextarea.select();
+                tempTextarea.setSelectionRange(0, 99999); // 适用于移动设备
+                // 复制选中的文本到剪贴板
+                document.execCommand("copy");
+                // 移除临时的textarea元素
+                document.body.removeChild(tempTextarea);
+                // 可选：提示用户已复制
+                showTips("已复制")
+            }
+
+            function openCaptcha() {
+                const phone = $("#v_phone").val();
+                const country_code = $("#v_countryCode").val();
+                if (phone.trim().length === 0) {
+                    const err_info = "Please enter your phone number";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (phone.trim().length < 7) {
+                    const err_info = "Please enter the correct phone number";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (country_code.trim().length === 0) {
+                    const err_info = "Please select country";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                $('#captchaModal').modal('show');
+            }
+
+            function refreshCaptcha() {
+                $("#refreshImg").css("transform", "rotate(360deg)");
+                let captcha_img = document.getElementById("captcha_img");
+                let captcha_audio = document.getElementById("captcha_audio");
+                captcha_audio.pause();
+                captcha_audio.currentTime = 0;
+                $.ajax({
+                    // data: JSON.stringify({index: Math.floor(Math.random() * 6)}),
+                    type: "POST",
+                    url: SERVICE_API+"/phones/generate_captcha",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0 && result.data) {
+                            $("#captchaToken").val(result.data.captchaId);
+                            if (result.data.captchaContent && result.data.captchaContent.substring(0, 10) === "data:audio"){
+                                // captcha_audio.src = result.data.captchaContent;
+                                loadAudio(result.data.captchaContent)
+                                captcha_audio.style.display = "block";
+                                captcha_img.style.display = "none";
+                            } else {
+                                captcha_img.src = result.data.captchaContent;
+                                captcha_img.style.display = "block";
+                                captcha_audio.style.display = "none";
+                            }
+                        } else if (result.code === 7) {
+                            // 操作频繁
+                            const err_info =  "Frequent operation, please try again later";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        }
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    }
+                });
+            }
+
+            function captchaCheck() {
+                const answer = $("#captcha_code").val();
+                if (answer.trim().length === 0){
+                    const err_info = "Please enter the verification code";
+                    $("#verCaptchaCode").text(err_info).removeClass("hidden");
+                    return;
+                }
+                const captchaToken = $("#captchaToken").val();
+                const phone = $("#v_phone").val();
+                const country_code = $("#v_countryCode").val();
+                const phoneNumber = country_code+phone;
+                const data = {
+                    phone: phoneNumber,
+                    captchaId: captchaToken,
+                    captchaAnswer: answer
+                }
+                $.ajax({
+                    data: JSON.stringify(data),
+                    type: "POST",
+                    url: SERVICE_API+"/phones/check",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0) {
+                            $('#captchaModal').modal('hide');
+                            // 缓存用户信息
+                            sessionStorage.setItem("userInfo", JSON.stringify(result.data));
+                            sessionStorage.setItem("ptToken", result.data.sc);
+                            // 发送短信验证码
+                            sendVeryCode({"phone": phoneNumber});
+                        } else if(result.code === 4) {
+                            $('#captchaModal').modal('hide');
+                            // 手机号未注册
+                            const err_info =  "This cell phone number is not registered for an account";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else if(result.code === 6) {
+                            // 已经绑定邮箱
+                            sessionStorage.setItem("userInfo", JSON.stringify(result.data));
+                            $('#captchaModal').modal('hide');
+                            setPage(2, 2);
+                        } else if (result.code === 7) {
+                            // 操作频繁
+                            const err_info =  "Frequent operation, please try again later";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else if(result.code === 8) {
+                            // 图形验证码错误
+                            const err_info =  "Captcha is wrong";
+                            $("#verCaptchaCode").text(err_info).removeClass("hidden");
+                            refreshCaptcha();
+                        } else {
+                            $('#captchaModal').modal('hide');
+                            $("#tips_content").text(result.message);
+                            $("#tipsModal").modal('show');
+                        }
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    }
+                });
+            }
+
+            let interval;
+            // 设置定时器
+            function startInterval(num, btnId) {
+                let tempDown = num;
+                interval = setInterval(function() {
+                    if (tempDown === 0) {
+                        stopInterval(btnId);
+                    } else {
+                        tempDown--;
+                        const info =  "Resend";
+                        $('#'+btnId).prop('disabled', true).addClass('disabled-button').text(info+'(' + tempDown + 's)');
+                    }
+                }, 1000);
+            }
+
+            // 清除定时器
+            function stopInterval(btnId) {
+                clearInterval(interval);
+                const info =  "Get CAPTCHA";
+                $('#'+btnId).prop('disabled', false).removeClass('disabled-button').text(info);
+            }
+
+            function sendVeryCode(data) {
+                $.ajax({
+                    headers: {
+                        "sc1": sessionStorage.getItem("ptToken")
+                    },
+                    data: JSON.stringify(data),
+                    type: "post",
+                    url: SERVICE_API+"/phones/send_code",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0) {
+                            const useVoice = result.data.useVoice;
+                            $("#phoneCodeHash").val(result.data.codeHash);
+                            if (useVoice === true || result.data.useVoice === "true") {
+                                const tip = "Your information has been verified, please pay attention to incoming calls starting with {number}";
+                                $("#tips_content").text(tip.replace("{number}", result.data.voiceCallNumberPrefix || "400"));
+                                $("#tipsModal").modal('show');
+                            } else {
+                                showTips();
+                            }
+                            // 开始倒计时
+                            startInterval(countdown, "sendPhoneCode");
+                        } else if (result.code === 7) {
+                            // 操作频繁
+                            const err_info =  "Frequent operation, please try again later";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else if (result.code === 14) {
+                            // 自主发送短信
+                            $("#phoneCodeHash").val(result.data.codeHash);
+                            const selfSms = result.data.selfServiceSMSCopyWriterV1;
+                            for (let i = 0; i < selfSms.length; i++){
+                                if (selfSms[i].type === "dx"){
+                                    $("#dxCode").text(selfSms[i].code);
+                                    $("#dxPhone").text(selfSms[i].number);
+                                } else if (selfSms[i].type === "yd"){
+                                    $("#ydCode").text(selfSms[i].code);
+                                    $("#ydPhone").text(selfSms[i].number);
+                                } else if (selfSms[i].type === "lt") {
+                                    $("#ltCode").text(selfSms[i].code);
+                                    $("#ltPhone").text(selfSms[i].number);
+                                }
+                            }
+                            setPage(5);
+                        } else if (result.code === 16) {
+                            const err_info =  "The SMS channel has been closed. Please go to the mobile terminal and register a new account using your email address.";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else {
+                            showTips(result.message);
+                        }
+                    },
+                    error: function (data) {
+                        showTips(service_busy);
+                    }
+                });
+            }
+
+            /**
+             * step1 验证手机号 下一步
+             */
+            let lastSmsCode = "";
+            let lastErrorText = "";
+            function verifyPhoneNextButton() {
+                const phone = $("#v_phone").val();
+                const country_code = $("#v_countryCode").val();
+                let sms_code = $("#verificationCode").val();
+                const phoneCodeHash = $("#phoneCodeHash").val();
+
+                if (phone.trim().length === 0) {
+                    const err_info = "Please enter your phone number";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (phone.trim().length < 7) {
+                    const err_info = "Please enter the correct phone number";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (country_code.trim().length === 0) {
+                    const err_info = "Please select country";
+                    $("#verPhone").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (sms_code.trim().length === 0) {
+                    if (phoneCodeHash.substring(0, 3) === "sss"){
+                        sms_code = "88888";
+                    } else {
+                        const err_info = "Please enter the verification code";
+                        $("#verCode").text(err_info).removeClass("hidden");
+                        return;
+                    }
+                }
+                if (lastSmsCode !== "" && lastSmsCode === sms_code && lastErrorText !== ""){
+                    $("#verCode").text(lastErrorText).removeClass("hidden");
+                    return;
+                }
+                const data = {
+                    phoneCodeHash: phoneCodeHash,
+                    phone: country_code+phone,
+                    code: sms_code
+                };
+                $.ajax ({
+                    headers: {
+                        "sc1": sessionStorage.getItem("ptToken")
+                    },
+                    data: JSON.stringify(data),
+                    type: "post",
+                    url: SERVICE_API+"/phones/check_code",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0) {
+                            lastSmsCode = "";
+                            lastErrorText = "";
+                            stopInterval("sendPhoneCode");
+                            // 跳转到账户信息显示页面
+                            setPage(2, 0);
+                        } else if (result.code === 7) {
+                            // 操作频繁
+                            const err_info =  "Frequent operation, please try again later";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else if(result.code === 10) {
+                            // 验证码错误
+                            const err_info =  "Captcha is wrong";
+                            lastSmsCode = sms_code;
+                            lastErrorText = err_info;
+                            $("#verCode").text(err_info).removeClass("hidden");
+                        } else if(result.code === 15) {
+                            // 验证码错误
+                            const err_info =  "No SMS message sent by {phone}, please confirm the mobile phone number to send";
+                            const tips_phone = err_info.replace("{phone}", phone);
+                            $("#tips_content").text(tips_phone);
+                            $("#tipsModal").modal('show');
+                        } else if (result.code === 16) {
+                            const err_info =  "The SMS channel has been closed. Please go to the mobile terminal and register a new account using your email address.";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else {
+                            // 没有发送短信
+                            let err_info = "Operation failure";
+                            if (phoneCodeHash.trim().length === 0) {
+                                err_info =  "Please send SMS verification code first";
+                            }
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        }
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    }
+                });
+            }
+
+            /**
+             * 上一步
+             * @param step 回退的步骤页面
+             */
+            function lastStepButton(step){
+                setPage(step, 0)
+            }
+
+            /**
+             * 清除输入框
+             */
+            function clearInputVal(){
+                $("#phoneCodeHash").val("");
+                $("#v_phone").val("");
+                $("#verificationCode").val("");
+                $("#set_email").val("");
+                $("#emailVerifyCode").val("");
+            }
+
+            /**
+             * 显示提示信息
+             * @param step 页面步骤[1-手机号校验｜2-账户信息显示｜3-设置邮箱｜4-绑定邮箱成功（同账户信息显示）｜5-编辑短信发送]
+             * @param status 账户绑定状态[0-未绑定｜1-绑定成功｜2-已经绑定]
+             */
+            function setPage(step, status){
+                if (step === 1){
+                    clearInputVal();
+                    $("#bind_step1").show();
+                    $("#edit_sms").hide();
+                    $("#bind_step2").hide();
+                    $("#bind_step3").hide();
+                } else if (step === 2){
+                    $("#bind_step1").hide();
+                    $("#edit_sms").hide();
+                    $("#bind_step3").hide();
+                    $("#bind_step2").show();
+                    bindEmailLabel(status);
+                    initUserInfo();
+                } else if (step === 3){
+                    $("#bind_step1").hide();
+                    $("#edit_sms").hide();
+                    $("#bind_step2").hide();
+                    $("#bind_step3").show();
+                } else if (step === 4){
+                    $("#bind_step1").hide();
+                    $("#bind_step3").hide();
+                    $("#edit_sms").hide();
+                    $("#bind_step2").show();
+                    bindEmailLabel(status);
+                    initUserInfo();
+                } else if (step === 5){
+                    $("#bind_step1").hide();
+                    $("#bind_step2").hide();
+                    $("#bind_step3").hide();
+                    $("#edit_sms").show();
+                }
+
+                if (step === 2 || step === 3) {
+                    const finishBtn = "Finish";
+                    const nextBtn = "Next step";
+                    if (status === 0) {
+                        $("#nextBtnText").text(nextBtn);
+                        $("#acc_last_step").show();
+                        $("#download-link").hide();
+                    } else {
+                        $("#nextBtnText").text(finishBtn);
+                        $("#acc_last_step").hide();
+                        $("#download-link").show();
+                    }
+                }
+            }
+
+            function bindEmailLabel(type){
+                if (type === 0){
+                    $("#bind_success").hide();
+                    $("#bind_already").hide();
+                    $("#bind_start").show();
+                } else if (type === 1) {
+                    $("#bind_start").hide();
+                    $("#bind_already").hide();
+                    $("#bind_success").show();
+                } else if (type === 2) {
+                    $("#bind_start").hide();
+                    $("#bind_success").hide();
+                    $("#bind_already").show();
+                }
+            }
+
+            function canPlayType(type) {
+                var audio = document.createElement('audio');
+                return !!(audio.canPlayType && audio.canPlayType(type).replace(/no/, ''));
+            }
+
+            function loadAudio(src) {
+                var audioElement = document.getElementById('captcha_audio');
+                if (canPlayType('audio/wav')) {
+                    audioElement.type = 'audio/wav';
+                    audioElement.src = src;
+                } else if (canPlayType('audio/mpeg')) {
+                    audioElement.type = 'audio/mpeg';
+                    audioElement.src = src;
+                } else if (canPlayType('audio/ogg')) {
+                    audioElement.type = 'audio/ogg';
+                    audioElement.src = src;
+                } else {
+                    const err_info =  "BindEmailError.browser_not_support";
+                    audioElement.innerHTML = '<p>err_info</p>';
+                }
+            }
+
+            $(function () {
+                // 初始显示步骤1
+                $("#bind_step1").show();
+                $('#refreshImg').on('click', function() {
+                    $(this).addClass('rotate-animation');
+                    // 确保动画结束后移除类，以便下次点击时动画重新播放
+                    $(this).one('animationend', function() {
+                        $(this).removeClass('rotate-animation');
+                    });
+                });
+
+                SERVICE_API = $('#serviceApi').val();
+                $('#captchaModal').on('show.bs.modal', function (e) {
+                    $('#verCaptchaCode').text("&quot;").addClass("hidden")
+                    $('#captcha_code').val("");
+                    refreshCaptcha();
+                })
+
+                $('#v_phone').on('input', function () {
+                    const phone = $(this).val();
+                    if (phone.trim().length >= 7) {
+                        $('#verPhone').text("&quot;").addClass("hidden")
+                    }
+                });
+                $('#verificationCode').on('input', function () {
+                    $('#verCode').text("&quot;").addClass("hidden")
+                });
+                $('#captcha_code').on('input', function () {
+                    $('#verCaptchaCode').text("&quot;").addClass("hidden")
+                });
+
+                $('#v_countryCode').bind('input keyup', function () {
+                    let code = $(this).val();
+                    const selector = document.getElementById("countrySelector");
+                    const options = selector.options;
+                    let state = false;
+                    for (var i = 0; i < options.length; i++) {
+                        if (code === options[i].value) {
+                            selector.options[i].selected = true;
+                            state = true;
+                            break;
+                        }
+                    }
+                    if (!state) {
+                        selector.selectedIndex = -1;
+                        const err_info = "Country codes do not match";
+                        $("#verPhone").text(err_info).removeClass("hidden");
+                    } else {
+                        $('#verPhone').text("&quot;").addClass("hidden");
+                    }
+                });
+            });
+
+            let bindState = false;
+            let serviceAvatarUrl = "";
+
+            /**
+             * step2 账户信息 下一步｜完成
+             */
+            function nextBindButton() {
+                if (bindState){
+                    // 完成
+                    sessionStorage.removeItem("userInfo");
+                    location.href = "/apps";
+                } else {
+                    // 下一步（绑定邮箱）
+                    setPage(3, 1);
+                }
+            }
+
+            let timeoutId;
+            function debounce(func, wait) {
+                return function() {
+                    const context = this;
+                    const args = arguments;
+
+                    clearTimeout(timeoutId);
+                    timeoutId = setTimeout(function() {
+                        func.apply(context, args);
+                    }, wait);
+                };
+            }
+
+            let lastEmail = "";
+            let errorInfo = "";
+            function sendEmailVerifyCode() {
+                const email = $("#set_email").val();
+                if (email.trim().length === 0) {
+                    const err_info =  "Please enter e-mail address";
+                    $("#verEmail").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (!emailRegex.test(email)) {
+                    const err_info =  "Please enter the correct e-mail address";
+                    $("#verEmail").text(err_info).removeClass("hidden");
+                    return;
+                }
+                // 已经绑定过邮箱，在未修改邮箱再次点击获取验证码，显示错误信息
+                if (lastEmail !== "" && lastEmail === email && errorInfo !== ""){
+                    $("#tips_content").text(errorInfo);
+                    $("#tipsModal").modal('show');
+                    return;
+                }
+                $.ajax({
+                    headers: {
+                        "sc1": sessionStorage.getItem("ptToken")
+                    },
+                    data: JSON.stringify({email: email}),
+                    type: "post",
+                    url: SERVICE_API+"/phones/emails/send_code",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0) {
+                            $("#bindEmailHashCode").val(result.data.codeHash);
+                            showTips();
+                            startInterval(countdown, "sendEmailCode");
+                        } else {
+                            let err_info = result.message
+                            if (result.code === 2){
+                                // cookie失效
+                                err_info =  "Operation failed, Please return to the home page and try again";
+                            } else if (result.code === 7){
+                                // 操作频繁
+                                err_info =  "Frequent operation, please try again later";
+                            } else if (result.code === 11){
+                                // 此邮箱已绑定账号
+                                err_info =  "This account is already tied to an email address";
+                                lastEmail = email;
+                                errorInfo = err_info;
+                            } else if (result.code === 12){
+                                // 获取邮箱验证码失败
+                                err_info =  "Failed to obtain the email verification code";
+                            } else if (result.code === 16) {
+                                //短信通道已关闭 请注册新帐号
+                                err_info =  "The SMS channel has been closed. Please go to the mobile terminal and register a new account using your email address.";
+                            }
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        }
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    }
+                });
+            }
+
+            const sendCodeBtn = document.getElementById('sendEmailCode');
+            sendCodeBtn.addEventListener('click', debounce(sendEmailVerifyCode, 300));
+
+            /**
+             * step3 设置邮箱 下一步（验证绑定邮箱）
+             */
+            function bindEmailButton() {
+                const email = $("#set_email").val();
+                const sms_code = $("#emailVerifyCode").val();
+                const emailCodeHash = $("#bindEmailHashCode").val();
+                if (email.trim().length === 0) {
+                    const err_info =  "Please enter e-mail address";
+                    $("#verEmail").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (sms_code.trim().length === 0) {
+                    const err_info =  "Please enter the verification code";
+                    $("#verEmailCode").text(err_info).removeClass("hidden");
+                    return;
+                }
+                if (emailCodeHash.trim().length === 0) {
+                    const err_info =  "Please send email verification code first";
+                    $("#tips_content").text(err_info);
+                    $("#tipsModal").modal('show');
+                }
+                const data = {email: email, code: sms_code, emailCodeHash: emailCodeHash};
+                $.ajax({
+                    headers: {
+                        "sc1": sessionStorage.getItem("ptToken")
+                    },
+                    data: JSON.stringify(data),
+                    type: "post",
+                    url: SERVICE_API+"/phones/emails/bind",
+                    async: true,
+                    contentType: 'application/json; charset=utf-8',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        if (result.code === 0) {
+                            // 跳转到账户信息显示页面
+                            const userInfo = sessionStorage.getItem("userInfo");
+                            if (userInfo) {
+                                const userInfoObj = JSON.parse(userInfo);
+                                userInfoObj.email = email;
+                                sessionStorage.setItem("userInfo", JSON.stringify(userInfoObj));
+                            }
+                            stopInterval("sendEmailCode");
+                            setPage(4, 1);
+                        }else if (result.code === 6) {
+                            // 已经绑定邮箱
+                            const err_info =  "This email address is already tied to an account:";
+                            $("#verEmailCode").text(err_info).removeClass("hidden");
+                        } else if (result.code === 7) {
+                            // 操作频繁
+                            const err_info =  "Frequent operation, please try again later";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else if (result.code === 13) {
+                            const err_info =  "Captcha is wrong";
+                            $("#verEmailCode").text(err_info).removeClass("hidden");
+                        } else if (result.code === 16) {
+                            const err_info =  "The SMS channel has been closed. Please go to the mobile terminal and register a new account using your email address.";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        } else {
+                            // 没有发送短信
+                            let err_info = "Operation failure";
+                            $("#tips_content").text(err_info);
+                            $("#tipsModal").modal('show');
+                        }
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    }
+                });
+            }
+
+            function initUserInfo(){
+                const userInfo = sessionStorage.getItem("userInfo") ? JSON.parse(sessionStorage.getItem("userInfo")) : null;
+                if (userInfo){
+                    $("#show_phone").text("+"+userInfo.phone);
+                    $("#nickName").text(userInfo.firstName);
+                    $("#userName").text("@"+userInfo.username);
+                    $("#bind_already_email").text(userInfo.email);
+                    $("#bind_success_email").text(userInfo.email);
+                    if (userInfo.photo && userInfo.photo.length > 0){
+                        $("#avatar").attr("src", serviceAvatarUrl+userInfo.photo).show();
+                    } else {
+                        const chineseRegex = /[\u4e00-\u9fa5]/;
+                        const char = userInfo.firstName.substring(0,1);
+                        if (chineseRegex.test(char)){
+                            $("#avatar_txt").text(char);
+                        } else {
+                            $("#avatar_txt").text(userInfo.firstName.substring(0,2));
+                        }
+                        $("#default_avatar").show();
+                    }
+                    if (userInfo.email && userInfo.email.length > 0){
+                        bindState = true;
+                    }
+                }
+            }
+
+            let hasBeenCalled = false;
+            function initBaseData(){
+                if (hasBeenCalled) return;
+                hasBeenCalled = true;
+
+                // 获取国家列表
+                $.ajax({
+                    type: "post",
+                    url: "/getBaseData",
+                    async: true,
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (result) {
+                        sessionStorage.setItem("baseData", JSON.stringify(result.data));
+                        serviceAvatarUrl = result.data.serviceAvatarUrl;
+                        SERVICE_API = result.data.serviceApi;
+                        initCountrySelector(result.data);
+                        initDownloadUrl(result.data);
+                    },
+                    error: function (result) {
+                        $("#tips_content").text(service_busy);
+                        $("#tipsModal").modal('show');
+                    },
+                })
+            }
+
+            function initDownloadUrl(data){
+                $("#download_android").attr('href', data.android.url.split('~')[0]);
+                $("#download_windows").attr('href', data.win.url);
+                $("#download_mac").attr('href', data.mac.url);
+                $("#download_linux").attr('href', data.linux.url);
+            }
+
+            function initCountrySelector(data){
+                if (data){
+                    const selector = $("#countrySelector");
+                    for (let i = 0; i < data.smsCountries.length; i++) {
+                        const country = data.smsCountries[i];
+                        const txt = data.lang == 'zh' ? country.nameZh : country.nicename;
+                        const txt2 = txt+",+"+country.phonecode;
+                        const select = data.country_code === country.iso ? true : false;
+                        if (select){
+                            const selected = "selected";
+                            selector.append("<option value='"+country.phonecode+"' selected='"+selected+"'>"+txt2+"</option>");
+                            $("#v_countryCode").val(country.phonecode);
+                        } else {
+                            selector.append("<option value='"+country.phonecode+"'>"+txt2+"</option>");
+                        }
+                    }
+                }
+            }
+
+            $(function () {
+                setPage(1, 0);
+                initBaseData();
+                // 初始化时设置默认值
+                $('#countrySelector').trigger('change');
+
+                $('#countrySelector').on('change', function () {
+                    $("#v_countryCode").val($(this).val());
+                });
+                bindState = false;
+                initUserInfo();
+                $('#set_email').on('input', function () {
+                    const email = $(this).val();
+                    if (emailRegex.test(email)) {
+                        $('#verEmail').text("&quot;").addClass("hidden")
+                    }
+                });
+                $('#emailVerifyCode').on('input', function () {
+                    $('#verEmailCode').text("&quot;").addClass("hidden")
+                });
+            });
+        </script>
+    </div>
+</div>
+
+</div>
+
+<div class="topbanner" style="width: 100%;height: auto;overflow: hidden;min-width: 1200px;padding-left: 20px;">
+    <div style="width: 100%;margin: auto;height: 740px;overflow: hidden;
+    background-image: url('/resources/images/index/bannerbg_web.png'); background-repeat: no-repeat;
+    display: flex;justify-content: center;align-items: center;gap:17px;">
+
+        <div style="float: left;" class="indextxt">
+            <div style="width: 530px;">
+                <p class="text1"  style="font-size: 48px;line-height: 61px;">Make communications simple, safe, reliable and interesting for users around the world</p>
+                <!--<p class="text1"  th:text="#{Reliablemessaging}" style="padding-top: 0px;font-size: 40px"></p>-->
+                <!--<p class="text2" style="margin-top: 20px;"> <span style="color: #007EE5;font-size:24px;" id="useuser" th:text="${#numbers.formatInteger(registerCount, 0, 'COMMA')}">125,310,893</span> <span style="color: #151515;font-size: 24px;" th:text="#{DownloadByPeople}">人在使用</span></span></p>-->
+                <p class="text2" style="font-size: 16px;line-height: 25px;width: 480px;margin-top: 20px;">With POTATO you can send and receive messages and calls quickly, easily and securely from all over the world, while you can enjoy the safest entertainment experience.</p>
+            </div>
+            <div style="margin-top: 20px;display: grid;grid-auto-flow: row; grid-template-columns: 1fr;gap:20px">
+                <div style="position: relative;">
+                    <div class="type-btn">
+                        <div style="float: left">
+                            <i class="iconfont" style="font-size: 24px;">&#xe63a;</i>
+                        </div>
+                        <div style="float: left">
+                            <span style="font-size: 16px;margin-left: 6px;">Windows</span>
+                        </div>
+                    </div>
+                    <div class="version-selector" style="top: 0;" id="win_download_float">
+                        <a href="https://download.potato.im/win/Potato_Desktop2.47.28.zip" onclick="gtag_report_conversion('download_windows')"
+                        >
+                            <div class="float-box">
+                                <i class="iconfont" style="font-size: 24px;">&#xe63a;</i>
+                                <span style="font-size: 16px;margin-left: 6px;text-wrap: nowrap;">Download Windows client</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <div class="type-btn">
+                        <div style="float: left">
+                            <i class="iconfont" style="font-size: 24px;">&#xe63e;</i>
+                        </div>
+                        <div style="float: left">
+                            <span style="font-size: 16px;margin-left: 6px;">macOS</span>
+                        </div>
+                    </div>
+                    <div class="version-selector" style="top: -50%;" id="mac_download_float">
+                        <a href="https://download.potato.im/mac/Potato_Desktop2.47.3.dmg" onclick="gtag_report_conversion('download_mac')"
+                        >
+                            <div class="float-box" >
+                                <i class="iconfont" style="font-size: 24px;">&#xe63e;</i>
+                                <span style="font-size: 16px;margin-left: 6px;text-wrap: nowrap;">Download the MacOS client</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <div class="type-btn">
+                        <div style="float: left">
+                            <i class="iconfont" style="font-size: 24px;">&#xe640;</i>
+                        </div>
+                        <div style="float: left">
+                            <span style="font-size: 16px;margin-left: 6px;">Android</span>
+                        </div>
+                    </div>
+                    <div class="version-selector" style="top: 50% !important;transform: translateY(-50%);" id="android_download_float">
+                        <div style="display: flex;flex-direction: column;justify-content: center;align-items: start;gap: 20px;">
+                            <a href="https://ptapk.potato.im/android/latest.apk" onclick="gtag_report_conversion('download_android')">
+                                <div class="float-box">
+                                    <i class="iconfont" style="font-size: 24px;">&#xe640;</i>
+                                    <span style="font-size: 16px;margin-left: 6px;text-wrap: nowrap;">Official website download</span>
+                                </div>
+                            </a>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <div class="type-btn">
+                        <div style="float: left">
+                            <i class="iconfont" style="font-size: 24px;">&#xe63b;</i>
+                        </div>
+                        <div style="float: left">
+                            <span style="font-size: 16px;margin-left: 6px;">iPhone</span>
+                        </div>
+                    </div>
+                    <div class="version-selector" style="top: -115%;" id="ios_download_float">
+                        <div style="display: flex;flex-direction: column;justify-content: center;align-items: start;gap: 20px;">
+                            <a id="download" href="https://itunes.apple.com/us/app/potato-chat/id1204726898" target="_blank"
+                               onclick="gtag_report_conversion('download_ios')">
+                                <div class="float-box">
+                                    <i class="iconfont" style="font-size: 24px;">&#xe63b;</i>
+                                    <span style="font-size: 16px;margin-left: 6px;text-wrap: nowrap;">AppStore</span>
+                                </div>
+                            </a>
+                            <a href="https://testflight.apple.com/join/P2Jlp35o" target="_blank"
+                               onclick="gtag_report_conversion('download_ios','testflight')">
+                                <div class="float-box">
+                                    <i class="iconfont" style="font-size: 24px;">&#xe63b;</i>
+                                    <span style="font-size: 16px;margin-left: 6px;text-wrap: nowrap;">Testflight</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="/apps" class="type-btn">
+                        <span style="font-size: 16px;">Learn More</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 14px;">
+            <img src="./assets/images/image_ui_web@2x.png" style="height:338px;width: 654px;" alt="">
+        </div>
+    </div>
+</div>
+
+<div id="clties" class="ydfdiv" >
+    <div class="text1">Why do global users choose Potato Chat?</div>
+</div>
+
+<div class="advantages" style="min-width: 1200px">
+    <div class="yhdiv">
+        <div class="ctdiv">
+            <div class="tsdiv" >
+                <img src="./assets/images/ic_applets.svg">
+                <p class="txttl">Mini Programs</p>
+                <p class="txtdes">Experience it without downloading and installation</p>
+            </div>
+            <div class="tsdiv" style="margin-left: 60px">
+                <img src="./assets/images/ic_cloudstorage.svg">
+                <p class="txttl">Cloud</p>
+                <p class="txtdes">Support multi-terminal login, message will synchronize automatically </p>
+            </div>
+            <div class="tsdiv" style="margin-left: 60px">
+                <img src="./assets/images/ic_safety.svg">
+                <p class="txttl">Safe</p>
+                <p class="txtdes">Use the most advacnced encryption technology to ensure information security</p>
+            </div>
+        </div>
+
+        <div class="ctdiv">
+            <div class="tsdiv">
+                <img  src="./assets/images/ic_powerful.svg">
+                <p class="txttl">Free</p>
+                <p class="txtdes">No limits on message and file sizes</p>
+            </div>
+            <div class="tsdiv" style="margin-left: 60px">
+                <img src="./assets/images/ic_rapid.svg">
+                <p class="txttl">Fast</p>
+                <p class="txtdes">Provides users with super-fast connections and experience</p>
+            </div>
+            <div class="tsdiv" style="margin-left: 60px">
+                <img src="./assets/images/ic_wallet.svg">
+                <p class="txttl">Wallet &amp; Web3.0 Wallet</p>
+                <p class="txtdes">Support global digital currency, multi-currency management, payment and red envelopes</p>
+            </div>
+        </div>
+
+        <div class="ctdiv">
+            <div class="tsdiv">
+                <img  src="./assets/images/ic_permission.svg">
+                <p class="txttl">Bot</p>
+                <p class="txtdes">Freely create bots through API</p>
+            </div>
+            <div class="tsdiv" style="margin-left: 60px">
+                <img src="./assets/images/ic_grouping.svg">
+                <p class="txttl">Groups</p>
+                <p class="txtdes">Create a super group of up to 200,000 members</p>
+            </div>
+            <div class="tsdiv" style="margin-left: 60px">
+                <img src="./assets/images/ic_privacy.svg">
+                <p class="txttl">Privacy</p>
+                <p class="txtdes">Message encryption can be customized to self-destruction</p>
+            </div>
+        </div>
+
+        <div class="ctdiv">
+            <div class="tsdiv">
+                <img  src="./assets/images/ic_open.svg">
+                <p class="txttl">Open</p>
+                <p class="txtdes">A diverse and free platform</p>
+            </div>
+            <div class="tsdiv" style="margin-left: 60px">
+                <img src="./assets/images/ic_taste.svg">
+                <p class="txttl">Fun</p>
+                <p class="txtdes">Find funny things and interesting people</p>
+            </div>
+            <div class="tsdiv" style="margin-left: 60px">
+                <img src="./assets/images/ic_video.svg">
+                <p class="txttl">Video Call</p>
+                <p class="txtdes">Experience high-quality voice and video calls for free</p>
+            </div>
+        </div>
+
+        <div class="ctdiv" style="margin-bottom: 80px">
+            <div class="tsdiv">
+                <img  src="./assets/images/ic_circleoffriends.svg">
+                <p class="txttl">Moments</p>
+                <p class="txtdes">Share and post updates</p>
+            </div>
+            <div class="tsdiv" style="margin-left: 60px">
+                <img src="./assets/images/ic_peoplenearby.svg">
+                <p class="txttl">People Nearby</p>
+                <p class="txtdes">Find your friends based on location</p>
+            </div>
+            <div class="tsdiv" style="margin-left: 60px">
+                <img src="./assets/images/ic_fansx.svg">
+                <p class="txttl">FansX</p>
+                <p class="txtdes">Everyone is a creator, making creation more free, simpler, safer and more valuable</p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+    <div style="width: 100%;padding-left: 20px;">
+        <div class="home-privacy" id="home-privacy">
+            <div class="botmfdiv">
+                <div class="botmdiv">
+                    <ul>
+                        <li class="li-title">Mobile Apps</li>
+                        <li> <a href="/changelog#mAndroid">Android</a></li>
+                        <li><a href="/changelog#miOS">iOS</a></li>
+                        <!--<li><a href="https://github.com/potatogm/potato/releases" target="_blank">GitHub</a></li>-->
+                        <!--<li><a href="https://play.google.com/store/apps/details?id=org.potato.messenger.play"
+                                target="_blank">Google Play</a></li>-->
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="botmdiv" style="margin-left: 160px">
+                    <ul>
+                        <li class="li-title">Desktop Apps</li>
+                        <li><a href="/changelog#mMacOS">macOS</a></li>
+                        <li><a href="/changelog#mWindows">Windows</a></li>
+                        <li><a href="/changelog#mLinux">Linux</a></li>
+                        <!--<li><a href="/resources/files/POTATO.pdf" th:text="#{WhitePaper}" target="_blank">White
+                                Paper</a></li>-->
+                        <!--                    <li><a href="/changelog#mGitHub">GitHub</a></li>-->
+                    </ul>
+                </div>
+
+                <div class="botmdiv" style="margin-left: 160px;width: 180px">
+                    <ul>
+                        <li class="li-title">Official Community</li>
+                        <li><a href="https://twitter.com/PotatoChatApp" target="_blank">Follow Twitter</a></li>
+                        <li><a href="mailto:business@potato.im" target="_blank">Business Email</a></li>
+                        <li><a href="mailto:support@potato.im" target="_blank">Technical Support Email</a>
+                        </li>
+                        <li><a href="mailto:webadmin@potato.im" target="_blank">Administrator Email</a></li>
+                    </ul>
+                </div>
+
+                <div class="botmdiv" style="margin-right: 0px;float: right;width: 240px">
+                    <ul>
+                        <li class="li-title">Subscribe to us</li>
+                        <li>
+                            <di><input id="email" type="email" class="emailtxt" placeholder="Enter your email to subscribe"></di>
+                            <div id="emsg" style="color:red;font-size:12px;display:none">Email address is wrong, please re-enter</div>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <input id="emailbtn" type="button" value="Email subscription"
+                                style=" cursor: pointer;color: #FFFFFF;outline: none;font-family: PingFangSC-Regular;background: #007EE5;border-radius: 16px;border: none;width: 240px;height: 32px;font-size: 14px;text-align: center;">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sugok" class="alertmsg" style="display:none">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 80px;color: #007EE5;text-align: center;">
+                    &#xe636;</div>
+                
+                
+                    <div
+                        style="text-align: center;font-size: 16px;color: #333333;line-height: 24px;height: 24px;margin-top: 20px">
+                        Successfully！</div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dyok" class="alertmsg" style="display:none">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 80px;color: #007EE5;text-align: center;">
+                    &#xe636;</div>
+                <div style="text-align: center;font-size: 16px;color: #333333;line-height: 24px;height: 24px;margin-top: 20px">Congratulations, the subscription is successful</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dynook" class="alertmsg" style="display:none">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 80px;color: #F04646;text-align: center;">
+                    &#xe637;</div>
+                <div style="text-align: center;font-size: 16px;color: #333333;line-height: 24px;height: 24px;margin-top: 20px">Sorry, subscription failed</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ydynook" class="alertmsg" style="display:none">
+        <div class="dyok">
+            <div class="show-box">
+                <div class="icon iconfont" style="font-size: 60px;line-height: 80px;color: #F04646;text-align: center;">
+                    &#xe637;</div>
+                <div style="text-align: center;font-size: 16px;color: #333333;line-height: 24px;height: 24px;margin-top: 20px">Sorry, subscription failed</div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!--<script src="./assets/js/jquery-1.11.3.%20min.js"></script>-->
+<script src="./assets/js/jquery-3.3.1.min.js"></script>
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/common.js"></script>
+<script src="./assets/js/jquery.qrcode.min.js"></script>
+
+<script src="./assets/js/bootstrap.min.js"></script>
+
+
+    
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145422758-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-145422758-2');
+
+
+            imgUpload({
+                inputId: 'file',
+                imgBox: 'imgBox',
+                buttonId: 'btn',
+                data: 'file1',
+                num: "2"
+            });
+
+            window.onload = () => {
+                document.getElementsByTagName("body")[0].style.height = document.body.scrollHeight + "px";
+                document.getElementsByTagName("body")[0].style.width = document.body.scrollWidth + "px";
+            }
+
+            $(function () {
+
+                $('#countryCode').bind('input keyup', function () {
+                    var codp = "+" + $(this).val();
+                    var guojia = $("#errocode").text();
+                    var code = "";
+                    $(".selectctry-item").each(function () {
+                        if ($(this).children("div:eq(1)").text() == codp) {
+                            guojia = $(this).children("div:first").text();
+                            code = $(this).children("div:eq(1)").text();
+                            return;
+                        }
+                    });
+                    $("#citydiv").text(guojia);
+                    $("#citynum").text(code);
+                });
+
+
+                $.ajax({
+                    type: 'POST',
+                    url: "/ctysg",
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded;charset=utf-8",
+                    success: function (result) {
+                        var countryCode = result.countryCode;
+                        result = result.country;
+                        if ($("#localelang").val() == "en" || typeof $("#localelang").val() === "undefined") {
+                            for (var i = 0; i < result.length; i++) {
+                                if (countryCode == result[i].iso) {
+                                    $("#citydiv").text(result[i].nicename);
+                                    $("#citynum").text("+" + result[i].phonecode);
+                                    $("#countryCode").val(result[i].phonecode);
+                                }
+                                $("#selectctry").append("<div class='selectctry-item'><div style='width: auto;height: 48px;overflow: auto;float: left;color: #000000;'>" + result[i].nicename + "</div>" +
+                                    "<div style='width: auto;height: 48px;overflow: auto;float: right;color: #333333;'>+" + result[i].phonecode + "</div></div>");
+                            }
+                        } else {
+                            for (var i = 0; i < result.length; i++) {
+                                if (countryCode == result[i].iso) {
+                                    $("#citydiv").text(result[i].nameZh);
+                                    $("#citynum").text("+" + result[i].phonecode);
+                                    $("#countryCode").val(result[i].phonecode);
+                                }
+                                $("#selectctry").append("<div class='selectctry-item'><div style='width: auto;height: 48px;overflow: auto;float: left;color: #000000;'>" + result[i].nameZh + "</div>" +
+                                    "<div style='width: auto;height: 48px;overflow: auto;float: right;color: #333333;'>+" + result[i].phonecode + "</div></div>");
+                            }
+                        }
+                        $(".selectctry-item").click(function () {
+                            $("#citydiv").text($(this).children("div").eq(0).html());
+                            $("#citynum").text($(this).children("div").eq(1).html());
+                            var shocode = $(this).children("div").eq(1).html();
+                            $("#countryCode").val(shocode.substring(1, shocode.length));
+                            $("#selectctry").toggle();
+                        });
+                    }, error: function (result) {
+                        console.log("System error！");
+                    }
+                });
+
+
+                $('textarea').bind('input propertychange', function () {
+
+                    if ($(this).val().trim().length > 520) {
+                        $(this).val($(this).val().substring(0, 520));
+                    } else {
+                        $("#textCount").css("color", "black");
+                    };
+                    $("#textCount").html($(this).val().trim().length);
+                });
+
+
+                $(".suga").click(function () {
+                    $("#suggestion_frame").show();
+                    // 打开弹窗时清除数据
+                    // resetInputs();
+                    $("#verify_phone_frame").hide();
+                });
+
+                $("#open-verify-phone").click(function () {
+                    $("#verify_phone_frame").show();
+                    // $("#suggestion_frame").hide();
+                    setPage(1);
+                });
+
+
+                $("#email").keyup(function () {
+                    var emaild = $("#email").val();
+                    var myReg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+                    if (!myReg.test(emaild)) {
+                        $("#email").css("border", " 1px solid red");
+                    } else {
+                        $("#emsg").hide();
+                        $("#email").css("border", " 1px solid #007EE5");
+                    }
+                });
+
+                $("#emailbtn").click(function () {
+                    var emaild = $("#email").val();
+                    var myReg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+                    if (!myReg.test(emaild)) {
+                        $("#email").css("border", " 1px solid red");
+                        $("#emsg").show();
+                        return;
+                    } else {
+                        $("#emsg").hide();
+                        $("#email").css("border", " 1px solid #007EE5");
+                    }
+
+                    $.ajax({
+                        type: "get",
+                        url: "/news/email",
+                        data: "email=" + $('#rss-email').val(),
+                        success: function (data) {
+                            if (data.email == $('#rss-email').val()) {
+                                $("#ydynook").show();
+                                setTimeout(function () {
+                                    $("#ydynook").hide();
+                                }, 2000);
+                            } else {
+
+                                $.ajax({
+                                    type: "post",
+                                    url: "/news/email",
+                                    data: "email=" + $('#rss-email').val(),
+                                    error: function () {
+                                        $("#dynook").show();
+                                        setTimeout(function () {
+                                            $("#dynook").hide();
+                                        }, 3000);
+                                    },
+                                    success: function (data) {
+                                        $("#dyok").show();
+                                        $("body").css("overflow", "hidden");
+                                        setTimeout(function () {
+                                            $("#dyok").hide();
+                                            $("body").css("overflow", "auto");
+                                        }, 3000);
+                                    }
+                                });
+
+                            }
+                        }
+                    });
+
+
+                });
+
+            });
+        </script>
+    
+
+<script type="text/javascript">
+    document.write('<script src="./assets/js/slide.js' + new Date().getTime() + '"><\/script>');
+    var nums = 0, timer = null;
+    function reg(num) {
+        $.ajax({
+            type: "post",
+            url: "/regs?num="+num,
+            dataType: "json",
+            contentType: false,
+            success: function (num) {
+                nums = num;
+                $("#useuser").html(new Number(num).toLocaleString());
+            }
+        });
+    }
+    $(function () {
+        portChannel();
+        var initheight = $("#clties").offset().top;
+        $(document).scroll(function() {
+            var scrollTop = $(window).scrollTop();
+            var divtop = $("#clties").offset().top;
+           if(divtop < scrollTop){
+               $("#cltiesf").show();
+           }else if(initheight > scrollTop){
+               $("#cltiesf").hide();
+           }
+        });
+
+//        timer = setInterval(function(){
+//            reg(nums);
+//        }, 1000);
+//        
+//        $(window).on('unload', function(){
+//            if (timer !== null) {
+//                clearInterval(timer);
+//            }
+//        });
+        
+        configDownloadUrl();
+    });
+</script>
+<script>// 动态创建版本信息框
+document.querySelectorAll('.type-btn').forEach(mainLink => {
+    let hoverTimer;
+    const selector = mainLink.parentNode.querySelector('.version-selector');
+    if (!selector) {
+        return;
+    }
+    mainLink.addEventListener('mouseenter', (e) => {
+        // 关闭所有其他版本选择框
+        document.querySelectorAll('.version-selector').forEach(el => {
+            if (el !== selector) {
+                el.classList.remove('show');
+                el.style.display = 'none';
+            }
+        });
+
+        clearTimeout(hoverTimer);
+        selector.classList.add('show');
+        selector.style.display = 'block';
+    });
+
+    mainLink.addEventListener('mouseleave', (e) => {
+        hoverTimer = setTimeout(() => {
+            if (!selector.matches(':hover')) {
+                selector.classList.remove('show');
+                selector.style.display = 'none';
+            }
+        }, 100);
+    });
+
+    selector.addEventListener('mouseenter', () => {
+        clearTimeout(hoverTimer);
+    });
+
+    selector.addEventListener('mouseleave', () => {
+        selector.classList.remove('show');
+        setTimeout(() => {
+            selector.style.display = 'none';
+        }, 50);
+    });
+});
+</script>
+</body>
+</html>

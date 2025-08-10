@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-08-10T01:49:03.781Z",
+  "desktop": {
+    "originalPath": "curl-potato-content/desktop/index.html",
+    "updatedPath": "curl-potato-content/desktop/index-with-assets.html",
+    "resourcesCount": 0
+  },
+  "mobile": {
+    "originalPath": "curl-potato-content/mobile/index.html",
+    "updatedPath": "curl-potato-content/mobile/index-with-assets.html",
+    "resourcesCount": 0
+  },
+  "totalResources": 0
+}
